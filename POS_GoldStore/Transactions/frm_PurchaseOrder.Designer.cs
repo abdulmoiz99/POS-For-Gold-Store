@@ -33,14 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lab_TQuantity = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_exitForm = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lab_TAmount = new System.Windows.Forms.Label();
             this.GroupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_Print = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
@@ -48,151 +40,58 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_New = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
             this.dtp_dueDate = new System.Windows.Forms.DateTimePicker();
             this.rdo_Credit = new System.Windows.Forms.RadioButton();
             this.rdo_Cash = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.btnfnd = new System.Windows.Forms.Button();
-            this.datetimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.txt_InvoiceNo = new System.Windows.Forms.TextBox();
-            this.Label2 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.easyCompletionComboBox2 = new SergeUtils.EasyCompletionComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_exitForm = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lab_TQuantity = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lab_TAmount = new System.Windows.Forms.Label();
+            this.btn_UpdateRow = new System.Windows.Forms.Button();
+            this.btn_Remove = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.easyCompletionComboBox3 = new SergeUtils.EasyCompletionComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.gbPartyInfo = new System.Windows.Forms.GroupBox();
             this.txt_CICellNo = new System.Windows.Forms.TextBox();
-            this.txt_CIName = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
             this.txt_CIRemarks = new System.Windows.Forms.RichTextBox();
             this.Label26 = new System.Windows.Forms.Label();
             this.Label36 = new System.Windows.Forms.Label();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.gbPartyInfo = new System.Windows.Forms.GroupBox();
-            this.dgv_PurchaseDetail = new System.Windows.Forms.DataGridView();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btn_Remove = new System.Windows.Forms.Button();
-            this.btn_UpdateRow = new System.Windows.Forms.Button();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.easyCompletionComboBox1 = new SergeUtils.EasyCompletionComboBox();
-            this.easyCompletionComboBox2 = new SergeUtils.EasyCompletionComboBox();
-            this.panel2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.btnfnd = new System.Windows.Forms.Button();
+            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.datetimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.txt_InvoiceNo = new System.Windows.Forms.TextBox();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.dgv_PurchaseDetail = new System.Windows.Forms.DataGridView();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.gbPartyInfo.SuspendLayout();
+            this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PurchaseDetail)).BeginInit();
             this.GroupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lab_TQuantity
-            // 
-            this.lab_TQuantity.AutoSize = true;
-            this.lab_TQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
-            this.lab_TQuantity.Location = new System.Drawing.Point(221, 166);
-            this.lab_TQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lab_TQuantity.Name = "lab_TQuantity";
-            this.lab_TQuantity.Size = new System.Drawing.Size(31, 36);
-            this.lab_TQuantity.TabIndex = 205;
-            this.lab_TQuantity.Text = "0";
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1014, 34);
-            this.panel1.TabIndex = 1007;
-            // 
-            // btn_exitForm
-            // 
-            this.btn_exitForm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_exitForm.FlatAppearance.BorderSize = 0;
-            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(896, 0);
-            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_exitForm.Name = "btn_exitForm";
-            this.btn_exitForm.Size = new System.Drawing.Size(118, 75);
-            this.btn_exitForm.TabIndex = 1016;
-            this.btn_exitForm.Text = "     &Close";
-            this.btn_exitForm.UseVisualStyleBackColor = false;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(14, 18);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(217, 33);
-            this.label33.TabIndex = 1;
-            this.label33.Text = "Purchase Order";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
-            this.panel2.Controls.Add(this.btn_exitForm);
-            this.panel2.Controls.Add(this.label33);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 34);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1014, 75);
-            this.panel2.TabIndex = 1008;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lab_TQuantity);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.lab_TAmount);
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(161)))), ((int)(((byte)(226)))));
-            this.groupBox4.Location = new System.Drawing.Point(630, 334);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(284, 226);
-            this.groupBox4.TabIndex = 1009;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Sub Total ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
-            this.label5.Location = new System.Drawing.Point(8, 166);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 36);
-            this.label5.TabIndex = 205;
-            this.label5.Text = "Item Count:";
-            // 
-            // lab_TAmount
-            // 
-            this.lab_TAmount.AutoSize = true;
-            this.lab_TAmount.Font = new System.Drawing.Font("BigNoodleTitling", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_TAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(172)))), ((int)(((byte)(117)))));
-            this.lab_TAmount.Location = new System.Drawing.Point(51, 47);
-            this.lab_TAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lab_TAmount.Name = "lab_TAmount";
-            this.lab_TAmount.Size = new System.Drawing.Size(82, 104);
-            this.lab_TAmount.TabIndex = 204;
-            this.lab_TAmount.Text = "0";
             // 
             // GroupBox3
             // 
@@ -202,12 +101,12 @@
             this.GroupBox3.Controls.Add(this.btn_cancel);
             this.GroupBox3.Controls.Add(this.btn_Save);
             this.GroupBox3.Controls.Add(this.btn_New);
-            this.GroupBox3.Location = new System.Drawing.Point(625, 106);
+            this.GroupBox3.Location = new System.Drawing.Point(620, 139);
             this.GroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox3.Name = "GroupBox3";
             this.GroupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox3.Size = new System.Drawing.Size(295, 228);
-            this.GroupBox3.TabIndex = 1006;
+            this.GroupBox3.TabIndex = 1026;
             this.GroupBox3.TabStop = false;
             // 
             // btn_Print
@@ -308,10 +207,36 @@
             this.btn_New.Text = "&New";
             this.btn_New.UseVisualStyleBackColor = false;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton1);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.dtp_dueDate);
+            this.groupBox5.Controls.Add(this.rdo_Credit);
+            this.groupBox5.Controls.Add(this.rdo_Cash);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Location = new System.Drawing.Point(10, 139);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(604, 67);
+            this.groupBox5.TabIndex = 1030;
+            this.groupBox5.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("BigNoodleTitling", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(163)))), ((int)(((byte)(76)))));
+            this.radioButton1.Location = new System.Drawing.Point(361, 18);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(76, 36);
+            this.radioButton1.TabIndex = 1001;
+            this.radioButton1.Text = "Temp";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(484, 23);
+            this.label16.Location = new System.Drawing.Point(466, 17);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 13);
@@ -323,7 +248,7 @@
             this.dtp_dueDate.CustomFormat = "dd/MM/yyyy";
             this.dtp_dueDate.Enabled = false;
             this.dtp_dueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_dueDate.Location = new System.Drawing.Point(482, 40);
+            this.dtp_dueDate.Location = new System.Drawing.Point(464, 34);
             this.dtp_dueDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_dueDate.Name = "dtp_dueDate";
             this.dtp_dueDate.Size = new System.Drawing.Size(115, 20);
@@ -367,29 +292,293 @@
             this.label13.TabIndex = 44;
             this.label13.Text = "Transaction Mode";
             // 
-            // groupBox5
+            // label33
             // 
-            this.groupBox5.Controls.Add(this.radioButton1);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.dtp_dueDate);
-            this.groupBox5.Controls.Add(this.rdo_Credit);
-            this.groupBox5.Controls.Add(this.rdo_Cash);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Location = new System.Drawing.Point(15, 106);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(604, 67);
-            this.groupBox5.TabIndex = 1010;
-            this.groupBox5.TabStop = false;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(14, 18);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(217, 33);
+            this.label33.TabIndex = 1;
+            this.label33.Text = "Purchase Order";
             // 
-            // label20
+            // easyCompletionComboBox2
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 53);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(20, 13);
-            this.label20.TabIndex = 1004;
-            this.label20.Text = "Rs";
+            this.easyCompletionComboBox2.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easyCompletionComboBox2.FormattingEnabled = true;
+            this.easyCompletionComboBox2.Location = new System.Drawing.Point(155, 38);
+            this.easyCompletionComboBox2.Name = "easyCompletionComboBox2";
+            this.easyCompletionComboBox2.Size = new System.Drawing.Size(268, 26);
+            this.easyCompletionComboBox2.TabIndex = 1001;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox5.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(155, 154);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(268, 24);
+            this.textBox5.TabIndex = 358;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox4.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(155, 116);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(268, 24);
+            this.textBox4.TabIndex = 358;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox3.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(155, 78);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(268, 24);
+            this.textBox3.TabIndex = 358;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
+            this.panel2.Controls.Add(this.btn_exitForm);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 34);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1014, 75);
+            this.panel2.TabIndex = 1028;
+            // 
+            // btn_exitForm
+            // 
+            this.btn_exitForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exitForm.FlatAppearance.BorderSize = 0;
+            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exitForm.Location = new System.Drawing.Point(896, 0);
+            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_exitForm.Name = "btn_exitForm";
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 75);
+            this.btn_exitForm.TabIndex = 1016;
+            this.btn_exitForm.Text = "     &Close";
+            this.btn_exitForm.UseVisualStyleBackColor = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lab_TQuantity);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.lab_TAmount);
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(161)))), ((int)(((byte)(226)))));
+            this.groupBox4.Location = new System.Drawing.Point(625, 367);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(284, 226);
+            this.groupBox4.TabIndex = 1029;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Sub Total ";
+            // 
+            // lab_TQuantity
+            // 
+            this.lab_TQuantity.AutoSize = true;
+            this.lab_TQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
+            this.lab_TQuantity.Location = new System.Drawing.Point(221, 166);
+            this.lab_TQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_TQuantity.Name = "lab_TQuantity";
+            this.lab_TQuantity.Size = new System.Drawing.Size(31, 36);
+            this.lab_TQuantity.TabIndex = 205;
+            this.lab_TQuantity.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
+            this.label5.Location = new System.Drawing.Point(8, 166);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 36);
+            this.label5.TabIndex = 205;
+            this.label5.Text = "Item Count:";
+            // 
+            // lab_TAmount
+            // 
+            this.lab_TAmount.AutoSize = true;
+            this.lab_TAmount.Font = new System.Drawing.Font("BigNoodleTitling", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_TAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(172)))), ((int)(((byte)(117)))));
+            this.lab_TAmount.Location = new System.Drawing.Point(51, 47);
+            this.lab_TAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_TAmount.Name = "lab_TAmount";
+            this.lab_TAmount.Size = new System.Drawing.Size(82, 104);
+            this.lab_TAmount.TabIndex = 204;
+            this.lab_TAmount.Text = "0";
+            // 
+            // btn_UpdateRow
+            // 
+            this.btn_UpdateRow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_UpdateRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_UpdateRow.FlatAppearance.BorderSize = 0;
+            this.btn_UpdateRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_UpdateRow.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_UpdateRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btn_UpdateRow.Image = ((System.Drawing.Image)(resources.GetObject("btn_UpdateRow.Image")));
+            this.btn_UpdateRow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_UpdateRow.Location = new System.Drawing.Point(446, 146);
+            this.btn_UpdateRow.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_UpdateRow.Name = "btn_UpdateRow";
+            this.btn_UpdateRow.Size = new System.Drawing.Size(106, 43);
+            this.btn_UpdateRow.TabIndex = 357;
+            this.btn_UpdateRow.Text = "    &Update";
+            this.btn_UpdateRow.UseVisualStyleBackColor = false;
+            // 
+            // btn_Remove
+            // 
+            this.btn_Remove.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Remove.Enabled = false;
+            this.btn_Remove.FlatAppearance.BorderSize = 0;
+            this.btn_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Remove.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Remove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btn_Remove.Image = ((System.Drawing.Image)(resources.GetObject("btn_Remove.Image")));
+            this.btn_Remove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Remove.Location = new System.Drawing.Point(446, 93);
+            this.btn_Remove.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Remove.Name = "btn_Remove";
+            this.btn_Remove.Size = new System.Drawing.Size(105, 44);
+            this.btn_Remove.TabIndex = 27;
+            this.btn_Remove.Text = "       &Remove";
+            this.btn_Remove.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(446, 33);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(105, 44);
+            this.btnAdd.TabIndex = 20;
+            this.btnAdd.Text = "    &Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1014, 34);
+            this.panel1.TabIndex = 1027;
+            // 
+            // easyCompletionComboBox3
+            // 
+            this.easyCompletionComboBox3.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easyCompletionComboBox3.FormattingEnabled = true;
+            this.easyCompletionComboBox3.Location = new System.Drawing.Point(101, 27);
+            this.easyCompletionComboBox3.Name = "easyCompletionComboBox3";
+            this.easyCompletionComboBox3.Size = new System.Drawing.Size(208, 26);
+            this.easyCompletionComboBox3.TabIndex = 1002;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(97, 118);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 23);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Rate :";
+            // 
+            // gbPartyInfo
+            // 
+            this.gbPartyInfo.Controls.Add(this.easyCompletionComboBox3);
+            this.gbPartyInfo.Controls.Add(this.txt_CICellNo);
+            this.gbPartyInfo.Controls.Add(this.Label12);
+            this.gbPartyInfo.Controls.Add(this.txt_CIRemarks);
+            this.gbPartyInfo.Controls.Add(this.Label26);
+            this.gbPartyInfo.Controls.Add(this.Label36);
+            this.gbPartyInfo.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPartyInfo.Location = new System.Drawing.Point(298, 207);
+            this.gbPartyInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.gbPartyInfo.Name = "gbPartyInfo";
+            this.gbPartyInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.gbPartyInfo.Size = new System.Drawing.Size(316, 153);
+            this.gbPartyInfo.TabIndex = 1021;
+            this.gbPartyInfo.TabStop = false;
+            this.gbPartyInfo.Text = "Customer Info";
+            // 
+            // txt_CICellNo
+            // 
+            this.txt_CICellNo.Location = new System.Drawing.Point(101, 64);
+            this.txt_CICellNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_CICellNo.Name = "txt_CICellNo";
+            this.txt_CICellNo.Size = new System.Drawing.Size(208, 22);
+            this.txt_CICellNo.TabIndex = 2;
+            // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.Location = new System.Drawing.Point(25, 106);
+            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(74, 21);
+            this.Label12.TabIndex = 309;
+            this.Label12.Text = "Remarks :";
+            // 
+            // txt_CIRemarks
+            // 
+            this.txt_CIRemarks.Location = new System.Drawing.Point(101, 101);
+            this.txt_CIRemarks.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_CIRemarks.Name = "txt_CIRemarks";
+            this.txt_CIRemarks.Size = new System.Drawing.Size(208, 35);
+            this.txt_CIRemarks.TabIndex = 3;
+            this.txt_CIRemarks.Text = "";
+            // 
+            // Label26
+            // 
+            this.Label26.AutoSize = true;
+            this.Label26.Location = new System.Drawing.Point(3, 70);
+            this.Label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label26.Name = "Label26";
+            this.Label26.Size = new System.Drawing.Size(96, 21);
+            this.Label26.TabIndex = 29;
+            this.Label26.Text = "Contact No :";
+            // 
+            // Label36
+            // 
+            this.Label36.AutoSize = true;
+            this.Label36.Location = new System.Drawing.Point(42, 34);
+            this.Label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label36.Name = "Label36";
+            this.Label36.Size = new System.Drawing.Size(57, 21);
+            this.Label36.TabIndex = 23;
+            this.Label36.Text = "Name :";
+            // 
+            // easyCompletionComboBox1
+            // 
+            this.easyCompletionComboBox1.FormattingEnabled = true;
+            this.easyCompletionComboBox1.Location = new System.Drawing.Point(118, 32);
+            this.easyCompletionComboBox1.Name = "easyCompletionComboBox1";
+            this.easyCompletionComboBox1.Size = new System.Drawing.Size(110, 29);
+            this.easyCompletionComboBox1.TabIndex = 1000;
             // 
             // Label11
             // 
@@ -410,6 +599,25 @@
             this.btnfnd.TabIndex = 41;
             this.btnfnd.Text = "...";
             this.btnfnd.UseVisualStyleBackColor = true;
+            // 
+            // GroupBox1
+            // 
+            this.GroupBox1.Controls.Add(this.easyCompletionComboBox1);
+            this.GroupBox1.Controls.Add(this.Label11);
+            this.GroupBox1.Controls.Add(this.btnfnd);
+            this.GroupBox1.Controls.Add(this.datetimePicker);
+            this.GroupBox1.Controls.Add(this.Label3);
+            this.GroupBox1.Controls.Add(this.txt_InvoiceNo);
+            this.GroupBox1.Controls.Add(this.Label2);
+            this.GroupBox1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Location = new System.Drawing.Point(9, 206);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Name = "GroupBox1";
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Size = new System.Drawing.Size(283, 154);
+            this.GroupBox1.TabIndex = 1022;
+            this.GroupBox1.TabStop = false;
+            this.GroupBox1.Text = "Invoice Info";
             // 
             // datetimePicker
             // 
@@ -452,97 +660,6 @@
             this.Label2.TabIndex = 5;
             this.Label2.Text = "Invoice Date :";
             // 
-            // txt_CICellNo
-            // 
-            this.txt_CICellNo.Location = new System.Drawing.Point(92, 64);
-            this.txt_CICellNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_CICellNo.Name = "txt_CICellNo";
-            this.txt_CICellNo.Size = new System.Drawing.Size(217, 20);
-            this.txt_CICellNo.TabIndex = 2;
-            // 
-            // txt_CIName
-            // 
-            this.txt_CIName.Location = new System.Drawing.Point(92, 31);
-            this.txt_CIName.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_CIName.Name = "txt_CIName";
-            this.txt_CIName.Size = new System.Drawing.Size(217, 20);
-            this.txt_CIName.TabIndex = 1;
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Location = new System.Drawing.Point(27, 106);
-            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(55, 13);
-            this.Label12.TabIndex = 309;
-            this.Label12.Text = "Remarks :";
-            // 
-            // txt_CIRemarks
-            // 
-            this.txt_CIRemarks.Location = new System.Drawing.Point(92, 101);
-            this.txt_CIRemarks.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_CIRemarks.Name = "txt_CIRemarks";
-            this.txt_CIRemarks.Size = new System.Drawing.Size(217, 35);
-            this.txt_CIRemarks.TabIndex = 3;
-            this.txt_CIRemarks.Text = "";
-            // 
-            // Label26
-            // 
-            this.Label26.AutoSize = true;
-            this.Label26.Location = new System.Drawing.Point(6, 70);
-            this.Label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(67, 13);
-            this.Label26.TabIndex = 29;
-            this.Label26.Text = "Contact No :";
-            // 
-            // Label36
-            // 
-            this.Label36.AutoSize = true;
-            this.Label36.Location = new System.Drawing.Point(43, 34);
-            this.Label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label36.Name = "Label36";
-            this.Label36.Size = new System.Drawing.Size(38, 13);
-            this.Label36.TabIndex = 23;
-            this.Label36.Text = "Name:";
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.Controls.Add(this.easyCompletionComboBox1);
-            this.GroupBox1.Controls.Add(this.Label11);
-            this.GroupBox1.Controls.Add(this.btnfnd);
-            this.GroupBox1.Controls.Add(this.datetimePicker);
-            this.GroupBox1.Controls.Add(this.Label3);
-            this.GroupBox1.Controls.Add(this.txt_InvoiceNo);
-            this.GroupBox1.Controls.Add(this.Label2);
-            this.GroupBox1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(14, 173);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(283, 154);
-            this.GroupBox1.TabIndex = 1002;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Invoice Info";
-            // 
-            // gbPartyInfo
-            // 
-            this.gbPartyInfo.Controls.Add(this.txt_CICellNo);
-            this.gbPartyInfo.Controls.Add(this.txt_CIName);
-            this.gbPartyInfo.Controls.Add(this.Label12);
-            this.gbPartyInfo.Controls.Add(this.txt_CIRemarks);
-            this.gbPartyInfo.Controls.Add(this.Label26);
-            this.gbPartyInfo.Controls.Add(this.Label36);
-            this.gbPartyInfo.Location = new System.Drawing.Point(303, 174);
-            this.gbPartyInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.gbPartyInfo.Name = "gbPartyInfo";
-            this.gbPartyInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.gbPartyInfo.Size = new System.Drawing.Size(316, 153);
-            this.gbPartyInfo.TabIndex = 1001;
-            this.gbPartyInfo.TabStop = false;
-            this.gbPartyInfo.Text = "Customer Info";
-            // 
             // dgv_PurchaseDetail
             // 
             this.dgv_PurchaseDetail.AllowUserToAddRows = false;
@@ -562,7 +679,7 @@
             this.dgv_PurchaseDetail.ColumnHeadersHeight = 30;
             this.dgv_PurchaseDetail.EnableHeadersVisualStyles = false;
             this.dgv_PurchaseDetail.GridColor = System.Drawing.Color.White;
-            this.dgv_PurchaseDetail.Location = new System.Drawing.Point(15, 569);
+            this.dgv_PurchaseDetail.Location = new System.Drawing.Point(10, 602);
             this.dgv_PurchaseDetail.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_PurchaseDetail.MultiSelect = false;
             this.dgv_PurchaseDetail.Name = "dgv_PurchaseDetail";
@@ -587,19 +704,7 @@
             this.dgv_PurchaseDetail.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_PurchaseDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_PurchaseDetail.Size = new System.Drawing.Size(905, 152);
-            this.dgv_PurchaseDetail.TabIndex = 1005;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("BigNoodleTitling", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(163)))), ((int)(((byte)(76)))));
-            this.radioButton1.Location = new System.Drawing.Point(361, 18);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 36);
-            this.radioButton1.TabIndex = 1001;
-            this.radioButton1.Text = "Temp";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.dgv_PurchaseDetail.TabIndex = 1025;
             // 
             // Label8
             // 
@@ -611,59 +716,6 @@
             this.Label8.Size = new System.Drawing.Size(127, 23);
             this.Label8.TabIndex = 22;
             this.Label8.Text = "Product Name :";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(446, 33);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(105, 44);
-            this.btnAdd.TabIndex = 20;
-            this.btnAdd.Text = "    &Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btn_Remove
-            // 
-            this.btn_Remove.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Remove.Enabled = false;
-            this.btn_Remove.FlatAppearance.BorderSize = 0;
-            this.btn_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Remove.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Remove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.btn_Remove.Image = ((System.Drawing.Image)(resources.GetObject("btn_Remove.Image")));
-            this.btn_Remove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Remove.Location = new System.Drawing.Point(446, 93);
-            this.btn_Remove.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Remove.Name = "btn_Remove";
-            this.btn_Remove.Size = new System.Drawing.Size(105, 44);
-            this.btn_Remove.TabIndex = 27;
-            this.btn_Remove.Text = "       &Remove";
-            this.btn_Remove.UseVisualStyleBackColor = false;
-            // 
-            // btn_UpdateRow
-            // 
-            this.btn_UpdateRow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_UpdateRow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_UpdateRow.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateRow.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdateRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.btn_UpdateRow.Image = ((System.Drawing.Image)(resources.GetObject("btn_UpdateRow.Image")));
-            this.btn_UpdateRow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateRow.Location = new System.Drawing.Point(446, 146);
-            this.btn_UpdateRow.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_UpdateRow.Name = "btn_UpdateRow";
-            this.btn_UpdateRow.Size = new System.Drawing.Size(106, 43);
-            this.btn_UpdateRow.TabIndex = 357;
-            this.btn_UpdateRow.Text = "    &Update";
-            this.btn_UpdateRow.UseVisualStyleBackColor = false;
             // 
             // GroupBox2
             // 
@@ -679,25 +731,14 @@
             this.GroupBox2.Controls.Add(this.label1);
             this.GroupBox2.Controls.Add(this.Label8);
             this.GroupBox2.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(13, 328);
+            this.GroupBox2.Location = new System.Drawing.Point(8, 361);
             this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Size = new System.Drawing.Size(606, 233);
-            this.GroupBox2.TabIndex = 1003;
+            this.GroupBox2.TabIndex = 1023;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Product Info";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 81);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 23);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Product Weight  :";
             // 
             // label6
             // 
@@ -710,66 +751,16 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Amount :";
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(97, 118);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 23);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Rate :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox3.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(155, 78);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(268, 24);
-            this.textBox3.TabIndex = 358;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox4.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(155, 116);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(268, 24);
-            this.textBox4.TabIndex = 358;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox5.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(155, 154);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(268, 24);
-            this.textBox5.TabIndex = 358;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // easyCompletionComboBox1
-            // 
-            this.easyCompletionComboBox1.FormattingEnabled = true;
-            this.easyCompletionComboBox1.Location = new System.Drawing.Point(118, 32);
-            this.easyCompletionComboBox1.Name = "easyCompletionComboBox1";
-            this.easyCompletionComboBox1.Size = new System.Drawing.Size(110, 29);
-            this.easyCompletionComboBox1.TabIndex = 1000;
-            // 
-            // easyCompletionComboBox2
-            // 
-            this.easyCompletionComboBox2.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.easyCompletionComboBox2.FormattingEnabled = true;
-            this.easyCompletionComboBox2.Location = new System.Drawing.Point(155, 38);
-            this.easyCompletionComboBox2.Name = "easyCompletionComboBox2";
-            this.easyCompletionComboBox2.Size = new System.Drawing.Size(268, 26);
-            this.easyCompletionComboBox2.TabIndex = 1001;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 23);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Product Weight  :";
             // 
             // frm_PurchaseOrder
             // 
@@ -778,45 +769,35 @@
             this.ClientSize = new System.Drawing.Size(1014, 777);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.GroupBox3);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.GroupBox2);
-            this.Controls.Add(this.GroupBox1);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.gbPartyInfo);
+            this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.dgv_PurchaseDetail);
+            this.Controls.Add(this.GroupBox2);
             this.Name = "frm_PurchaseOrder";
             this.Text = "frm_PurchaseOrder";
+            this.GroupBox3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.GroupBox3.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
             this.gbPartyInfo.ResumeLayout(false);
             this.gbPartyInfo.PerformLayout();
+            this.GroupBox1.ResumeLayout(false);
+            this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PurchaseDetail)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lab_TQuantity;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_exitForm;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lab_TAmount;
         internal System.Windows.Forms.GroupBox GroupBox3;
         private System.Windows.Forms.Button btn_Print;
         private System.Windows.Forms.Button btn_Update;
@@ -824,40 +805,47 @@
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_New;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton1;
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.DateTimePicker dtp_dueDate;
         private System.Windows.Forms.RadioButton rdo_Credit;
         private System.Windows.Forms.RadioButton rdo_Cash;
         internal System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label20;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Button btnfnd;
-        internal System.Windows.Forms.DateTimePicker datetimePicker;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.TextBox txt_InvoiceNo;
-        internal System.Windows.Forms.Label Label2;
-        private System.Windows.Forms.TextBox txt_CICellNo;
-        private System.Windows.Forms.TextBox txt_CIName;
-        internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.RichTextBox txt_CIRemarks;
-        internal System.Windows.Forms.Label Label26;
-        internal System.Windows.Forms.Label Label36;
-        internal System.Windows.Forms.GroupBox GroupBox1;
-        private SergeUtils.EasyCompletionComboBox easyCompletionComboBox1;
-        internal System.Windows.Forms.GroupBox gbPartyInfo;
-        internal System.Windows.Forms.DataGridView dgv_PurchaseDetail;
-        internal System.Windows.Forms.Label Label8;
-        public System.Windows.Forms.Button btnAdd;
-        public System.Windows.Forms.Button btn_Remove;
-        private System.Windows.Forms.Button btn_UpdateRow;
-        internal System.Windows.Forms.GroupBox GroupBox2;
+        private System.Windows.Forms.Label label33;
         private SergeUtils.EasyCompletionComboBox easyCompletionComboBox2;
         internal System.Windows.Forms.TextBox textBox5;
         internal System.Windows.Forms.TextBox textBox4;
         internal System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_exitForm;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label lab_TQuantity;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lab_TAmount;
+        private System.Windows.Forms.Button btn_UpdateRow;
+        public System.Windows.Forms.Button btn_Remove;
+        public System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Panel panel1;
+        private SergeUtils.EasyCompletionComboBox easyCompletionComboBox3;
         internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.GroupBox gbPartyInfo;
+        private System.Windows.Forms.TextBox txt_CICellNo;
+        internal System.Windows.Forms.Label Label12;
+        internal System.Windows.Forms.RichTextBox txt_CIRemarks;
+        internal System.Windows.Forms.Label Label26;
+        internal System.Windows.Forms.Label Label36;
+        private SergeUtils.EasyCompletionComboBox easyCompletionComboBox1;
+        internal System.Windows.Forms.Label Label11;
+        internal System.Windows.Forms.Button btnfnd;
+        internal System.Windows.Forms.GroupBox GroupBox1;
+        internal System.Windows.Forms.DateTimePicker datetimePicker;
+        internal System.Windows.Forms.Label Label3;
+        internal System.Windows.Forms.TextBox txt_InvoiceNo;
+        internal System.Windows.Forms.Label Label2;
+        internal System.Windows.Forms.DataGridView dgv_PurchaseDetail;
+        internal System.Windows.Forms.Label Label8;
+        internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.Label label1;
     }

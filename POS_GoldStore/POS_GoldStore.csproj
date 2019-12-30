@@ -125,6 +125,9 @@
     <EmbeddedResource Include="Transactions\frm_PurchaseOrder.resx">
       <DependentUpon>frm_PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_SaleOrder.resx">
+      <DependentUpon>frm_SaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\frm_ChangeUserPassword.resx">
       <DependentUpon>frm_ChangeUserPassword.cs</DependentUpon>
     </EmbeddedResource>
