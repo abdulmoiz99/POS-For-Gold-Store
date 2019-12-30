@@ -1,4 +1,5 @@
-﻿using POS_GoldStore.UserManagemen;
+﻿using POS_GoldStore.Setup;
+using POS_GoldStore.UserManagemen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace POS_GoldStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Login());
+            Application.Run(new frm_AddProduct());
         }
     }
 }

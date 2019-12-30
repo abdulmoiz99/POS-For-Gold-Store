@@ -60,8 +60,8 @@ namespace POS_GoldStore.UserManagemen
                                 Main.UserName = txt_Username.Text;
 
                                 this.Hide();
-                                //var NEW = new frm_Main();
-                                // NEW.ShowDialog();
+                                var NEW = new frm_Main();
+                                NEW.ShowDialog();
 
                             }
                             else MessageBox.Show("Invalid Password", "Login", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

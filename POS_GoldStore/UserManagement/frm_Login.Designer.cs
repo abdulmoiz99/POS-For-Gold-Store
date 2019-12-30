@@ -207,6 +207,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Name = "frm_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Login";
             this.Load += new System.EventHandler(this.frm_Login_Load);
             this.ResumeLayout(false);
