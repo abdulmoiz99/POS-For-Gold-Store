@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dashBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +40,6 @@
             this.saleOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,20 +83,23 @@
             // addProductToolStripMenuItem
             // 
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
+            this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
             // addPartyToolStripMenuItem
             // 
             this.addPartyToolStripMenuItem.Name = "addPartyToolStripMenuItem";
-            this.addPartyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.addPartyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addPartyToolStripMenuItem.Text = "Add Party";
+            this.addPartyToolStripMenuItem.Click += new System.EventHandler(this.addPartyToolStripMenuItem_Click);
             // 
             // voucherSetupToolStripMenuItem
             // 
             this.voucherSetupToolStripMenuItem.Name = "voucherSetupToolStripMenuItem";
-            this.voucherSetupToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.voucherSetupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.voucherSetupToolStripMenuItem.Text = "Voucher Setup";
+            this.voucherSetupToolStripMenuItem.Click += new System.EventHandler(this.voucherSetupToolStripMenuItem_Click);
             // 
             // transactionsToolStripMenuItem
             // 
@@ -114,12 +115,14 @@
             this.purchaseOrderToolStripMenuItem.Name = "purchaseOrderToolStripMenuItem";
             this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.purchaseOrderToolStripMenuItem.Text = "Purchase Order";
+            this.purchaseOrderToolStripMenuItem.Click += new System.EventHandler(this.purchaseOrderToolStripMenuItem_Click);
             // 
             // saleOrderToolStripMenuItem
             // 
             this.saleOrderToolStripMenuItem.Name = "saleOrderToolStripMenuItem";
             this.saleOrderToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.saleOrderToolStripMenuItem.Text = "Sale Order";
+            this.saleOrderToolStripMenuItem.Click += new System.EventHandler(this.saleOrderToolStripMenuItem_Click);
             // 
             // userManagementToolStripMenuItem
             // 
@@ -134,11 +137,7 @@
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // frm_Main
             // 
@@ -146,8 +145,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 549);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frm_Main";
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -160,7 +161,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dashBoardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setupToolStripMenuItem;

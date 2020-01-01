@@ -70,17 +70,23 @@
     <Compile Include="Setup\frm_AddCustomer.Designer.cs">
       <DependentUpon>frm_AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Setup\frm_AddParty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Setup\frm_AddParty.Designer.cs">
-      <DependentUpon>frm_AddParty.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setup\frm_AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Setup\frm_AddProduct.Designer.cs">
       <DependentUpon>frm_AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frm_CitySetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frm_CitySetup.Designer.cs">
+      <DependentUpon>frm_CitySetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frm_DocSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frm_DocSetup.Designer.cs">
+      <DependentUpon>frm_DocSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
     <Compile Include="Transactions\frm_PurchaseOrder.cs">
@@ -125,11 +131,14 @@
     <EmbeddedResource Include="Setup\frm_AddCustomer.resx">
       <DependentUpon>frm_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Setup\frm_AddParty.resx">
-      <DependentUpon>frm_AddParty.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Setup\frm_AddProduct.resx">
       <DependentUpon>frm_AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frm_CitySetup.resx">
+      <DependentUpon>frm_CitySetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frm_DocSetup.resx">
+      <DependentUpon>frm_DocSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_PurchaseOrder.resx">
       <DependentUpon>frm_PurchaseOrder.cs</DependentUpon>
