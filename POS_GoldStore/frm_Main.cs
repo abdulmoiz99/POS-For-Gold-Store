@@ -128,5 +128,216 @@ namespace POS_GoldStore
             {
             }
         }
+
+        private void btn_Dashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AddProduct_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_AddProduct();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void btn_AddCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_AddCustomer();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void btn_VoucherSetup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_DocSetup();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void btn_PurchaseOrder_Click(object sender, EventArgs e)
+        {
+           
+                var frm = new frm_PurchaseOrder();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+        }
+
+        private void btn_SaleOrder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_SaleOrder();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
+        }
+
+        private void btn_CashFlow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_CashTemp();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void btn_ChangePassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_ChangeUserPassword();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frm_Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_PurchaseTemp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_PurchaseTemp();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void btn_SaleTemp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_SaleTemp();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void addProductToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_AddProduct();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_AddCustomer();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void voucherSetupToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_DocSetup();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new frm_ChangeUserPassword();
+                frm.MdiParent = this; // assign MdiParent of FormB to FormC
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
     }
 }

@@ -13,12 +13,12 @@ namespace POS_GoldStore.Setup
     public partial class frm_AddProduct : Form
     {
         int mode;
-        String FName = "AddProduct";
+        //String FName = "AddProduct";
         public frm_AddProduct()
         {
             InitializeComponent();
         }
-    
+
         private void btn_New_Click(object sender, EventArgs e)
         {
             mode = 1;
@@ -29,6 +29,8 @@ namespace POS_GoldStore.Setup
             btn_cancel.Enabled = true;
             btn_Save.Enabled = true;
             txt_Name.Enabled = true;
+            txt_PBalance.Enabled = true;
+
             txt_Name.Focus();
             dgv_BrandSetup.Enabled = false;
         }
@@ -42,6 +44,8 @@ namespace POS_GoldStore.Setup
             btn_Save.Enabled = true;
             btn_cancel.Enabled = true;
             txt_Name.Enabled = true;
+            txt_PBalance.Enabled = true;
+
             txt_Name.Focus();
             dgv_BrandSetup.Enabled = true;
 
@@ -53,6 +57,7 @@ namespace POS_GoldStore.Setup
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            float balance = 0;
             int active = 1;
             if (rdo_Yes.Checked == true)
             {
@@ -60,41 +65,49 @@ namespace POS_GoldStore.Setup
             }
 
             else active = 0;
-            if (mode == 1)
+            if (txt_Name.Text == "")
             {
-                
-                if (txt_Name.Text == "")
-                {
-                    MessageBox.Show("Please Enter Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
+                MessageBox.Show("Please Enter Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txt_PBalance.Text == "")
+            {
+                MessageBox.Show("Please Product Balance ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!float.TryParse(txt_PBalance.Text, out balance))
+            {
+                MessageBox.Show("Please Correct Product Balance ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (mode == 1)
+            {
+
                 {
                     DialogResult YesOrNo = MessageBox.Show("Are you sure To INSERT the current Record", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (YesOrNo == DialogResult.Yes)
                     {
-                        SQL.NonScalarQuery("Insert Into ProductMaster(PName,PActive,CompanyID) values ('" + txt_Name.Text + "'," + active + "," + Main.CompanyID + ")");
+                        SQL.NonScalarQuery("Insert Into ProductMaster(PName,PBalance,PActive,CompanyID) values ('" + txt_Name.Text + "'," + balance + "," + active + "," + Main.CompanyID + ")");
                         AllClear();
                         frm_AddProduct_Load(sender, e);
                         btn_cancel_Click(sender, e);
                         MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
-                }
-            }
+
+                }  }
             else if (mode == 2)
-            {
-                
+                {
+
                     DialogResult YesOrNo = MessageBox.Show("Are you sure To UPDATE the current Record", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (YesOrNo == DialogResult.Yes)
                     {
-                        SQL.NonScalarQuery("update ProductMaster set PName='" + txt_Name.Text + "',PActive=" + active + " where PID=" + int.Parse(txt_DataGridViewIndex.Text) + "");
+                        SQL.NonScalarQuery("update ProductMaster set PName='" + txt_Name.Text + "',PActive=" + active + ",PBalance =" + balance + " where PID=" + int.Parse(txt_DataGridViewIndex.Text) + "");
                         AllClear();
                         frm_AddProduct_Load(sender, e);
                         btn_cancel_Click(sender, e);
                         MessageBox.Show("Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
-                
+
+                }
             }
-        }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
@@ -110,18 +123,20 @@ namespace POS_GoldStore.Setup
             btn_cancel.Enabled = false;
             btn_Save.Enabled = false;
             txt_Name.Enabled = false;
+            txt_PBalance.Enabled = false;
+
             dgv_BrandSetup.Enabled = true;
         }
 
         private void txt_Find_TextChanged(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_BrandSetup, "select PID,IBName,PActive from ProductMaster where CompanyID=" + Main.CompanyID + " AND CAST(IBName as varchar) like '%" + txt_Find.Text + "%'");
+            Main.fillDgv(dgv_BrandSetup, "select PID,PName,PBalance,PActive from ProductMaster where CompanyID=" + Main.CompanyID + " AND CAST(PName as varchar) like '%" + txt_Find.Text + "%'");
 
         }
 
         private void frm_AddProduct_Load(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_BrandSetup, "select PID,PName,Pactive from ProductMaster where CompanyID=" + Main.CompanyID + "");
+            Main.fillDgv(dgv_BrandSetup, "select PID,PName,PBalance, Pactive from ProductMaster where CompanyID=" + Main.CompanyID + "");
 
         }
 
@@ -134,34 +149,61 @@ namespace POS_GoldStore.Setup
         {
             try
             {
-                txt_Name.Text = "";
+
                 int index = e.RowIndex;
-                string active = "";
-                int Result;
                 if (index > -1)
                 {
                     txt_DataGridViewIndex.Text = index.ToString();
                     DataGridViewRow selectedrow = dgv_BrandSetup.Rows[index];
-                    txt_DataGridViewIndex.Text = selectedrow.Cells[0].Value.ToString();
-                    txt_Name.Text = selectedrow.Cells[1].Value.ToString();
-                    active = selectedrow.Cells[2].Value.ToString();
-                    Result = string.Compare(active, "False");
-                    if (Result == 0)
-                    {
-                        rdo_No.Checked = true;
-                    }
-                    else
-                    {
-                        rdo_Yes.Checked = true;
-                    }
+                    txt_DataGridViewIndex.Text = selectedrow.Cells["PID"].Value.ToString();
+                    txt_Name.Text = selectedrow.Cells["PName"].Value.ToString();
+                    txt_PBalance.Text = selectedrow.Cells["PBalance"].Value.ToString();
+                    bool active = Convert.ToBoolean(selectedrow.Cells["PActive"].Value.ToString());
+                    if (active == true) rdo_Yes.Checked = true;
+                    else rdo_No.Checked = true;
+
                 }
                 index = 0;
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdo_No_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdo_Yes_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_DataGridViewIndex_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

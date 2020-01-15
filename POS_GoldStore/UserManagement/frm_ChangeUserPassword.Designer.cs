@@ -46,6 +46,7 @@
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_close.FlatAppearance.BorderSize = 0;
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_26;
             this.btn_close.Location = new System.Drawing.Point(248, 16);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(24, 27);
@@ -157,9 +158,10 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 87);
+            this.button1.Image = global::POS_GoldStore.Properties.Resources.icons8_user_100;
+            this.button1.Location = new System.Drawing.Point(12, 29);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 134);
+            this.button1.Size = new System.Drawing.Size(263, 192);
             this.button1.TabIndex = 26;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -179,8 +181,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lab_user);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ChangeUserPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ChangeUserPassword";
+            this.Load += new System.EventHandler(this.frm_ChangeUserPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

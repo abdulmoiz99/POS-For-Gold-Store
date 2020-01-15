@@ -52,5 +52,10 @@ namespace POS_GoldStore.UserManagement
                 }
             }
         }
+
+        private void frm_ChangeUserPassword_Load(object sender, EventArgs e)
+        {
+            lab_user.Text = Main.UserName;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using POS_GoldStore.Setup;
+using POS_GoldStore.Transactions;
 using POS_GoldStore.UserManagemen;
 using System;
 using System.Collections.Generic;

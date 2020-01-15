@@ -89,17 +89,41 @@
       <DependentUpon>frm_DocSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
+    <Compile Include="Transactions\frm_CashFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_CashFlow.Designer.cs">
+      <DependentUpon>frm_CashFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\frm_CashTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_CashTemp.Designer.cs">
+      <DependentUpon>frm_CashTemp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transactions\frm_PurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transactions\frm_PurchaseOrder.Designer.cs">
       <DependentUpon>frm_PurchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transactions\frm_PurchaseTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_PurchaseTemp.Designer.cs">
+      <DependentUpon>frm_PurchaseTemp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transactions\frm_SaleOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transactions\frm_SaleOrder.Designer.cs">
       <DependentUpon>frm_SaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\frm_SaleTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_SaleTemp.Designer.cs">
+      <DependentUpon>frm_SaleTemp.cs</DependentUpon>
     </Compile>
     <Compile Include="UserManagement\frm_ChangeUserPassword.cs">
       <SubType>Form</SubType>
@@ -127,6 +151,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Setup\frm_AddCustomer.resx">
       <DependentUpon>frm_AddCustomer.cs</DependentUpon>
@@ -140,11 +165,23 @@
     <EmbeddedResource Include="Setup\frm_DocSetup.resx">
       <DependentUpon>frm_DocSetup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_CashFlow.resx">
+      <DependentUpon>frm_CashFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_CashTemp.resx">
+      <DependentUpon>frm_CashTemp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_PurchaseOrder.resx">
       <DependentUpon>frm_PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_PurchaseTemp.resx">
+      <DependentUpon>frm_PurchaseTemp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_SaleOrder.resx">
       <DependentUpon>frm_SaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_SaleTemp.resx">
+      <DependentUpon>frm_SaleTemp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\frm_ChangeUserPassword.resx">
       <DependentUpon>frm_ChangeUserPassword.cs</DependentUpon>
@@ -164,6 +201,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewFolder_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-bin-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-property-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-undo-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
