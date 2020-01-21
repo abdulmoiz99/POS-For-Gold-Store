@@ -99,7 +99,26 @@ namespace POS_GoldStore.Transactions
             lab_Return.Text = "";
             lab_Amount.Text = "";
         }
-
+        public bool checkStock(float weight, int ProductID)
+        {
+            String BalanceWeight = SQL.ScalarQuery("Select PBalance from ProductMaster where PID ="+ProductID+"");
+            float fBalanceWeight;
+            float.TryParse(BalanceWeight, out fBalanceWeight);
+            if (fBalanceWeight >= weight)
+            {
+                return true;
+            }
+            else return false;
+        }
+        public void AllClear()
+        {
+            txt_CIRemarks.Text = "";
+            txt_ProductWeight.Text = "";
+            txt_ProductRate.Text = "";
+            txt_Amount.Text = ""; 
+            txt_Received.Text = "";
+            txt_Return.Text = "";
+        }
         private void btn_exitForm_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -204,12 +223,23 @@ namespace POS_GoldStore.Transactions
             {
                 MessageBox.Show("Please Enter Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txt_ProductRate.Text == "")
+            else if (checkStock(float.Parse(txt_ProductWeight.Text),int.Parse(cmb_ProductName.SelectedValue.ToString()))==false)
+            {
+                MessageBox.Show("Product Weight Is Less Than Avaiable Stock", "Stock Altert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (txt_ProductRate.Text == "" && rdo_Temp.Checked == false)
             {
                 MessageBox.Show("Please Enter Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                float Rate;
+                if (rdo_Temp.Checked == true)
+                {
+                    Rate = 0;
+                }
+                else Rate = float.Parse(txt_ProductRate.Text);
                 getTransactionMode();
                 SQL.NonScalarQuery(@"Insert into SaleMaster(SMDocId                             ,SMNo                         ,SMNoo           ,SMDate                                                   ,SMCustomerID                           ,SMRemarks                   ,SMProductID                          ,ProductWeight                                , SMRate                                    ,SMAmount                              ,SMMode                                                       ,CompanyID)
                                                          values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intSMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + float.Parse(txt_ProductWeight.Text) + "','" + float.Parse(txt_ProductRate.Text) + "','" + float.Parse(txt_Amount.Text) + "','" + TransactionMode + "'," + Main.CompanyID + ")");
@@ -217,7 +247,9 @@ namespace POS_GoldStore.Transactions
 
                 MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GenerateInvoiceNo();
+                AllClear();
                 frm_SaleOrder_Load(sender, e);
+
             }
         }
 
@@ -245,6 +277,32 @@ namespace POS_GoldStore.Transactions
         {
             ReturnBalance();
             lab_Rec.Text = txt_Received.Text;
+        }
+
+        private void rdo_Temp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo_Temp.Checked == true)
+            {
+                lab_RatePerTola.Visible = false;
+                lab_Amt.Visible = false;
+                lab_Recived.Visible = false;
+                lab_Ret.Visible = false;
+                txt_ProductRate.Visible = false;
+                txt_Amount.Visible = false;
+                txt_Received.Visible = false;
+                txt_Return.Visible = false;
+            }
+            else
+            {
+                lab_RatePerTola.Visible = true;
+                lab_Amt.Visible = true;
+                lab_Recived.Visible = true;
+                lab_Ret.Visible = true;
+                txt_ProductRate.Visible = true;
+                txt_Amount.Visible = true;
+                txt_Received.Visible = true;
+                txt_Return.Visible = true;
+            }
         }
     }
 

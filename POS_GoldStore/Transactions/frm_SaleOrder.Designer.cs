@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmb_CustomerName = new SergeUtils.EasyCompletionComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lab_RatePerTola = new System.Windows.Forms.Label();
             this.gbPartyInfo = new System.Windows.Forms.GroupBox();
             this.txt_CICellNo = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
@@ -49,14 +49,14 @@
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Return = new System.Windows.Forms.TextBox();
             this.txt_Received = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmb_InvoiceType = new SergeUtils.EasyCompletionComboBox();
+            this.lab_Ret = new System.Windows.Forms.Label();
+            this.lab_Recived = new System.Windows.Forms.Label();
             this.cmb_ProductName = new SergeUtils.EasyCompletionComboBox();
             this.txt_Amount = new System.Windows.Forms.TextBox();
             this.txt_ProductRate = new System.Windows.Forms.TextBox();
             this.txt_ProductWeight = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lab_Amt = new System.Windows.Forms.Label();
+            this.cmb_InvoiceType = new SergeUtils.EasyCompletionComboBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_CustomerId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -107,16 +107,16 @@
             this.cmb_CustomerName.TabIndex = 1002;
             this.cmb_CustomerName.SelectedIndexChanged += new System.EventHandler(this.cmb_CustomerName_SelectedIndexChanged);
             // 
-            // label7
+            // lab_RatePerTola
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 119);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Rate Per Tola :";
+            this.lab_RatePerTola.AutoSize = true;
+            this.lab_RatePerTola.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_RatePerTola.Location = new System.Drawing.Point(32, 119);
+            this.lab_RatePerTola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_RatePerTola.Name = "lab_RatePerTola";
+            this.lab_RatePerTola.Size = new System.Drawing.Size(116, 23);
+            this.lab_RatePerTola.TabIndex = 22;
+            this.lab_RatePerTola.Text = "Rate Per Tola :";
             // 
             // gbPartyInfo
             // 
@@ -261,14 +261,14 @@
             // 
             this.GroupBox2.Controls.Add(this.txt_Return);
             this.GroupBox2.Controls.Add(this.txt_Received);
-            this.GroupBox2.Controls.Add(this.label10);
-            this.GroupBox2.Controls.Add(this.label9);
+            this.GroupBox2.Controls.Add(this.lab_Ret);
+            this.GroupBox2.Controls.Add(this.lab_Recived);
             this.GroupBox2.Controls.Add(this.cmb_ProductName);
             this.GroupBox2.Controls.Add(this.txt_Amount);
             this.GroupBox2.Controls.Add(this.txt_ProductRate);
             this.GroupBox2.Controls.Add(this.txt_ProductWeight);
-            this.GroupBox2.Controls.Add(this.label7);
-            this.GroupBox2.Controls.Add(this.label6);
+            this.GroupBox2.Controls.Add(this.lab_RatePerTola);
+            this.GroupBox2.Controls.Add(this.lab_Amt);
             this.GroupBox2.Controls.Add(this.label1);
             this.GroupBox2.Controls.Add(this.Label8);
             this.GroupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,37 +305,27 @@
             this.txt_Received.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_Received.TextChanged += new System.EventHandler(this.txt_Received_TextChanged_1);
             // 
-            // label10
+            // lab_Ret
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(79, 220);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 23);
-            this.label10.TabIndex = 1003;
-            this.label10.Text = "Return :";
+            this.lab_Ret.AutoSize = true;
+            this.lab_Ret.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Ret.Location = new System.Drawing.Point(60, 220);
+            this.lab_Ret.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Ret.Name = "lab_Ret";
+            this.lab_Ret.Size = new System.Drawing.Size(86, 23);
+            this.lab_Ret.TabIndex = 1003;
+            this.lab_Ret.Text = "Discount :";
             // 
-            // label9
+            // lab_Recived
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(62, 187);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 23);
-            this.label9.TabIndex = 1004;
-            this.label9.Text = "Received :";
-            // 
-            // cmb_InvoiceType
-            // 
-            this.cmb_InvoiceType.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_InvoiceType.FormattingEnabled = true;
-            this.cmb_InvoiceType.Location = new System.Drawing.Point(120, 128);
-            this.cmb_InvoiceType.Name = "cmb_InvoiceType";
-            this.cmb_InvoiceType.Size = new System.Drawing.Size(43, 26);
-            this.cmb_InvoiceType.TabIndex = 1002;
-            this.cmb_InvoiceType.Visible = false;
+            this.lab_Recived.AutoSize = true;
+            this.lab_Recived.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Recived.Location = new System.Drawing.Point(62, 187);
+            this.lab_Recived.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Recived.Name = "lab_Recived";
+            this.lab_Recived.Size = new System.Drawing.Size(85, 23);
+            this.lab_Recived.TabIndex = 1004;
+            this.lab_Recived.Text = "Received :";
             // 
             // cmb_ProductName
             // 
@@ -382,16 +372,26 @@
             this.txt_ProductWeight.TextChanged += new System.EventHandler(this.txt_ProductWeight_TextChanged);
             this.txt_ProductWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ProductWeight_KeyPress);
             // 
-            // label6
+            // lab_Amt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 155);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 23);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Amount :";
+            this.lab_Amt.AutoSize = true;
+            this.lab_Amt.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Amt.Location = new System.Drawing.Point(70, 155);
+            this.lab_Amt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Amt.Name = "lab_Amt";
+            this.lab_Amt.Size = new System.Drawing.Size(78, 23);
+            this.lab_Amt.TabIndex = 22;
+            this.lab_Amt.Text = "Amount :";
+            // 
+            // cmb_InvoiceType
+            // 
+            this.cmb_InvoiceType.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_InvoiceType.FormattingEnabled = true;
+            this.cmb_InvoiceType.Location = new System.Drawing.Point(120, 128);
+            this.cmb_InvoiceType.Name = "cmb_InvoiceType";
+            this.cmb_InvoiceType.Size = new System.Drawing.Size(43, 26);
+            this.cmb_InvoiceType.TabIndex = 1002;
+            this.cmb_InvoiceType.Visible = false;
             // 
             // GroupBox1
             // 
@@ -554,6 +554,7 @@
             this.rdo_Temp.TabIndex = 1001;
             this.rdo_Temp.Text = "Temp";
             this.rdo_Temp.UseVisualStyleBackColor = true;
+            this.rdo_Temp.CheckedChanged += new System.EventHandler(this.rdo_Temp_CheckedChanged);
             // 
             // rdo_Credit
             // 
@@ -650,7 +651,7 @@
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(161)))), ((int)(((byte)(226)))));
-            this.groupBox4.Location = new System.Drawing.Point(443, 361);
+            this.groupBox4.Location = new System.Drawing.Point(453, 352);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -783,7 +784,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_ProductDetails.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_ProductDetails.Location = new System.Drawing.Point(746, 378);
+            this.dgv_ProductDetails.Location = new System.Drawing.Point(769, 378);
             this.dgv_ProductDetails.Name = "dgv_ProductDetails";
             this.dgv_ProductDetails.ReadOnly = true;
             this.dgv_ProductDetails.RowHeadersWidth = 7;
@@ -849,7 +850,7 @@
 
         #endregion
         private SergeUtils.EasyCompletionComboBox cmb_CustomerName;
-        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.Label lab_RatePerTola;
         internal System.Windows.Forms.GroupBox gbPartyInfo;
         private System.Windows.Forms.TextBox txt_CICellNo;
         internal System.Windows.Forms.Label Label12;
@@ -869,7 +870,7 @@
         internal System.Windows.Forms.TextBox txt_Amount;
         internal System.Windows.Forms.TextBox txt_ProductRate;
         internal System.Windows.Forms.TextBox txt_ProductWeight;
-        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.Label lab_Amt;
         internal System.Windows.Forms.GroupBox GroupBox1;
         private System.Windows.Forms.TextBox txt_CustomerId;
         private System.Windows.Forms.Panel panel1;
@@ -899,8 +900,8 @@
         private System.Windows.Forms.Label label5;
         internal System.Windows.Forms.TextBox txt_Return;
         internal System.Windows.Forms.TextBox txt_Received;
-        internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.Label lab_Ret;
+        internal System.Windows.Forms.Label lab_Recived;
         private System.Windows.Forms.DataGridView dgv_ProductDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Balance;

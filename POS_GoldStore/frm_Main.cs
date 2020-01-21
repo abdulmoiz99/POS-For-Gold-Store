@@ -1,4 +1,5 @@
-﻿using POS_GoldStore.Setup;
+﻿using POS_GoldStore.Expense;
+using POS_GoldStore.Setup;
 using POS_GoldStore.Transactions;
 using POS_GoldStore.UserManagement;
 using System;
@@ -338,6 +339,31 @@ namespace POS_GoldStore
             catch (Exception)
             {
             }
+        }
+
+        private void expenseSetupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_ExpenseSetup();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+
+        }
+
+        private void btn_Expense_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_AddExpense();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_Dashboard();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
     }
 }

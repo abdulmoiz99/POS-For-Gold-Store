@@ -33,18 +33,20 @@
             this.btn_SaleOrder = new System.Windows.Forms.Button();
             this.btn_PurchaseOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Expense = new System.Windows.Forms.Button();
             this.btn_SaleTemp = new System.Windows.Forms.Button();
             this.btn_PurchaseTemp = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voucherSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expenseSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +93,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btn_Expense);
             this.panel2.Controls.Add(this.btn_SaleTemp);
             this.panel2.Controls.Add(this.btn_CashTemp);
             this.panel2.Controls.Add(this.btn_PurchaseTemp);
@@ -102,6 +105,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 712);
             this.panel2.TabIndex = 4;
+            // 
+            // btn_Expense
+            // 
+            this.btn_Expense.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Expense.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Expense.ForeColor = System.Drawing.Color.White;
+            this.btn_Expense.Location = new System.Drawing.Point(3, 337);
+            this.btn_Expense.Name = "btn_Expense";
+            this.btn_Expense.Size = new System.Drawing.Size(220, 46);
+            this.btn_Expense.TabIndex = 3;
+            this.btn_Expense.Text = "&Expense";
+            this.btn_Expense.UseVisualStyleBackColor = false;
+            this.btn_Expense.Click += new System.EventHandler(this.btn_Expense_Click);
             // 
             // btn_SaleTemp
             // 
@@ -140,6 +156,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "&Dashboard";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
             // 
@@ -153,11 +170,6 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // mainToolStripMenuItem
             // 
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
@@ -169,7 +181,8 @@
             this.setupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProductToolStripMenuItem,
             this.addCustomerToolStripMenuItem,
-            this.voucherSetupToolStripMenuItem});
+            this.voucherSetupToolStripMenuItem,
+            this.expenseSetupToolStripMenuItem});
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
             this.setupToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.setupToolStripMenuItem.Text = "Setup";
@@ -177,23 +190,30 @@
             // addProductToolStripMenuItem
             // 
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click_1);
             // 
             // addCustomerToolStripMenuItem
             // 
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addCustomerToolStripMenuItem.Text = "Add Customer";
             this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
             // voucherSetupToolStripMenuItem
             // 
             this.voucherSetupToolStripMenuItem.Name = "voucherSetupToolStripMenuItem";
-            this.voucherSetupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.voucherSetupToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.voucherSetupToolStripMenuItem.Text = "Voucher Setup";
             this.voucherSetupToolStripMenuItem.Click += new System.EventHandler(this.voucherSetupToolStripMenuItem_Click_1);
+            // 
+            // expenseSetupToolStripMenuItem
+            // 
+            this.expenseSetupToolStripMenuItem.Name = "expenseSetupToolStripMenuItem";
+            this.expenseSetupToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.expenseSetupToolStripMenuItem.Text = "Expense Setup";
+            this.expenseSetupToolStripMenuItem.Click += new System.EventHandler(this.expenseSetupToolStripMenuItem_Click);
             // 
             // userManagementToolStripMenuItem
             // 
@@ -209,6 +229,11 @@
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // frm_Main
             // 
@@ -249,5 +274,7 @@
         private System.Windows.Forms.ToolStripMenuItem userManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem expenseSetupToolStripMenuItem;
+        private System.Windows.Forms.Button btn_Expense;
     }
 }

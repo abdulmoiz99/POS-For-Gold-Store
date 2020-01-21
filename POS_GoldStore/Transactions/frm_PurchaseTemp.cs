@@ -40,6 +40,7 @@ namespace POS_GoldStore.Transactions
                     txt_Quantity.Text = selectedrow.Cells["ProductWeight"].Value.ToString();
                     txt_BalanceQuantity.Text = selectedrow.Cells["BalQty"].Value.ToString();
                     txt_ProductId.Text = selectedrow.Cells["PMProductID"].Value.ToString();
+                    txt_CustomerName.Text = selectedrow.Cells["CustomerName"].Value.ToString();
 
                 }
                 index = 0;
@@ -52,7 +53,7 @@ namespace POS_GoldStore.Transactions
 
         private void frm_PurchaseTemp_Activated(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_SaleTemp, "select PMId,PMNo,PMDate,pMCustomerID,PMProductId,PName,ProductWeight,BalQty,PMRate,PMAmount from TvuFrmTempPaid where BalQty>0");
+            Main.fillDgv(dgv_SaleTemp, "select PMId,PMNo,PMDate,pMCustomerID,CustomerName,PMProductId,PName,ProductWeight,BalQty,PMRate,PMAmount from TvuFrmTempPaid where BalQty>0");
 
         }
 
@@ -72,7 +73,7 @@ namespace POS_GoldStore.Transactions
                 SQL.NonScalarQuery(@"Insert Into tempmaster (TMDate                      ,TMInvID                          ,TMType,TMCSID                ,TMQty)
                                                       values('" + dtp_date.Value.Date.ToString("yyyyMMdd") + "'," + int.Parse(txt_SMID.Text) + " ,1    ," + Main.CompanyID + "," + Quantity + ")");
                 SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + float.Parse(txt_NewQuantity.Text) + " where pID = " + int.Parse(txt_ProductId.Text) + "");
-
+                frm_PurchaseTemp_Activated( sender,  e);
                 MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -108,7 +109,7 @@ namespace POS_GoldStore.Transactions
 
         private void txt_Find_TextChanged(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_SaleTemp, "select PMId,pMNo,pMDate,PMCustomerID,PName,ProductWeight,BalQty,PMRate,PMAmount  from TvuFrmTempPaid where CompanyID=" + Main.CompanyID + " AND + CAST(SMNo as varchar) + CAST(SMCustomerID as varchar) + CAST(PName as varchar)  like '%" + txt_Find.Text + "%'");
+            Main.fillDgv(dgv_SaleTemp, "select PMId,pMNo,pMDate,PMCustomerID,CustomerName,PName,ProductWeight,BalQty,PMRate,PMAmount  from TvuFrmTempPaid where CompanyID=" + Main.CompanyID + " AND + CAST(PMNo as varchar) + CAST(PMCustomerID as varchar) + CAST(PName as varchar) + Cast(Customername as varchar)  like '%" + txt_Find.Text + "%'");
 
         }
 

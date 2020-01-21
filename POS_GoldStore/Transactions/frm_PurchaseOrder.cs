@@ -15,7 +15,7 @@ namespace POS_GoldStore.Transactions
     {
         int intPMNoo;
         int mode;
-        
+
         string TransactionMode;
         public void AmountFormula()
         {
@@ -28,7 +28,7 @@ namespace POS_GoldStore.Transactions
             txt_Amount.Text = output.ToString();
             lab_Amount.Text = output.ToString();
             ReturnBalance();
-            
+
         }
         public void enable_disable(bool TorF)
         {
@@ -69,7 +69,7 @@ namespace POS_GoldStore.Transactions
             }
             catch (Exception ex)
             {
-                MessageBox.Show( ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
         public void getTransactionMode()
@@ -95,7 +95,15 @@ namespace POS_GoldStore.Transactions
             lab_Return.Text = "";
             lab_Amount.Text = "";
         }
-
+        public void AllClear()
+        {
+            txt_CIRemarks.Text = "";
+            txt_ProductWeight.Text = "";
+            txt_ProductRate.Text = "";
+            txt_Amount.Text = "";
+            txt_Given.Text = "";
+            txt_Return.Text = "";
+        }
         private void btn_exitForm_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -203,6 +211,7 @@ namespace POS_GoldStore.Transactions
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            float PWeight = 0, PAmount = 0;
             if (cmb_CustomerName.SelectedIndex < 0)
             {
                 MessageBox.Show("Please Select Customer Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -211,27 +220,42 @@ namespace POS_GoldStore.Transactions
             {
                 MessageBox.Show("Please Enter Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txt_ProductRate.Text == "")
+            else if (txt_ProductRate.Text == "" && rdo_Temp.Checked == false)
             {
                 MessageBox.Show("Please Enter Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (!float.TryParse(txt_ProductWeight.Text, out PWeight))
+            {
+                MessageBox.Show("Invalid Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!float.TryParse(txt_ProductRate.Text, out PAmount))
+            {
+                MessageBox.Show("Invalid Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
+                float Rate;
+                if (rdo_Temp.Checked == true)
+                {
+                    Rate = 0;
+                }
+                else Rate = float.Parse(txt_ProductRate.Text);
                 getTransactionMode();
-                SQL.NonScalarQuery(@"Insert into PurchaseMaster(PMDocId                             ,PMNo                         ,PMNoo           ,PMDate                                                   ,PMCustomerID                           ,PMRemarks                   ,PMProductID                          ,ProductWeight                                , PMRate                                    ,PMAmount                              ,PMMode                 ,PMDueDate                                        ,CompanyID)
-                                                         values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intPMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + float.Parse(txt_ProductWeight.Text) + "','" + float.Parse(txt_ProductRate.Text) + "','" + float.Parse(txt_Amount.Text) + "','" + TransactionMode + "','" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + Main.CompanyID + ")");
+                SQL.NonScalarQuery(@"Insert into PurchaseMaster(PMDocId                              ,PMNo                        ,PMNoo           ,PMDate                                                   ,PMCustomerID                           ,PMRemarks                   ,PMProductID                          ,ProductWeight    ,PMRate        ,PMAmount         ,PMMode                  ,PMDueDate                                                 ,CompanyID)
+                                                         values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intPMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + PWeight + "','" + Rate + "','" + PAmount + "','" + TransactionMode + "','" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + Main.CompanyID + ")");
 
 
-                SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance + "+float.Parse(txt_ProductWeight.Text)+" where pID = "+ cmb_ProductName.SelectedValue + "");
+                SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance + " + float.Parse(txt_ProductWeight.Text) + " where pID = " + cmb_ProductName.SelectedValue + "");
                 MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GenerateInvoiceNo();
+                AllClear();
                 frm_PurchaseOrder_Load(sender, e);
             }
         }
         public void ReturnBalance()
         {
             double received;
-            double.TryParse(txt_Received.Text, out received);
+            double.TryParse(txt_Given.Text, out received);
             double Total = received - Convert.ToDouble(txt_Amount.Text);
             Total = Math.Round(Total, 0);
             txt_Return.Text = Total.ToString();
@@ -241,12 +265,38 @@ namespace POS_GoldStore.Transactions
         private void txt_Received_TextChanged(object sender, EventArgs e)
         {
             ReturnBalance();
-            lab_Rec.Text = txt_Received.Text;
+            lab_Rec.Text = txt_Given.Text;
         }
 
         private void txt_Amount_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void rdo_Temp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo_Temp.Checked == true)
+            {
+                lab_RatePerTola.Visible = false;
+                lab_Amt.Visible = false;
+                lab_Given.Visible = false;
+                lab_Ret.Visible = false;
+                txt_ProductRate.Visible = false;
+                txt_Amount.Visible = false;
+                txt_Given.Visible = false;
+                txt_Return.Visible = false;
+            }
+            else
+            {
+                lab_RatePerTola.Visible = true;
+                lab_Amt.Visible = true;
+                lab_Given.Visible = true;
+                lab_Ret.Visible = true;
+                txt_ProductRate.Visible = true;
+                txt_Amount.Visible = true;
+                txt_Given.Visible = true;
+                txt_Return.Visible = true;
+            }
         }
     }
 }

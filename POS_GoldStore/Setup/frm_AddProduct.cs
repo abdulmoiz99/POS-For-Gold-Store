@@ -158,6 +158,7 @@ namespace POS_GoldStore.Setup
                     txt_DataGridViewIndex.Text = selectedrow.Cells["PID"].Value.ToString();
                     txt_Name.Text = selectedrow.Cells["PName"].Value.ToString();
                     txt_PBalance.Text = selectedrow.Cells["PBalance"].Value.ToString();
+                    txt_Remarks.Text = selectedrow.Cells["Remarks"].Value.ToString();
                     bool active = Convert.ToBoolean(selectedrow.Cells["PActive"].Value.ToString());
                     if (active == true) rdo_Yes.Checked = true;
                     else rdo_No.Checked = true;

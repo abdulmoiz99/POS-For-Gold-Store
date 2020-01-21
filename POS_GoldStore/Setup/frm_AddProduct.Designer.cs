@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AddProduct));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_DataGridViewIndex = new System.Windows.Forms.TextBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
@@ -54,9 +54,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_PBalance = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_Remarks = new System.Windows.Forms.TextBox();
             this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BrandSetup)).BeginInit();
@@ -69,7 +72,7 @@
             // 
             this.txt_DataGridViewIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_DataGridViewIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DataGridViewIndex.Location = new System.Drawing.Point(361, 240);
+            this.txt_DataGridViewIndex.Location = new System.Drawing.Point(361, 305);
             this.txt_DataGridViewIndex.Name = "txt_DataGridViewIndex";
             this.txt_DataGridViewIndex.Size = new System.Drawing.Size(24, 29);
             this.txt_DataGridViewIndex.TabIndex = 193;
@@ -202,33 +205,34 @@
             // 
             this.dgv_BrandSetup.AllowUserToAddRows = false;
             this.dgv_BrandSetup.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgv_BrandSetup.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgv_BrandSetup.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_BrandSetup.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_BrandSetup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_BrandSetup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_BrandSetup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_BrandSetup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PID,
             this.PName,
             this.PBalance,
+            this.PRemarks,
             this.PActive});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_BrandSetup.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_BrandSetup.Location = new System.Drawing.Point(17, 316);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_BrandSetup.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_BrandSetup.Location = new System.Drawing.Point(17, 358);
             this.dgv_BrandSetup.Name = "dgv_BrandSetup";
             this.dgv_BrandSetup.ReadOnly = true;
             this.dgv_BrandSetup.RowTemplate.Height = 35;
@@ -316,7 +320,7 @@
             this.rdo_No.AutoSize = true;
             this.rdo_No.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdo_No.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.rdo_No.Location = new System.Drawing.Point(175, 210);
+            this.rdo_No.Location = new System.Drawing.Point(201, 255);
             this.rdo_No.Name = "rdo_No";
             this.rdo_No.Size = new System.Drawing.Size(58, 28);
             this.rdo_No.TabIndex = 4;
@@ -331,7 +335,7 @@
             this.rdo_Yes.Checked = true;
             this.rdo_Yes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdo_Yes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.rdo_Yes.Location = new System.Drawing.Point(106, 210);
+            this.rdo_Yes.Location = new System.Drawing.Point(132, 255);
             this.rdo_Yes.Name = "rdo_Yes";
             this.rdo_Yes.Size = new System.Drawing.Size(63, 28);
             this.rdo_Yes.TabIndex = 3;
@@ -357,7 +361,7 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txt_Find);
-            this.groupBox1.Location = new System.Drawing.Point(17, 249);
+            this.groupBox1.Location = new System.Drawing.Point(17, 291);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(338, 52);
             this.groupBox1.TabIndex = 192;
@@ -369,7 +373,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.label2.Location = new System.Drawing.Point(12, 210);
+            this.label2.Location = new System.Drawing.Point(38, 255);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 24);
@@ -401,6 +405,30 @@
             this.txt_PBalance.TabIndex = 2;
             this.txt_PBalance.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.label5.Location = new System.Drawing.Point(13, 201);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 24);
+            this.label5.TabIndex = 183;
+            this.label5.Text = "Remarks :";
+            this.label5.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txt_Remarks
+            // 
+            this.txt_Remarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Remarks.Enabled = false;
+            this.txt_Remarks.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Remarks.Location = new System.Drawing.Point(132, 201);
+            this.txt_Remarks.Name = "txt_Remarks";
+            this.txt_Remarks.Size = new System.Drawing.Size(249, 33);
+            this.txt_Remarks.TabIndex = 2;
+            this.txt_Remarks.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
+            // 
             // PID
             // 
             this.PID.DataPropertyName = "PID";
@@ -424,6 +452,14 @@
             this.PBalance.Name = "PBalance";
             this.PBalance.ReadOnly = true;
             // 
+            // PRemarks
+            // 
+            this.PRemarks.DataPropertyName = "PRemarks";
+            this.PRemarks.HeaderText = "PRemarks";
+            this.PRemarks.Name = "PRemarks";
+            this.PRemarks.ReadOnly = true;
+            this.PRemarks.Visible = false;
+            // 
             // PActive
             // 
             this.PActive.DataPropertyName = "PActive";
@@ -442,10 +478,12 @@
             this.Controls.Add(this.txt_DataGridViewIndex);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgv_BrandSetup);
+            this.Controls.Add(this.txt_Remarks);
             this.Controls.Add(this.txt_PBalance);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.rdo_No);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rdo_Yes);
@@ -493,9 +531,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_PBalance;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PBalance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRemarks;
         private System.Windows.Forms.DataGridViewCheckBoxColumn PActive;
     }
 }

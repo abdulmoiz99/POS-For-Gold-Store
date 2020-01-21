@@ -147,11 +147,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.label8.Location = new System.Drawing.Point(65, 240);
+            this.label8.Location = new System.Drawing.Point(78, 240);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 28);
+            this.label8.Size = new System.Drawing.Size(133, 28);
             this.label8.TabIndex = 39;
-            this.label8.Text = "Mobile Store";
+            this.label8.Text = "Gold Store";
             // 
             // cmb_CompanyName
             // 

@@ -34,10 +34,6 @@
             this.GroupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_CustomerId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_Print = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rdo_Temp = new System.Windows.Forms.RadioButton();
             this.rdo_Credit = new System.Windows.Forms.RadioButton();
@@ -49,7 +45,6 @@
             this.txt_ProductRate = new System.Windows.Forms.TextBox();
             this.txt_ProductWeight = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_exitForm = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lab_Amount = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -62,7 +57,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmb_CustomerName = new SergeUtils.EasyCompletionComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lab_RatePerTola = new System.Windows.Forms.Label();
             this.gbPartyInfo = new System.Windows.Forms.GroupBox();
             this.txt_CICellNo = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
@@ -71,22 +66,27 @@
             this.Label36 = new System.Windows.Forms.Label();
             this.btnfnd = new System.Windows.Forms.Button();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_InvoiceType = new SergeUtils.EasyCompletionComboBox();
             this.dtp_InvoiceDate = new System.Windows.Forms.DateTimePicker();
             this.Label3 = new System.Windows.Forms.Label();
             this.txt_InvoiceNo = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmb_InvoiceType = new SergeUtils.EasyCompletionComboBox();
             this.txt_Return = new System.Windows.Forms.TextBox();
-            this.txt_Received = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txt_Given = new System.Windows.Forms.TextBox();
+            this.lab_Ret = new System.Windows.Forms.Label();
+            this.lab_Given = new System.Windows.Forms.Label();
+            this.lab_Amt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_ProductDetails = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_exitForm = new System.Windows.Forms.Button();
+            this.btn_Print = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_New = new System.Windows.Forms.Button();
             this.GroupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -133,80 +133,6 @@
             this.label4.TabIndex = 332;
             this.label4.Text = "Customer Id :";
             // 
-            // btn_Print
-            // 
-            this.btn_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_Print.Enabled = false;
-            this.btn_Print.FlatAppearance.BorderSize = 0;
-            this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Print.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Print.ForeColor = System.Drawing.Color.White;
-            this.btn_Print.Image = global::POS_GoldStore.Properties.Resources.icons8_print_36;
-            this.btn_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Print.Location = new System.Drawing.Point(149, 19);
-            this.btn_Print.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_Print.Name = "btn_Print";
-            this.btn_Print.Size = new System.Drawing.Size(133, 43);
-            this.btn_Print.TabIndex = 326;
-            this.btn_Print.Text = "&Print";
-            this.btn_Print.UseVisualStyleBackColor = false;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_cancel.Enabled = false;
-            this.btn_cancel.FlatAppearance.BorderSize = 0;
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Image = global::POS_GoldStore.Properties.Resources.icons8_undo_36;
-            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancel.Location = new System.Drawing.Point(149, 72);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(133, 43);
-            this.btn_cancel.TabIndex = 329;
-            this.btn_cancel.Text = "    &Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_Save.Enabled = false;
-            this.btn_Save.FlatAppearance.BorderSize = 0;
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Image = global::POS_GoldStore.Properties.Resources.icons8_save_36;
-            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Save.Location = new System.Drawing.Point(8, 72);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(133, 43);
-            this.btn_Save.TabIndex = 330;
-            this.btn_Save.Text = "  &Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // btn_New
-            // 
-            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_New.FlatAppearance.BorderSize = 0;
-            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_New.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_New.ForeColor = System.Drawing.Color.White;
-            this.btn_New.Image = global::POS_GoldStore.Properties.Resources.AddNewFolder_36;
-            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_New.Location = new System.Drawing.Point(8, 19);
-            this.btn_New.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(133, 43);
-            this.btn_New.TabIndex = 326;
-            this.btn_New.Text = "&New";
-            this.btn_New.UseVisualStyleBackColor = false;
-            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.rdo_Temp);
@@ -230,6 +156,7 @@
             this.rdo_Temp.TabIndex = 1001;
             this.rdo_Temp.Text = "Temp";
             this.rdo_Temp.UseVisualStyleBackColor = true;
+            this.rdo_Temp.CheckedChanged += new System.EventHandler(this.rdo_Temp_CheckedChanged);
             // 
             // rdo_Credit
             // 
@@ -338,25 +265,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1014, 75);
             this.panel2.TabIndex = 1028;
-            // 
-            // btn_exitForm
-            // 
-            this.btn_exitForm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_exitForm.FlatAppearance.BorderSize = 0;
-            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
-            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(896, 0);
-            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_exitForm.Name = "btn_exitForm";
-            this.btn_exitForm.Size = new System.Drawing.Size(118, 75);
-            this.btn_exitForm.TabIndex = 1016;
-            this.btn_exitForm.Text = "     &Close";
-            this.btn_exitForm.UseVisualStyleBackColor = false;
-            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
             // 
             // groupBox4
             // 
@@ -497,16 +405,16 @@
             this.cmb_CustomerName.TabIndex = 1002;
             this.cmb_CustomerName.SelectedIndexChanged += new System.EventHandler(this.cmb_CustomerName_SelectedIndexChanged);
             // 
-            // label7
+            // lab_RatePerTola
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 119);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Rate Per Tola :";
+            this.lab_RatePerTola.AutoSize = true;
+            this.lab_RatePerTola.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_RatePerTola.Location = new System.Drawing.Point(32, 119);
+            this.lab_RatePerTola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_RatePerTola.Name = "lab_RatePerTola";
+            this.lab_RatePerTola.Size = new System.Drawing.Size(116, 23);
+            this.lab_RatePerTola.TabIndex = 22;
+            this.lab_RatePerTola.Text = "Rate Per Tola :";
             // 
             // gbPartyInfo
             // 
@@ -601,6 +509,16 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Invoice Info";
             // 
+            // cmb_InvoiceType
+            // 
+            this.cmb_InvoiceType.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_InvoiceType.FormattingEnabled = true;
+            this.cmb_InvoiceType.Location = new System.Drawing.Point(120, 118);
+            this.cmb_InvoiceType.Name = "cmb_InvoiceType";
+            this.cmb_InvoiceType.Size = new System.Drawing.Size(48, 26);
+            this.cmb_InvoiceType.TabIndex = 1002;
+            this.cmb_InvoiceType.Visible = false;
+            // 
             // dtp_InvoiceDate
             // 
             this.dtp_InvoiceDate.CustomFormat = "dd/MM/yyyy";
@@ -658,14 +576,14 @@
             // 
             this.GroupBox2.Controls.Add(this.cmb_ProductName);
             this.GroupBox2.Controls.Add(this.txt_Return);
-            this.GroupBox2.Controls.Add(this.txt_Received);
+            this.GroupBox2.Controls.Add(this.txt_Given);
             this.GroupBox2.Controls.Add(this.txt_Amount);
             this.GroupBox2.Controls.Add(this.txt_ProductRate);
             this.GroupBox2.Controls.Add(this.txt_ProductWeight);
-            this.GroupBox2.Controls.Add(this.label10);
-            this.GroupBox2.Controls.Add(this.label9);
-            this.GroupBox2.Controls.Add(this.label7);
-            this.GroupBox2.Controls.Add(this.label6);
+            this.GroupBox2.Controls.Add(this.lab_Ret);
+            this.GroupBox2.Controls.Add(this.lab_Given);
+            this.GroupBox2.Controls.Add(this.lab_RatePerTola);
+            this.GroupBox2.Controls.Add(this.lab_Amt);
             this.GroupBox2.Controls.Add(this.label1);
             this.GroupBox2.Controls.Add(this.Label8);
             this.GroupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -679,16 +597,6 @@
             this.GroupBox2.Text = "Product Info";
             this.GroupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
-            // cmb_InvoiceType
-            // 
-            this.cmb_InvoiceType.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_InvoiceType.FormattingEnabled = true;
-            this.cmb_InvoiceType.Location = new System.Drawing.Point(120, 118);
-            this.cmb_InvoiceType.Name = "cmb_InvoiceType";
-            this.cmb_InvoiceType.Size = new System.Drawing.Size(48, 26);
-            this.cmb_InvoiceType.TabIndex = 1002;
-            this.cmb_InvoiceType.Visible = false;
-            // 
             // txt_Return
             // 
             this.txt_Return.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -700,50 +608,50 @@
             this.txt_Return.TabIndex = 358;
             this.txt_Return.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txt_Received
+            // txt_Given
             // 
-            this.txt_Received.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txt_Received.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Received.Location = new System.Drawing.Point(155, 186);
-            this.txt_Received.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Received.Name = "txt_Received";
-            this.txt_Received.Size = new System.Drawing.Size(268, 24);
-            this.txt_Received.TabIndex = 358;
-            this.txt_Received.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_Received.TextChanged += new System.EventHandler(this.txt_Received_TextChanged);
+            this.txt_Given.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txt_Given.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Given.Location = new System.Drawing.Point(155, 186);
+            this.txt_Given.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Given.Name = "txt_Given";
+            this.txt_Given.Size = new System.Drawing.Size(268, 24);
+            this.txt_Given.TabIndex = 358;
+            this.txt_Given.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Given.TextChanged += new System.EventHandler(this.txt_Received_TextChanged);
             // 
-            // label10
+            // lab_Ret
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(79, 220);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 23);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Return :";
+            this.lab_Ret.AutoSize = true;
+            this.lab_Ret.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Ret.Location = new System.Drawing.Point(79, 220);
+            this.lab_Ret.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Ret.Name = "lab_Ret";
+            this.lab_Ret.Size = new System.Drawing.Size(68, 23);
+            this.lab_Ret.TabIndex = 22;
+            this.lab_Ret.Text = "Return :";
             // 
-            // label9
+            // lab_Given
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(62, 187);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 23);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Received :";
+            this.lab_Given.AutoSize = true;
+            this.lab_Given.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Given.Location = new System.Drawing.Point(87, 189);
+            this.lab_Given.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Given.Name = "lab_Given";
+            this.lab_Given.Size = new System.Drawing.Size(60, 23);
+            this.lab_Given.TabIndex = 22;
+            this.lab_Given.Text = "Given :";
             // 
-            // label6
+            // lab_Amt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 155);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 23);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Amount :";
+            this.lab_Amt.AutoSize = true;
+            this.lab_Amt.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Amt.Location = new System.Drawing.Point(70, 155);
+            this.lab_Amt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Amt.Name = "lab_Amt";
+            this.lab_Amt.Size = new System.Drawing.Size(78, 23);
+            this.lab_Amt.TabIndex = 22;
+            this.lab_Amt.Text = "Amount :";
             // 
             // label1
             // 
@@ -808,6 +716,99 @@
             this.Balance.ReadOnly = true;
             this.Balance.Width = 80;
             // 
+            // btn_exitForm
+            // 
+            this.btn_exitForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exitForm.FlatAppearance.BorderSize = 0;
+            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
+            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exitForm.Location = new System.Drawing.Point(896, 0);
+            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_exitForm.Name = "btn_exitForm";
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 75);
+            this.btn_exitForm.TabIndex = 1016;
+            this.btn_exitForm.Text = "     &Close";
+            this.btn_exitForm.UseVisualStyleBackColor = false;
+            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
+            // 
+            // btn_Print
+            // 
+            this.btn_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_Print.Enabled = false;
+            this.btn_Print.FlatAppearance.BorderSize = 0;
+            this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Print.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Print.ForeColor = System.Drawing.Color.White;
+            this.btn_Print.Image = global::POS_GoldStore.Properties.Resources.icons8_print_36;
+            this.btn_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Print.Location = new System.Drawing.Point(149, 19);
+            this.btn_Print.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(133, 43);
+            this.btn_Print.TabIndex = 326;
+            this.btn_Print.Text = "&Print";
+            this.btn_Print.UseVisualStyleBackColor = false;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_cancel.Enabled = false;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Image = global::POS_GoldStore.Properties.Resources.icons8_undo_36;
+            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancel.Location = new System.Drawing.Point(149, 72);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(133, 43);
+            this.btn_cancel.TabIndex = 329;
+            this.btn_cancel.Text = "    &Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_Save.Enabled = false;
+            this.btn_Save.FlatAppearance.BorderSize = 0;
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Image = global::POS_GoldStore.Properties.Resources.icons8_save_36;
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Save.Location = new System.Drawing.Point(8, 72);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(133, 43);
+            this.btn_Save.TabIndex = 330;
+            this.btn_Save.Text = "  &Save";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
+            // btn_New
+            // 
+            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_New.FlatAppearance.BorderSize = 0;
+            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_New.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_New.ForeColor = System.Drawing.Color.White;
+            this.btn_New.Image = global::POS_GoldStore.Properties.Resources.AddNewFolder_36;
+            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_New.Location = new System.Drawing.Point(8, 19);
+            this.btn_New.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_New.Name = "btn_New";
+            this.btn_New.Size = new System.Drawing.Size(133, 43);
+            this.btn_New.TabIndex = 326;
+            this.btn_New.Text = "&New";
+            this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
+            // 
             // frm_PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -870,7 +871,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel1;
         private SergeUtils.EasyCompletionComboBox cmb_CustomerName;
-        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.Label lab_RatePerTola;
         internal System.Windows.Forms.GroupBox gbPartyInfo;
         private System.Windows.Forms.TextBox txt_CICellNo;
         internal System.Windows.Forms.Label Label12;
@@ -885,15 +886,15 @@
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.Label lab_Amt;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label4;
         private SergeUtils.EasyCompletionComboBox cmb_InvoiceType;
         private System.Windows.Forms.TextBox txt_CustomerId;
         internal System.Windows.Forms.TextBox txt_Return;
-        internal System.Windows.Forms.TextBox txt_Received;
-        internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.TextBox txt_Given;
+        internal System.Windows.Forms.Label lab_Ret;
+        internal System.Windows.Forms.Label lab_Given;
         private System.Windows.Forms.Label lab_Rec;
         private System.Windows.Forms.Label lab_Return;
         private System.Windows.Forms.Label label15;
