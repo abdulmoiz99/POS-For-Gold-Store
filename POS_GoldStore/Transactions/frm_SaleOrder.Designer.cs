@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmb_CustomerName = new SergeUtils.EasyCompletionComboBox();
             this.lab_RatePerTola = new System.Windows.Forms.Label();
             this.gbPartyInfo = new System.Windows.Forms.GroupBox();
@@ -87,6 +87,7 @@
             this.dgv_ProductDetails = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Balance = new System.Windows.Forms.Button();
             this.gbPartyInfo.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -602,9 +603,9 @@
             this.label33.Location = new System.Drawing.Point(14, 18);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(153, 33);
+            this.label33.Size = new System.Drawing.Size(257, 33);
             this.label33.TabIndex = 1;
-            this.label33.Text = "Sale Order";
+            this.label33.Text = "Sale / Temp Given";
             // 
             // panel2
             // 
@@ -760,36 +761,36 @@
             // 
             this.dgv_ProductDetails.AllowUserToAddRows = false;
             this.dgv_ProductDetails.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgv_ProductDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgv_ProductDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_ProductDetails.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ProductDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ProductDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_ProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ProductDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Balance});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ProductDetails.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_ProductDetails.Location = new System.Drawing.Point(769, 378);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ProductDetails.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_ProductDetails.Location = new System.Drawing.Point(769, 405);
             this.dgv_ProductDetails.Name = "dgv_ProductDetails";
             this.dgv_ProductDetails.ReadOnly = true;
             this.dgv_ProductDetails.RowHeadersWidth = 7;
             this.dgv_ProductDetails.RowTemplate.Height = 35;
-            this.dgv_ProductDetails.Size = new System.Drawing.Size(214, 253);
+            this.dgv_ProductDetails.Size = new System.Drawing.Size(214, 225);
             this.dgv_ProductDetails.TabIndex = 1040;
             // 
             // Column2
@@ -808,12 +809,30 @@
             this.Balance.ReadOnly = true;
             this.Balance.Width = 80;
             // 
+            // btn_Balance
+            // 
+            this.btn_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_Balance.FlatAppearance.BorderSize = 0;
+            this.btn_Balance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Balance.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Balance.ForeColor = System.Drawing.Color.White;
+            this.btn_Balance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Balance.Location = new System.Drawing.Point(768, 370);
+            this.btn_Balance.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Balance.Name = "btn_Balance";
+            this.btn_Balance.Size = new System.Drawing.Size(214, 35);
+            this.btn_Balance.TabIndex = 1043;
+            this.btn_Balance.Text = "Balance";
+            this.btn_Balance.UseVisualStyleBackColor = false;
+            this.btn_Balance.Click += new System.EventHandler(this.btn_Balance_Click);
+            // 
             // frm_SaleOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(995, 650);
+            this.Controls.Add(this.btn_Balance);
             this.Controls.Add(this.dgv_ProductDetails);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.gbPartyInfo);
@@ -905,5 +924,6 @@
         private System.Windows.Forms.DataGridView dgv_ProductDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Balance;
+        private System.Windows.Forms.Button btn_Balance;
     }
 }

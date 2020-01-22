@@ -143,6 +143,12 @@
     <Compile Include="Transactions\frm_SaleTemp.Designer.cs">
       <DependentUpon>frm_SaleTemp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transactions\frm_TempBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_TempBalance.Designer.cs">
+      <DependentUpon>frm_TempBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManagement\frm_ChangeUserPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_SaleTemp.resx">
       <DependentUpon>frm_SaleTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_TempBalance.resx">
+      <DependentUpon>frm_TempBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\frm_ChangeUserPassword.resx">
       <DependentUpon>frm_ChangeUserPassword.cs</DependentUpon>

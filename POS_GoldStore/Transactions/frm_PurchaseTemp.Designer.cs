@@ -62,9 +62,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.dgv_SaleTemp = new System.Windows.Forms.DataGridView();
-            this.txt_ProductId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +73,9 @@
             this.BalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_ProductId = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -450,34 +450,6 @@
             this.dgv_SaleTemp.TabIndex = 1036;
             this.dgv_SaleTemp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SaleTemp_CellContentClick);
             // 
-            // txt_ProductId
-            // 
-            this.txt_ProductId.Enabled = false;
-            this.txt_ProductId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ProductId.Location = new System.Drawing.Point(631, 692);
-            this.txt_ProductId.Name = "txt_ProductId";
-            this.txt_ProductId.Size = new System.Drawing.Size(43, 26);
-            this.txt_ProductId.TabIndex = 1057;
-            this.txt_ProductId.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-3, 208);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 20);
-            this.label9.TabIndex = 1041;
-            this.label9.Text = "Customer Name :";
-            // 
-            // txt_CustomerName
-            // 
-            this.txt_CustomerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CustomerName.Location = new System.Drawing.Point(139, 205);
-            this.txt_CustomerName.Name = "txt_CustomerName";
-            this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
-            this.txt_CustomerName.TabIndex = 1048;
-            // 
             // PMID
             // 
             this.PMID.DataPropertyName = "PMID";
@@ -560,6 +532,34 @@
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             this.Amount.Visible = false;
+            // 
+            // txt_ProductId
+            // 
+            this.txt_ProductId.Enabled = false;
+            this.txt_ProductId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ProductId.Location = new System.Drawing.Point(631, 692);
+            this.txt_ProductId.Name = "txt_ProductId";
+            this.txt_ProductId.Size = new System.Drawing.Size(43, 26);
+            this.txt_ProductId.TabIndex = 1057;
+            this.txt_ProductId.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(-3, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 20);
+            this.label9.TabIndex = 1041;
+            this.label9.Text = "Customer Name :";
+            // 
+            // txt_CustomerName
+            // 
+            this.txt_CustomerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CustomerName.Location = new System.Drawing.Point(139, 205);
+            this.txt_CustomerName.Name = "txt_CustomerName";
+            this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
+            this.txt_CustomerName.TabIndex = 1048;
             // 
             // frm_PurchaseTemp
             // 

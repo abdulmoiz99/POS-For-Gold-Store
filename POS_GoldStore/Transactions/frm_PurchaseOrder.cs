@@ -298,5 +298,17 @@ namespace POS_GoldStore.Transactions
                 txt_Return.Visible = true;
             }
         }
+
+        private void btn_Balance_Click(object sender, EventArgs e)
+        {
+            if(dgv_ProductDetails.Visible==true)
+            {
+                dgv_ProductDetails.Visible = false;
+            }
+            else
+            {
+                dgv_ProductDetails.Visible = true;
+            }
+        }
     }
 }

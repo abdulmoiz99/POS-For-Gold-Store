@@ -33,6 +33,7 @@
             this.btn_SaleOrder = new System.Windows.Forms.Button();
             this.btn_PurchaseOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_TempBal = new System.Windows.Forms.Button();
             this.btn_Expense = new System.Windows.Forms.Button();
             this.btn_SaleTemp = new System.Windows.Forms.Button();
             this.btn_PurchaseTemp = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btn_TempBal);
             this.panel2.Controls.Add(this.btn_Expense);
             this.panel2.Controls.Add(this.btn_SaleTemp);
             this.panel2.Controls.Add(this.btn_CashTemp);
@@ -105,6 +107,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 712);
             this.panel2.TabIndex = 4;
+            // 
+            // btn_TempBal
+            // 
+            this.btn_TempBal.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_TempBal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TempBal.ForeColor = System.Drawing.Color.White;
+            this.btn_TempBal.Location = new System.Drawing.Point(3, 389);
+            this.btn_TempBal.Name = "btn_TempBal";
+            this.btn_TempBal.Size = new System.Drawing.Size(220, 46);
+            this.btn_TempBal.TabIndex = 4;
+            this.btn_TempBal.Text = "Temp Balance";
+            this.btn_TempBal.UseVisualStyleBackColor = false;
+            this.btn_TempBal.Click += new System.EventHandler(this.btn_TempBal_Click);
             // 
             // btn_Expense
             // 
@@ -276,5 +291,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem expenseSetupToolStripMenuItem;
         private System.Windows.Forms.Button btn_Expense;
+        private System.Windows.Forms.Button btn_TempBal;
     }
 }
