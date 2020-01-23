@@ -101,7 +101,7 @@ namespace POS_GoldStore.Transactions
         }
         public bool checkStock(float weight, int ProductID)
         {
-            String BalanceWeight = SQL.ScalarQuery("Select PBalance from ProductMaster where PID ="+ProductID+"");
+            String BalanceWeight = SQL.ScalarQuery("Select PBalance from ProductMaster where PID =" + ProductID + "");
             float fBalanceWeight;
             float.TryParse(BalanceWeight, out fBalanceWeight);
             if (fBalanceWeight >= weight)
@@ -115,7 +115,7 @@ namespace POS_GoldStore.Transactions
             txt_CIRemarks.Text = "";
             txt_ProductWeight.Text = "";
             txt_ProductRate.Text = "";
-            txt_Amount.Text = ""; 
+            txt_Amount.Text = "";
             txt_Received.Text = "";
             txt_Return.Text = "";
         }
@@ -165,7 +165,7 @@ namespace POS_GoldStore.Transactions
             {
             }
             GenerateInvoiceNo();
-          //  cmb_InvoiceType.SelectedIndex = 1;
+            //  cmb_InvoiceType.SelectedIndex = 1;
         }
 
         private void cmb_CustomerName_SelectedIndexChanged(object sender, EventArgs e)
@@ -223,7 +223,7 @@ namespace POS_GoldStore.Transactions
             {
                 MessageBox.Show("Please Enter Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (checkStock(float.Parse(txt_ProductWeight.Text),int.Parse(cmb_ProductName.SelectedValue.ToString()))==false)
+            else if (checkStock(float.Parse(txt_ProductWeight.Text), int.Parse(cmb_ProductName.SelectedValue.ToString())) == false)
             {
                 MessageBox.Show("Product Weight Is Less Than Avaiable Stock", "Stock Altert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -235,22 +235,31 @@ namespace POS_GoldStore.Transactions
             else
             {
                 float Rate;
+                float Receive;
                 if (rdo_Temp.Checked == true)
                 {
                     Rate = 0;
-                }
-                else Rate = float.Parse(txt_ProductRate.Text);
-                getTransactionMode();
-                SQL.NonScalarQuery(@"Insert into SaleMaster(SMDocId                             ,SMNo                         ,SMNoo           ,SMDate                                                   ,SMCustomerID                           ,SMRemarks                   ,SMProductID                          ,ProductWeight                                , SMRate                                    ,SMAmount                              ,SMMode                                                       ,CompanyID)
-                                                         values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intSMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + float.Parse(txt_ProductWeight.Text) + "','" + float.Parse(txt_ProductRate.Text) + "','" + float.Parse(txt_Amount.Text) + "','" + TransactionMode + "'," + Main.CompanyID + ")");
-                SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + float.Parse(txt_ProductWeight.Text) + " where pID = " + cmb_ProductName.SelectedValue + "");
+                    Receive = 0;
 
-                MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                GenerateInvoiceNo();
-                AllClear();
-                frm_SaleOrder_Load(sender, e);
+                }
+                else
+                {
+                    Rate = float.Parse(txt_ProductRate.Text);
+                    Receive = float.Parse(txt_Received.Text);
+                }
 
             }
+
+            getTransactionMode();
+            SQL.NonScalarQuery(@"Insert into SaleMaster(SMDocId                             ,SMNo                        ,SMNoo           ,SMDate                                                   ,SMCustomerID                           ,SMRemarks                   ,SMProductID                          ,ProductWeight                                , SMRate                                    ,SMAmount                              ,SMRecieve                               ,SMMode                   ,CompanyID)
+                                                values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intSMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + float.Parse(txt_ProductWeight.Text) + "','" + float.Parse(txt_ProductRate.Text) + "','" + float.Parse(txt_Amount.Text) + "','" + float.Parse(txt_Received.Text) + "','" + TransactionMode + "'," + Main.CompanyID + ")");
+            SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + float.Parse(txt_ProductWeight.Text) + " where pID = " + cmb_ProductName.SelectedValue + "");
+
+            MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            GenerateInvoiceNo();
+            AllClear();
+            frm_SaleOrder_Load(sender, e);
+
         }
 
         private void GroupBox2_Enter(object sender, EventArgs e)
@@ -260,8 +269,10 @@ namespace POS_GoldStore.Transactions
         public void ReturnBalance()
         {
             double received;
+            double Amount;
             double.TryParse(txt_Received.Text, out received);
-            double Total = received - Convert.ToDouble(txt_Amount.Text);
+            double.TryParse(txt_Amount.Text, out Amount);
+            double Total = received - Amount;
             Total = Math.Round(Total, 0);
             txt_Return.Text = Total.ToString();
             lab_Return.Text = Total.ToString();

@@ -235,11 +235,17 @@ namespace POS_GoldStore.Transactions
             else
             {
                 float Rate;
+                float Receive;
                 if (rdo_Temp.Checked == true)
                 {
                     Rate = 0;
+                    Receive = 0;
                 }
-                else Rate = float.Parse(txt_ProductRate.Text);
+                else
+                {
+                    Rate = float.Parse(txt_ProductRate.Text);
+                  //  Rate = float.Parse(txt_Re.Text);
+                }
                 getTransactionMode();
                 SQL.NonScalarQuery(@"Insert into PurchaseMaster(PMDocId                              ,PMNo                        ,PMNoo           ,PMDate                                                   ,PMCustomerID                           ,PMRemarks                   ,PMProductID                          ,ProductWeight    ,PMRate        ,PMAmount         ,PMMode                  ,PMDueDate                                                 ,CompanyID)
                                                          values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intPMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + PWeight + "','" + Rate + "','" + PAmount + "','" + TransactionMode + "','" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + Main.CompanyID + ")");
@@ -301,7 +307,7 @@ namespace POS_GoldStore.Transactions
 
         private void btn_Balance_Click(object sender, EventArgs e)
         {
-            if(dgv_ProductDetails.Visible==true)
+            if (dgv_ProductDetails.Visible == true)
             {
                 dgv_ProductDetails.Visible = false;
             }
