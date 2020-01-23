@@ -461,7 +461,6 @@
             // btn_Print
             // 
             this.btn_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_Print.Enabled = false;
             this.btn_Print.FlatAppearance.BorderSize = 0;
             this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Print.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -475,6 +474,7 @@
             this.btn_Print.TabIndex = 326;
             this.btn_Print.Text = "&Print";
             this.btn_Print.UseVisualStyleBackColor = false;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
             // 
             // btn_cancel
             // 

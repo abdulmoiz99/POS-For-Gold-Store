@@ -1,8 +1,11 @@
-﻿using POS_GoldStore.Setup;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using POS_GoldStore.ReprtForm;
+using POS_GoldStore.Setup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -234,32 +237,48 @@ namespace POS_GoldStore.Transactions
             }
             else
             {
-                float Rate;
+                float Weight = 0, Amount = 0, Rate = 0;
                 float Receive;
                 if (rdo_Temp.Checked == true)
                 {
-                    Rate = 0;
+                    txt_Amount.Text = "0";
+                    txt_ProductRate.Text = "0";
                     Receive = 0;
 
                 }
                 else
                 {
-                    Rate = float.Parse(txt_ProductRate.Text);
                     Receive = float.Parse(txt_Received.Text);
                 }
+                if (!float.TryParse(txt_ProductWeight.Text, out Weight))
+                {
+                    MessageBox.Show("Please enter valid weight", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (!float.TryParse(txt_Amount.Text, out Amount))
+                {
+                    MessageBox.Show("Please enter valid amount", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (!float.TryParse(txt_ProductRate.Text, out Rate))
+                {
+                    MessageBox.Show("Please enter valid rate", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
 
+                    getTransactionMode();
+                    SQL.NonScalarQuery(@"Insert into SaleMaster(SMDocId                             ,SMNo                        ,SMNoo           ,SMDate                                                   ,SMCustomerID                           ,SMRemarks                   ,SMProductID                          ,ProductWeight                                , SMRate                                    ,SMAmount                              ,SMRecieve                               ,SMMode                   ,CompanyID)
+                                                values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intSMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + Weight + "','" + Rate + "','" + Amount + "','" + Receive + "','" + TransactionMode + "'," + Main.CompanyID + ")");
+
+                    MessageBox.Show(Weight.ToString());
+                    SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + Weight + " where pID = " + cmb_ProductName.SelectedValue + "");
+
+                    MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GenerateInvoiceNo();
+                    AllClear();
+                    frm_SaleOrder_Load(sender, e);
+
+                }
             }
-
-            getTransactionMode();
-            SQL.NonScalarQuery(@"Insert into SaleMaster(SMDocId                             ,SMNo                        ,SMNoo           ,SMDate                                                   ,SMCustomerID                           ,SMRemarks                   ,SMProductID                          ,ProductWeight                                , SMRate                                    ,SMAmount                              ,SMRecieve                               ,SMMode                   ,CompanyID)
-                                                values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intSMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + float.Parse(txt_ProductWeight.Text) + "','" + float.Parse(txt_ProductRate.Text) + "','" + float.Parse(txt_Amount.Text) + "','" + float.Parse(txt_Received.Text) + "','" + TransactionMode + "'," + Main.CompanyID + ")");
-            SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + float.Parse(txt_ProductWeight.Text) + " where pID = " + cmb_ProductName.SelectedValue + "");
-
-            MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GenerateInvoiceNo();
-            AllClear();
-            frm_SaleOrder_Load(sender, e);
-
         }
 
         private void GroupBox2_Enter(object sender, EventArgs e)
@@ -326,6 +345,48 @@ namespace POS_GoldStore.Transactions
             {
                 dgv_ProductDetails.Visible = true;
             }
+        }
+        //public void GetID()
+        //{
+        //    String S_ID = SQL.ScalarQuery("select * from sale master where SMNo='"+SM+"'")
+        //}
+        //private void Report(int PMID)
+        private void Report()
+        {
+            try
+            {
+                if (SQL.Con.State == ConnectionState.Open)
+                {
+                    SQL.Con.Close();
+                }
+                SQL.Con.Open();
+                Cursor = Cursors.WaitCursor;
+                ReportDocument myReport = new ReportDocument();
+                string reportPath = (Application.StartupPath + @"\Reports\SaleInvoice.rpt");
+                var ds = new DataSet();
+                String SqlQuery = "select * from SaleMaster where SMNoo=" + (intSMNoo - 1) + "";
+                var adapter = new SqlDataAdapter(SqlQuery, SQL.Con);
+                adapter.Fill(ds, "SaleMaster");
+                myReport.Load(reportPath);
+                myReport.SetDataSource(ds);
+                var frm = new frm_ReportForm();
+                frm.crystalReportViewer1.ReportSource = myReport;
+                frm.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                SQL.Con.Close();
+                Cursor = Cursors.Default;
+            }
+        }
+        private void btn_Print_Click(object sender, EventArgs e)
+        {
+            Report();
         }
     }
 

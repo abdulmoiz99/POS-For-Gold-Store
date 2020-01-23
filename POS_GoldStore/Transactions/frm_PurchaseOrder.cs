@@ -224,14 +224,7 @@ namespace POS_GoldStore.Transactions
             {
                 MessageBox.Show("Please Enter Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (!float.TryParse(txt_ProductWeight.Text, out PWeight))
-            {
-                MessageBox.Show("Invalid Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (!float.TryParse(txt_ProductRate.Text, out PAmount))
-            {
-                MessageBox.Show("Invalid Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
             else
             {
                 float Rate;
@@ -240,22 +233,36 @@ namespace POS_GoldStore.Transactions
                 {
                     Rate = 0;
                     Receive = 0;
+                    txt_Amount.Text = "0";
+                    txt_ProductRate.Text = "0";
+                    Receive = 0;
                 }
                 else
                 {
                     Rate = float.Parse(txt_ProductRate.Text);
-                  //  Rate = float.Parse(txt_Re.Text);
+                    //  Rate = float.Parse(txt_Re.Text);
                 }
-                getTransactionMode();
-                SQL.NonScalarQuery(@"Insert into PurchaseMaster(PMDocId                              ,PMNo                        ,PMNoo           ,PMDate                                                   ,PMCustomerID                           ,PMRemarks                   ,PMProductID                          ,ProductWeight    ,PMRate        ,PMAmount         ,PMMode                  ,PMDueDate                                                 ,CompanyID)
+                if (!float.TryParse(txt_ProductWeight.Text, out PWeight))
+                {
+                    MessageBox.Show("Invalid Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (!float.TryParse(txt_ProductRate.Text, out PAmount))
+                {
+                    MessageBox.Show("Invalid Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    getTransactionMode();
+                    SQL.NonScalarQuery(@"Insert into PurchaseMaster(PMDocId                              ,PMNo                        ,PMNoo           ,PMDate                                                   ,PMCustomerID                           ,PMRemarks                   ,PMProductID                          ,ProductWeight    ,PMRate        ,PMAmount         ,PMMode                  ,PMDueDate                                                 ,CompanyID)
                                                          values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intPMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + PWeight + "','" + Rate + "','" + PAmount + "','" + TransactionMode + "','" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + Main.CompanyID + ")");
 
 
-                SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance + " + float.Parse(txt_ProductWeight.Text) + " where pID = " + cmb_ProductName.SelectedValue + "");
-                MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                GenerateInvoiceNo();
-                AllClear();
-                frm_PurchaseOrder_Load(sender, e);
+                    SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance + " + float.Parse(txt_ProductWeight.Text) + " where pID = " + cmb_ProductName.SelectedValue + "");
+                    MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GenerateInvoiceNo();
+                    AllClear();
+                    frm_PurchaseOrder_Load(sender, e);
+                }
             }
         }
         public void ReturnBalance()
