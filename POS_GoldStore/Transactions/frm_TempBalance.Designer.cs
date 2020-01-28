@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TempBalance));
             this.dgv_Temp = new System.Windows.Forms.DataGridView();
-            this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TMQTy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Find = new System.Windows.Forms.TextBox();
@@ -61,102 +53,36 @@
             this.dgv_Temp.AllowUserToAddRows = false;
             this.dgv_Temp.AllowUserToDeleteRows = false;
             this.dgv_Temp.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Temp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Temp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Temp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Temp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PMCustomerID,
-            this.CustomerName,
-            this.CompanyID,
-            this.PMProductID,
-            this.PName,
-            this.ProductWeight,
-            this.TMQTy,
-            this.BalQty});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Temp.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Temp.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Temp.Location = new System.Drawing.Point(17, 187);
             this.dgv_Temp.Name = "dgv_Temp";
             this.dgv_Temp.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Temp.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Temp.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Temp.Size = new System.Drawing.Size(750, 335);
             this.dgv_Temp.TabIndex = 1;
-            // 
-            // PMCustomerID
-            // 
-            this.PMCustomerID.DataPropertyName = "PMCustomerID";
-            this.PMCustomerID.HeaderText = "Customer ID";
-            this.PMCustomerID.Name = "PMCustomerID";
-            this.PMCustomerID.ReadOnly = true;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
-            // CompanyID
-            // 
-            this.CompanyID.DataPropertyName = "CompanyID";
-            this.CompanyID.HeaderText = "CompanyID";
-            this.CompanyID.Name = "CompanyID";
-            this.CompanyID.ReadOnly = true;
-            this.CompanyID.Visible = false;
-            // 
-            // PMProductID
-            // 
-            this.PMProductID.DataPropertyName = "PMProductID";
-            this.PMProductID.HeaderText = "Product ID";
-            this.PMProductID.Name = "PMProductID";
-            this.PMProductID.ReadOnly = true;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Product Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // ProductWeight
-            // 
-            this.ProductWeight.DataPropertyName = "ProductWeight";
-            this.ProductWeight.HeaderText = "Product Weight";
-            this.ProductWeight.Name = "ProductWeight";
-            this.ProductWeight.ReadOnly = true;
-            // 
-            // TMQTy
-            // 
-            this.TMQTy.DataPropertyName = "TMQTy";
-            this.TMQTy.HeaderText = "Total Quantity";
-            this.TMQTy.Name = "TMQTy";
-            this.TMQTy.ReadOnly = true;
-            // 
-            // BalQty
-            // 
-            this.BalQty.DataPropertyName = "BalQty";
-            this.BalQty.HeaderText = "Balance Quantity";
-            this.BalQty.Name = "BalQty";
-            this.BalQty.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -235,11 +161,11 @@
             // 
             this.rb_PurchaseTemp.AutoSize = true;
             this.rb_PurchaseTemp.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.rb_PurchaseTemp.Location = new System.Drawing.Point(383, 89);
+            this.rb_PurchaseTemp.Location = new System.Drawing.Point(398, 89);
             this.rb_PurchaseTemp.Name = "rb_PurchaseTemp";
-            this.rb_PurchaseTemp.Size = new System.Drawing.Size(147, 25);
+            this.rb_PurchaseTemp.Size = new System.Drawing.Size(139, 25);
             this.rb_PurchaseTemp.TabIndex = 1038;
-            this.rb_PurchaseTemp.Text = "Purchase Temp";
+            this.rb_PurchaseTemp.Text = "Receive Temp";
             this.rb_PurchaseTemp.UseVisualStyleBackColor = true;
             // 
             // rb_SaleTemp
@@ -249,10 +175,10 @@
             this.rb_SaleTemp.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.rb_SaleTemp.Location = new System.Drawing.Point(269, 89);
             this.rb_SaleTemp.Name = "rb_SaleTemp";
-            this.rb_SaleTemp.Size = new System.Drawing.Size(108, 25);
+            this.rb_SaleTemp.Size = new System.Drawing.Size(123, 25);
             this.rb_SaleTemp.TabIndex = 1037;
             this.rb_SaleTemp.TabStop = true;
-            this.rb_SaleTemp.Text = "Sale Temp";
+            this.rb_SaleTemp.Text = "Given Temp";
             this.rb_SaleTemp.UseVisualStyleBackColor = true;
             this.rb_SaleTemp.CheckedChanged += new System.EventHandler(this.rb_SaleTemp_CheckedChanged);
             // 
@@ -298,14 +224,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_Temp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PMCustomerID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PMProductID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductWeight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TMQTy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BalQty;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_Find;
