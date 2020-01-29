@@ -373,5 +373,13 @@ namespace POS_GoldStore
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void btn_PurchaseCredit_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_PurchaseCredit();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
     }
 }

@@ -246,9 +246,9 @@ namespace POS_GoldStore.Transactions
                 {
                     MessageBox.Show("Invalid Product Weight", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (!float.TryParse(txt_ProductRate.Text, out PAmount))
+                else if (!float.TryParse(txt_Amount.Text, out PAmount))
                 {
-                    MessageBox.Show("Invalid Product Rate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid Product Amount", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -267,13 +267,26 @@ namespace POS_GoldStore.Transactions
         }
         public void ReturnBalance()
         {
-            double received;
-            double.TryParse(txt_Given.Text, out received);
-            double Total = received - Convert.ToDouble(txt_Amount.Text);
-            Total = Math.Round(Total, 0);
-            txt_Return.Text = Total.ToString();
-            lab_Return.Text = Total.ToString();
-
+            double dGiven, Amount;
+            if (txt_Given.Text == "")
+            {
+                dGiven = 0;
+            }
+            else
+            {
+                double.TryParse(txt_Given.Text, out dGiven);
+            }
+            if (!double.TryParse(txt_Amount.Text, out Amount))
+            {
+               // MessageBox.Show("Amount Is Invalid");
+            }
+            else
+            {
+                double Total = dGiven - Convert.ToDouble(txt_Amount.Text);
+                Total = Math.Round(Total, 0);
+                txt_Return.Text = Total.ToString();
+                lab_Return.Text = Total.ToString();
+            }
         }
         private void txt_Received_TextChanged(object sender, EventArgs e)
         {

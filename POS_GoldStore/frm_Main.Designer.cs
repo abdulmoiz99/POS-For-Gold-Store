@@ -48,6 +48,7 @@
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_PurchaseCredit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +95,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btn_PurchaseCredit);
             this.panel2.Controls.Add(this.btn_TempBal);
             this.panel2.Controls.Add(this.btn_Expense);
             this.panel2.Controls.Add(this.btn_SaleTemp);
@@ -250,6 +252,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btn_PurchaseCredit
+            // 
+            this.btn_PurchaseCredit.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_PurchaseCredit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PurchaseCredit.ForeColor = System.Drawing.Color.White;
+            this.btn_PurchaseCredit.Location = new System.Drawing.Point(3, 441);
+            this.btn_PurchaseCredit.Name = "btn_PurchaseCredit";
+            this.btn_PurchaseCredit.Size = new System.Drawing.Size(220, 46);
+            this.btn_PurchaseCredit.TabIndex = 5;
+            this.btn_PurchaseCredit.Text = "Purchase Credit";
+            this.btn_PurchaseCredit.UseVisualStyleBackColor = false;
+            this.btn_PurchaseCredit.Click += new System.EventHandler(this.btn_PurchaseCredit_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,5 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem expenseSetupToolStripMenuItem;
         private System.Windows.Forms.Button btn_Expense;
         private System.Windows.Forms.Button btn_TempBal;
+        private System.Windows.Forms.Button btn_PurchaseCredit;
     }
 }

@@ -167,6 +167,7 @@
             this.rb_PurchaseTemp.TabIndex = 1038;
             this.rb_PurchaseTemp.Text = "Receive Temp";
             this.rb_PurchaseTemp.UseVisualStyleBackColor = true;
+            this.rb_PurchaseTemp.CheckedChanged += new System.EventHandler(this.rb_PurchaseTemp_CheckedChanged);
             // 
             // rb_SaleTemp
             // 

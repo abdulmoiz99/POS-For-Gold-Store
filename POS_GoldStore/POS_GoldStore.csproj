@@ -133,6 +133,12 @@
     <Compile Include="Transactions\frm_CashTemp.Designer.cs">
       <DependentUpon>frm_CashTemp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transactions\frm_PurchaseCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_PurchaseCredit.Designer.cs">
+      <DependentUpon>frm_PurchaseCredit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transactions\frm_PurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="Transactions\frm_SaleOrder.Designer.cs">
       <DependentUpon>frm_SaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\frm_SaleOrderCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_SaleOrderCredit.Designer.cs">
+      <DependentUpon>frm_SaleOrderCredit.cs</DependentUpon>
     </Compile>
     <Compile Include="Transactions\frm_SaleTemp.cs">
       <SubType>Form</SubType>
@@ -221,6 +233,9 @@
     <EmbeddedResource Include="Transactions\frm_CashTemp.resx">
       <DependentUpon>frm_CashTemp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_PurchaseCredit.resx">
+      <DependentUpon>frm_PurchaseCredit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_PurchaseOrder.resx">
       <DependentUpon>frm_PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_SaleOrder.resx">
       <DependentUpon>frm_SaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_SaleOrderCredit.resx">
+      <DependentUpon>frm_SaleOrderCredit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_SaleTemp.resx">
       <DependentUpon>frm_SaleTemp.cs</DependentUpon>

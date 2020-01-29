@@ -18,7 +18,7 @@ namespace POS_GoldStore.Transactions
         }
         public void PurchaseTemp()
         {
-            Main.fillDgv(dgv_Temp, @"sselect PMCustomerID as Customer_ID ,CustomerName ,PMProductID as Product_ID ,PName as Product_Name  ,sum(ProductWeight) as Total_Weight_Receive ,sum(TMQTy) as Return_Weight ,sum(ProductWeight -TMQTy) as Reamining_Weight 
+            Main.fillDgv(dgv_Temp, @"select PMCustomerID as Customer_ID ,CustomerName ,PMProductID as Product_ID ,PName as Product_Name  ,sum(ProductWeight) as Total_Weight_Receive ,sum(TMQTy) as Return_Weight ,sum(ProductWeight -TMQTy) as Reamining_Weight 
                                         from TvuFrmTempPaid group by PMCustomerID ,CustomerName ,CompanyID ,PMProductID ,PName ");
         }
         public void SaleTemp()
@@ -42,6 +42,11 @@ namespace POS_GoldStore.Transactions
                 SaleTemp();
             }
             else PurchaseTemp();
+        }
+
+        private void rb_PurchaseTemp_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
