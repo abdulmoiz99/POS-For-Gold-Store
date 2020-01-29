@@ -55,7 +55,6 @@ namespace POS_GoldStore.Transactions
         private void frm_PurchaseCredit_Activated(object sender, EventArgs e)
         {
             Main.fillDgv(dgv_PruchaseCredit, "select PMId,PMNo,PMDate,pMCustomerID,CustomerName,PMProductId,PName,ProductWeight,BalAmt,PMRate,PMAmount from TvuFrmCreditPurchaseOrder where BalAmt>0");
-
         }
 
         private void btn_Save_Click(object sender, EventArgs e)

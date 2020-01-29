@@ -55,6 +55,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dgv_PruchaseCredit = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_ProductId = new System.Windows.Forms.TextBox();
+            this.txt_CustomerName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_New = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_exitForm = new System.Windows.Forms.Button();
             this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,16 +76,6 @@
             this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_ProductId = new System.Windows.Forms.TextBox();
-            this.txt_CustomerName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_exitForm = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -129,6 +129,7 @@
             this.txt_Find.Name = "txt_Find";
             this.txt_Find.Size = new System.Drawing.Size(315, 22);
             this.txt_Find.TabIndex = 10;
+            this.txt_Find.TextChanged += new System.EventHandler(this.txt_Find_TextChanged);
             // 
             // txt_Rate
             // 
@@ -340,87 +341,7 @@
             this.dgv_PruchaseCredit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_PruchaseCredit.Size = new System.Drawing.Size(835, 251);
             this.dgv_PruchaseCredit.TabIndex = 1083;
-            // 
-            // PMID
-            // 
-            this.PMID.DataPropertyName = "PMID";
-            this.PMID.HeaderText = "PMID";
-            this.PMID.Name = "PMID";
-            this.PMID.ReadOnly = true;
-            this.PMID.Visible = false;
-            // 
-            // PMNo
-            // 
-            this.PMNo.DataPropertyName = "PMNo";
-            this.PMNo.HeaderText = "Inv No";
-            this.PMNo.Name = "PMNo";
-            this.PMNo.ReadOnly = true;
-            this.PMNo.Width = 80;
-            // 
-            // PMDate
-            // 
-            this.PMDate.DataPropertyName = "PMDate";
-            this.PMDate.HeaderText = "Date";
-            this.PMDate.Name = "PMDate";
-            this.PMDate.ReadOnly = true;
-            // 
-            // PMCustomerID
-            // 
-            this.PMCustomerID.DataPropertyName = "PMCustomerID";
-            this.PMCustomerID.HeaderText = "PMCustomerID";
-            this.PMCustomerID.Name = "PMCustomerID";
-            this.PMCustomerID.ReadOnly = true;
-            this.PMCustomerID.Visible = false;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
-            // PMProductID
-            // 
-            this.PMProductID.DataPropertyName = "PMProductID";
-            this.PMProductID.HeaderText = "PMProductID";
-            this.PMProductID.Name = "PMProductID";
-            this.PMProductID.ReadOnly = true;
-            this.PMProductID.Visible = false;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Product Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // ProductWeight
-            // 
-            this.ProductWeight.DataPropertyName = "ProductWeight";
-            this.ProductWeight.HeaderText = "Product Weight";
-            this.ProductWeight.Name = "ProductWeight";
-            this.ProductWeight.ReadOnly = true;
-            // 
-            // PMRate
-            // 
-            this.PMRate.DataPropertyName = "PMRate";
-            this.PMRate.HeaderText = "Rate";
-            this.PMRate.Name = "PMRate";
-            this.PMRate.ReadOnly = true;
-            // 
-            // PMAmount
-            // 
-            this.PMAmount.DataPropertyName = "PMAmount";
-            this.PMAmount.HeaderText = "Total Amount";
-            this.PMAmount.Name = "PMAmount";
-            this.PMAmount.ReadOnly = true;
-            // 
-            // BalAmt
-            // 
-            this.BalAmt.DataPropertyName = "BalAmt";
-            this.BalAmt.HeaderText = "Balance Amount";
-            this.BalAmt.Name = "BalAmt";
-            this.BalAmt.ReadOnly = true;
+            this.dgv_PruchaseCredit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PruchaseCredit_CellContentClick);
             // 
             // panel2
             // 
@@ -489,6 +410,7 @@
             this.btn_Save.TabIndex = 131;
             this.btn_Save.Text = "  &Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_cancel
             // 
@@ -507,6 +429,7 @@
             this.btn_cancel.TabIndex = 130;
             this.btn_cancel.Text = "  &Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_New
             // 
@@ -524,6 +447,7 @@
             this.btn_New.TabIndex = 127;
             this.btn_New.Text = "&New";
             this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
             // pictureBox1
             // 
@@ -552,6 +476,88 @@
             this.btn_exitForm.TabIndex = 1016;
             this.btn_exitForm.Text = "     &Close";
             this.btn_exitForm.UseVisualStyleBackColor = false;
+            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
+            // 
+            // PMID
+            // 
+            this.PMID.DataPropertyName = "SMID";
+            this.PMID.HeaderText = "PMID";
+            this.PMID.Name = "PMID";
+            this.PMID.ReadOnly = true;
+            this.PMID.Visible = false;
+            // 
+            // PMNo
+            // 
+            this.PMNo.DataPropertyName = "SMNo";
+            this.PMNo.HeaderText = "Inv No";
+            this.PMNo.Name = "PMNo";
+            this.PMNo.ReadOnly = true;
+            this.PMNo.Width = 80;
+            // 
+            // PMDate
+            // 
+            this.PMDate.DataPropertyName = "SMDate";
+            this.PMDate.HeaderText = "Date";
+            this.PMDate.Name = "PMDate";
+            this.PMDate.ReadOnly = true;
+            // 
+            // PMCustomerID
+            // 
+            this.PMCustomerID.DataPropertyName = "SMCustomerID";
+            this.PMCustomerID.HeaderText = "PMCustomerID";
+            this.PMCustomerID.Name = "PMCustomerID";
+            this.PMCustomerID.ReadOnly = true;
+            this.PMCustomerID.Visible = false;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            // 
+            // PMProductID
+            // 
+            this.PMProductID.DataPropertyName = "SMProductID";
+            this.PMProductID.HeaderText = "PMProductID";
+            this.PMProductID.Name = "PMProductID";
+            this.PMProductID.ReadOnly = true;
+            this.PMProductID.Visible = false;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Product Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // ProductWeight
+            // 
+            this.ProductWeight.DataPropertyName = "ProductWeight";
+            this.ProductWeight.HeaderText = "Product Weight";
+            this.ProductWeight.Name = "ProductWeight";
+            this.ProductWeight.ReadOnly = true;
+            // 
+            // PMRate
+            // 
+            this.PMRate.DataPropertyName = "SMRate";
+            this.PMRate.HeaderText = "Rate";
+            this.PMRate.Name = "PMRate";
+            this.PMRate.ReadOnly = true;
+            // 
+            // PMAmount
+            // 
+            this.PMAmount.DataPropertyName = "SMAmount";
+            this.PMAmount.HeaderText = "Total Amount";
+            this.PMAmount.Name = "PMAmount";
+            this.PMAmount.ReadOnly = true;
+            // 
+            // BalAmt
+            // 
+            this.BalAmt.DataPropertyName = "BalAmt";
+            this.BalAmt.HeaderText = "Balance Amount";
+            this.BalAmt.Name = "BalAmt";
+            this.BalAmt.ReadOnly = true;
             // 
             // frm_SaleOrderCredit
             // 
@@ -585,6 +591,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_SaleOrderCredit";
             this.Text = "frm_SaleOrderCredit";
+            this.Activated += new System.EventHandler(this.frm_SaleOrderCredit_Activated);
+            this.Load += new System.EventHandler(this.frm_SaleOrderCredit_Load);
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -627,6 +635,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DataGridView dgv_PruchaseCredit;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_exitForm;
+        private System.Windows.Forms.TextBox txt_ProductId;
+        private System.Windows.Forms.TextBox txt_CustomerName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMDate;
@@ -638,11 +652,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PMRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn BalAmt;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_exitForm;
-        private System.Windows.Forms.TextBox txt_ProductId;
-        private System.Windows.Forms.TextBox txt_CustomerName;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label1;
     }
 }

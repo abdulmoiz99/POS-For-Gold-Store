@@ -238,7 +238,7 @@ namespace POS_GoldStore.Transactions
             else
             {
                 float Weight = 0, Amount = 0, Rate = 0;
-                float Receive;
+                float Receive=0;
                 if (rdo_Temp.Checked == true)
                 {
                     txt_Amount.Text = "0";
@@ -246,9 +246,13 @@ namespace POS_GoldStore.Transactions
                     Receive = 0;
 
                 }
+                else if(rdo_Credit.Checked==true)
+                {
+                    txt_Received.Text = "0";
+                }
                 else
                 {
-                    Receive = float.Parse(txt_Received.Text);
+                    float.TryParse(txt_Received.Text,out Receive);
                 }
                 if (!float.TryParse(txt_ProductWeight.Text, out Weight))
                 {
@@ -269,7 +273,6 @@ namespace POS_GoldStore.Transactions
                     SQL.NonScalarQuery(@"Insert into SaleMaster(SMDocId                             ,SMNo                        ,SMNoo           ,SMDate                                                   ,SMCustomerID                           ,SMRemarks                   ,SMProductID                          ,ProductWeight                                , SMRate                                    ,SMAmount                              ,SMRecieve                               ,SMMode                   ,CompanyID)
                                                 values(" + cmb_InvoiceType.SelectedValue + ",'" + txt_InvoiceNo.Text + "'," + intSMNoo + ",'" + dtp_InvoiceDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ,'" + txt_CIRemarks.Text + "'," + cmb_ProductName.SelectedValue + ",'" + Weight + "','" + Rate + "','" + Amount + "','" + Receive + "','" + TransactionMode + "'," + Main.CompanyID + ")");
 
-                    MessageBox.Show(Weight.ToString());
                     SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + Weight + " where pID = " + cmb_ProductName.SelectedValue + "");
 
                     MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
