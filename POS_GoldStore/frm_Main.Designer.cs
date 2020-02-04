@@ -33,6 +33,7 @@
             this.btn_SaleOrder = new System.Windows.Forms.Button();
             this.btn_PurchaseOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_SaleCredit = new System.Windows.Forms.Button();
             this.btn_PurchaseCredit = new System.Windows.Forms.Button();
             this.btn_TempBal = new System.Windows.Forms.Button();
             this.btn_Expense = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btn_SaleCredit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,12 +59,13 @@
             this.btn_CashTemp.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_CashTemp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CashTemp.ForeColor = System.Drawing.Color.White;
-            this.btn_CashTemp.Location = new System.Drawing.Point(3, 285);
+            this.btn_CashTemp.Location = new System.Drawing.Point(6, 571);
             this.btn_CashTemp.Name = "btn_CashTemp";
             this.btn_CashTemp.Size = new System.Drawing.Size(220, 46);
             this.btn_CashTemp.TabIndex = 0;
             this.btn_CashTemp.Text = "&Cash Temp";
             this.btn_CashTemp.UseVisualStyleBackColor = false;
+            this.btn_CashTemp.Visible = false;
             this.btn_CashTemp.Click += new System.EventHandler(this.btn_CashFlow_Click);
             // 
             // btn_SaleOrder
@@ -112,12 +113,25 @@
             this.panel2.Size = new System.Drawing.Size(226, 712);
             this.panel2.TabIndex = 4;
             // 
+            // btn_SaleCredit
+            // 
+            this.btn_SaleCredit.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_SaleCredit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SaleCredit.ForeColor = System.Drawing.Color.White;
+            this.btn_SaleCredit.Location = new System.Drawing.Point(5, 441);
+            this.btn_SaleCredit.Name = "btn_SaleCredit";
+            this.btn_SaleCredit.Size = new System.Drawing.Size(220, 46);
+            this.btn_SaleCredit.TabIndex = 6;
+            this.btn_SaleCredit.Text = "Sale Credit";
+            this.btn_SaleCredit.UseVisualStyleBackColor = false;
+            this.btn_SaleCredit.Click += new System.EventHandler(this.btn_SaleCredit_Click);
+            // 
             // btn_PurchaseCredit
             // 
             this.btn_PurchaseCredit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_PurchaseCredit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PurchaseCredit.ForeColor = System.Drawing.Color.White;
-            this.btn_PurchaseCredit.Location = new System.Drawing.Point(3, 441);
+            this.btn_PurchaseCredit.Location = new System.Drawing.Point(5, 389);
             this.btn_PurchaseCredit.Name = "btn_PurchaseCredit";
             this.btn_PurchaseCredit.Size = new System.Drawing.Size(220, 46);
             this.btn_PurchaseCredit.TabIndex = 5;
@@ -130,7 +144,7 @@
             this.btn_TempBal.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_TempBal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TempBal.ForeColor = System.Drawing.Color.White;
-            this.btn_TempBal.Location = new System.Drawing.Point(3, 389);
+            this.btn_TempBal.Location = new System.Drawing.Point(5, 337);
             this.btn_TempBal.Name = "btn_TempBal";
             this.btn_TempBal.Size = new System.Drawing.Size(220, 46);
             this.btn_TempBal.TabIndex = 4;
@@ -143,7 +157,7 @@
             this.btn_Expense.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Expense.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Expense.ForeColor = System.Drawing.Color.White;
-            this.btn_Expense.Location = new System.Drawing.Point(3, 337);
+            this.btn_Expense.Location = new System.Drawing.Point(5, 285);
             this.btn_Expense.Name = "btn_Expense";
             this.btn_Expense.Size = new System.Drawing.Size(220, 46);
             this.btn_Expense.TabIndex = 3;
@@ -266,19 +280,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // btn_SaleCredit
-            // 
-            this.btn_SaleCredit.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_SaleCredit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SaleCredit.ForeColor = System.Drawing.Color.White;
-            this.btn_SaleCredit.Location = new System.Drawing.Point(3, 493);
-            this.btn_SaleCredit.Name = "btn_SaleCredit";
-            this.btn_SaleCredit.Size = new System.Drawing.Size(220, 46);
-            this.btn_SaleCredit.TabIndex = 6;
-            this.btn_SaleCredit.Text = "Sale Credit";
-            this.btn_SaleCredit.UseVisualStyleBackColor = false;
-            this.btn_SaleCredit.Click += new System.EventHandler(this.btn_SaleCredit_Click);
             // 
             // frm_Main
             // 

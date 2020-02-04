@@ -18,20 +18,16 @@ namespace POS_GoldStore
         }
         private void TodayDetails()
         {
-            Lab_TodayPurchase.Text = SQL.ScalarQuery("SELECT isnull(Sum(PMTAmount),0) FROM PurchaseMASTER where PMMode='Cash' And PMDate=(select convert(date, GETDATE()))");
-            Lab_TodaySale.Text = SQL.ScalarQuery("SELECT isnull(Sum(SMTAmount),0) FROM SaleMASTER where SMMode='Cash' And SMDate=(select convert(date, GETDATE()))");
-            String CashPaid = SQL.ScalarQuery("SELECT COUNT(Paid) FROM TvuFrmDailyCounter  where  RecDate=(select convert(date, GETDATE()))");
-            if (CashPaid != "0")
-            {
-                Lab_TodayPaid.Text = SQL.ScalarQuery("SELECT Sum(Paid) FROM TvuFrmDailyCounter where  RecDate=(select convert(date, GETDATE()))");
-            }
-            else Lab_TodayPaid.Text = "0";
-            String CashRec = SQL.ScalarQuery("SELECT COUNT(receive) FROM TvuFrmDailyCounter where  RecDate=(select convert(date, GETDATE()))");
-            if (CashRec != "0")
-            {
-                Lab_TodayReceive.Text = SQL.ScalarQuery("SELECT Sum(receive) FROM TvuFrmDailyCounter where  RecDate=(select convert(date, GETDATE()))");
-            }
-            else Lab_TodayReceive.Text = "0";
+            lab_PurchaeAmount.Text = SQL.ScalarQuery("select PurchaseAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_SaleAmount.Text = SQL.ScalarQuery("select SaleAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_PurchaseRetAmt.Text = SQL.ScalarQuery("select PurchaseRetAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_SaleRetAmt.Text = SQL.ScalarQuery("select SaleRetAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_TempPaid.Text = SQL.ScalarQuery("select TempPaid from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_TempRec.Text = SQL.ScalarQuery("select SaleTempRec from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+        }
+        private void TodayExpense()
+        {
+            Main.fillDgv(dgv_Expense, "select ESName,EAmount from TvuExpenses where convert(varchar, EDate, 112) = '" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
         }
         public bool CheckTodayOpening()
         {
@@ -40,43 +36,11 @@ namespace POS_GoldStore
             if (string.Compare("True", Compare) == 0) return true;
             else return false;
         }
-        private void TodayProfit()
-        {
-            lab_TodayProfit.Text = SQL.ScalarQuery("select isnull(sum((Opening-(Payamt+Paid))+(recamt+receive)),0) from TvuFrmDailyCounter where RecDate=(select convert(date,GETDATE()))");
-            float Profit;
-            if (float.TryParse(lab_TodayProfit.Text, out Profit))
-            {
-                if (Profit <= 0)
-                {
-                    pnl_Profit.BackColor = Color.FromArgb(243, 92, 86);
-                }
-                else pnl_Profit.BackColor = Color.FromArgb(26, 161, 95);
-            }
-            lab_TodayProfit.Text = Profit.ToString();
-        }
-  
-       
-        private void CashFlowAmount()
-        {
-            string PAmt = SQL.ScalarQuery("SELECT isnull(SUM(CFAmt),0) FROM CashFlow WHERE CFMode = 'PAYABLE'");
-            String RAmt = SQL.ScalarQuery("SELECT isnull(SUM(CFAmt),0) FROM CashFlow WHERE CFMode = 'RECEIVABLE'");
-            lab_PayAmt.Text = PAmt + "/-";
-            lab_RecAmt.Text = RAmt + "/-";
-        }
-        private void TodayExpense()
-        {
-            Main.fillDgv(dgv_Expense, "select ESName ,EAmount from TvuExpenses  where EDate=(select convert(date,GETDATE()))");
-            String TAmt = SQL.ScalarQuery("SELECT isnull(SUM(EAmount),0) FROM TvuExpenses WHERE EDate=(select convert(date,GETDATE()));");
-            if (TAmt == "0")
-            {
-                lab_ExpenseTotal.Text = "0/-";
-            }
-            else lab_ExpenseTotal.Text = TAmt + "/-";
-            if (dgv_Expense.RowCount <= 0)
-            {
-                pnl_Expense.Visible = true;
-            }
-        }
+
+
+
+
+
 
         private void frm_Dashboard_Load(object sender, EventArgs e)
         {
@@ -84,9 +48,6 @@ namespace POS_GoldStore
             {
                 TodayDetails();
                 TodayExpense();
-                CashFlowAmount();
-                TodayProfit();
-               
             }
             catch (Exception ex)
             {
@@ -94,7 +55,7 @@ namespace POS_GoldStore
             }
             try
             {
-             
+
                 // Company Name 
                 lab_CompanyName.Text = "TECH WORK";// SQL.ScalarQuery("Select CompanyName From CompanySetup where CompanyID=" + Main.CompanyID + "");
                 lab_Username.Text = Main.UserName;
@@ -150,12 +111,19 @@ namespace POS_GoldStore
 
         private void txt_OpeningBalance_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Main.OnlyDigits(e); 
+            Main.OnlyDigits(e);
         }
 
         private void dateTime(object sender, EventArgs e)
         {
             lab_date.Text = DateTime.Now.ToString();
+            TodayDetails();
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
