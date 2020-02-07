@@ -96,6 +96,12 @@
     <Compile Include="ReprtForm\frm_ReportForm.Designer.cs">
       <DependentUpon>frm_ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReprtForm\SalePurchaseReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReprtForm\SalePurchaseReports.Designer.cs">
+      <DependentUpon>SalePurchaseReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setup\frm_AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,17 +127,35 @@
       <DependentUpon>frm_DocSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
+    <Compile Include="Transactions\CashBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\CashBalance.Designer.cs">
+      <DependentUpon>CashBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transactions\frm_CashFlow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transactions\frm_CashFlow.Designer.cs">
       <DependentUpon>frm_CashFlow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transactions\frm_CashReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_CashReports.Designer.cs">
+      <DependentUpon>frm_CashReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transactions\frm_CashTemp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transactions\frm_CashTemp.Designer.cs">
       <DependentUpon>frm_CashTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\frm_CashTempTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frm_CashTempTransactions.Designer.cs">
+      <DependentUpon>frm_CashTempTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="Transactions\frm_PurchaseCredit.cs">
       <SubType>Form</SubType>
@@ -181,11 +205,11 @@
     <Compile Include="UserManagement\frm_ChangeUserPassword.Designer.cs">
       <DependentUpon>frm_ChangeUserPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserManagement\frm_Login.cs">
+    <Compile Include="UserManagement\frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserManagement\frm_Login.Designer.cs">
-      <DependentUpon>frm_Login.cs</DependentUpon>
+    <Compile Include="UserManagement\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Expense\frm_AddExpense.resx">
       <DependentUpon>frm_AddExpense.cs</DependentUpon>
@@ -215,6 +239,9 @@
     <EmbeddedResource Include="ReprtForm\frm_ReportForm.resx">
       <DependentUpon>frm_ReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReprtForm\SalePurchaseReports.resx">
+      <DependentUpon>SalePurchaseReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Setup\frm_AddCustomer.resx">
       <DependentUpon>frm_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,11 +254,20 @@
     <EmbeddedResource Include="Setup\frm_DocSetup.resx">
       <DependentUpon>frm_DocSetup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\CashBalance.resx">
+      <DependentUpon>CashBalance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_CashFlow.resx">
       <DependentUpon>frm_CashFlow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_CashReports.resx">
+      <DependentUpon>frm_CashReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_CashTemp.resx">
       <DependentUpon>frm_CashTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frm_CashTempTransactions.resx">
+      <DependentUpon>frm_CashTempTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_PurchaseCredit.resx">
       <DependentUpon>frm_PurchaseCredit.cs</DependentUpon>
@@ -257,8 +293,8 @@
     <EmbeddedResource Include="UserManagement\frm_ChangeUserPassword.resx">
       <DependentUpon>frm_ChangeUserPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserManagement\frm_Login.resx">
-      <DependentUpon>frm_Login.cs</DependentUpon>
+    <EmbeddedResource Include="UserManagement\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

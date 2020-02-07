@@ -93,6 +93,7 @@
             this.groupBox1.Size = new System.Drawing.Size(372, 52);
             this.groupBox1.TabIndex = 1035;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
             // 
             // pictureBox1
             // 

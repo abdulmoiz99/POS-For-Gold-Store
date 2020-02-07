@@ -22,12 +22,16 @@ namespace POS_GoldStore
             lab_SaleAmount.Text = SQL.ScalarQuery("select SaleAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_PurchaseRetAmt.Text = SQL.ScalarQuery("select PurchaseRetAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_SaleRetAmt.Text = SQL.ScalarQuery("select SaleRetAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
-            lab_TempPaid.Text = SQL.ScalarQuery("select TempPaid from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
-            lab_TempRec.Text = SQL.ScalarQuery("select SaleTempRec from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+          //  lab_TempPaid.Text = SQL.ScalarQuery("select TempPaid from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+         //   lab_TempRec.Text = SQL.ScalarQuery("select SaleTempRec from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
         }
         private void TodayExpense()
         {
             Main.fillDgv(dgv_Expense, "select ESName,EAmount from TvuExpenses where convert(varchar, EDate, 112) = '" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+        }
+        private void TotalProductPayableReceiveable()
+        {
+            Main.fillDgv(dgv_ProductWeight, "Select PName,Payable,Receiveable from TvufrmProductdetails");
         }
         public bool CheckTodayOpening()
         {
@@ -117,11 +121,24 @@ namespace POS_GoldStore
         private void dateTime(object sender, EventArgs e)
         {
             lab_date.Text = DateTime.Now.ToString();
-            TodayDetails();
+            //TodayDetails();
+            Main.fillDgv(dgv_ProductWeight, "Select * from TvufrmProductSummary");
+
+
+        }
+        public static bool CheckRecord(string name)
+        {
+            string Compare = "";
+            Compare = SQL.ScalarQuery("SELECT CASE WHEN EXISTS (SELECT TOP 1 * FROM login  WHERE username = '" + name + "' And CompanyID=" + Main.CompanyID + ") THEN CAST (1 AS BIT) ELSE CAST (0 AS BIT) END");
+            if (string.Compare("True", Compare) == 0) return true;
+            else return false;
+        }
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void panel14_Paint(object sender, PaintEventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

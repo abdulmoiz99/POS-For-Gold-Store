@@ -70,10 +70,21 @@ namespace POS_GoldStore.Transactions
             }
             else
             {
-                SQL.NonScalarQuery(@"Insert Into CashTemp (CT_Date                                           ,CT_InvID                         ,CT_Type,CT_CompanyId          ,CT_Amount)
+                float Remaing = 0, NewAmount = 0;
+                float.TryParse(txt_BalanceAmount.Text, out Remaing);
+                float.TryParse(txt_NewAmount.Text, out NewAmount);
+
+                if (NewAmount > Remaing)
+                {
+                    MessageBox.Show("Amount Should Be Less Than Remaing Quantity", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    SQL.NonScalarQuery(@"Insert Into CashTemp (CT_Date                                           ,CT_InvID                         ,CT_Type,CT_CompanyId          ,CT_Amount)
                                                     values('" + dtp_date.Value.Date.ToString("yyyyMMdd") + "'," + int.Parse(txt_SMID.Text) + " ,1      ," + Main.CompanyID + "," + Quantity + ")");
-                frm_PurchaseCredit_Activated(sender, e);
-                MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frm_PurchaseCredit_Activated(sender, e);
+                    MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         public void enable_disable(bool value)

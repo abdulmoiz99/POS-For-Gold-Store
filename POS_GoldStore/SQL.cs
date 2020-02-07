@@ -97,11 +97,11 @@ namespace POS_GoldStore
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("SQL " + ex.Message);
+               // MessageBox.Show("SQL " + ex.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("SQL Scalar Query" + ex.Message);
+              //  MessageBox.Show("SQL Scalar Query" + ex.Message);
             }
             finally
             {

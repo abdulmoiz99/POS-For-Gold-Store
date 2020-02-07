@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Type.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Amount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Update.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAklJREFUSEu9
-        ljtvE0EUhQ0CgZSGh4QQSAhREKWipkCiQwE3FJZnFxJFKRKgQuLRsrQUvApCdtZYyQ+Awt4ZByWKRJMm
-        yj8IaSLRICHoDBLmHnvHzM7cxYkDFJ/sufecufbdeWzpyt3yf4EN2rwKm0cT0bqWCDUtQz1jk8WuQsN5
-        bdggqE+tHpZh+kIGqk10BgDNM3i4uQAbnJ9ZP0jGFTNRHKiv9LkhA72eR21kOVNwBV5uTi8AkkA9zIzt
-        JNCzURTt53QAuVikt6DtefQDTucFABXa6pqEfsTlOajNUc+TfuTyXmBhcvl475dRy6rpeTdfRO2mHjU+
-        bnHkBmBO6LPGsDixNOLmi+iUOvtQAHCtzg3AsIUG4QX2Uqg+9e5ITbw/xeW8wF5aR563Uqg1bon3v2Cz
-        ob+vq40LptDCZOM0Yi/H1SHbxIFlbXwySJ+4+f6X+UrjDIk+/xb3+VSvpCdtk0st0BdJ993y/IyFvm5r
-        cob4RlqGyDL8kKJ1yda4zE0snSDdtuUxfHkTNs8ZnWfE37bE99y8C9qK9qLNxof2I2affZ4xurx6gIp9
-        oIfawAN280Vg4ZhCWFBuPjcwYIliqXK5IoYqNAy7LoTjA/0F/7R1SaV1zBhwULr5ImS1OWZ8XNtzA0P/
-        mqCjn8tz0AX4OCu0yeW9ALB2eVuG6vbAiy/Qd0jb3bD0HnGf03kB0L3KQ7WcFQPfCPYqz3I9HXl2dZUD
-        bDZq4XOaYEcvJ3GYPv3TmcgGbfBg46oaL3rdQm4ne44N/n3KpV/Xy8vZ6i4BhgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="PName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Receiveable.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>43</value>
-  </metadata>
 </root>

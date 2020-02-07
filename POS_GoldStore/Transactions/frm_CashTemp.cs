@@ -31,7 +31,7 @@ namespace POS_GoldStore.Transactions
                     this.Close();
                 }
                 else
-                {
+                {   
                     Main.fillCombo(cmb_CustomerName, "CustomerMaster", "CustomerName", "CustomerID", "CustomerActive=1");
 
                 }
@@ -59,8 +59,8 @@ namespace POS_GoldStore.Transactions
         private void btn_Save_Click(object sender, EventArgs e)
         {
             float amount;
-            string mode ="RECEIVE";
-            if(rb_Pay.Checked==true)
+            string mode = "RECEIVE";
+            if (rb_Pay.Checked == true)
             {
                 mode = "PAY";
             }
@@ -79,8 +79,9 @@ namespace POS_GoldStore.Transactions
             }
             else
             {
-                SQL.NonScalarQuery(@"Insert into CashTemp(CT_CustomerID                          ,CT_Amount     ,CT_Date                                                   ,CT_Mode,CT_CompanyID)
-                                                   values(" + cmb_CustomerName.SelectedValue + " ," + amount + ",'" + dtp_CastTempDate.Value.Date.ToString("yyyyMMdd") + "','"+mode+"'   ," + Main.CompanyID + ")");
+
+                SQL.NonScalarQuery(@"Insert into CashMain(CM_Date                                                   ,    CM_CustomerID                      ,CM_Amount     ,CM_Bal        ,CM_Mode          ,CompanyID)
+                                                   values('" + dtp_CastTempDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ," + amount + "," + amount + ",'" + mode + "'   ," + Main.CompanyID + ")");
                 MessageBox.Show("Record Added Successfull", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -90,13 +91,20 @@ namespace POS_GoldStore.Transactions
             btn_Save.Enabled = true;
             btn_cancel.Enabled = true;
             btn_New.Enabled = false;
+            enable_disable(true);
         }
-
+        private void enable_disable(bool val)
+        {
+            cmb_CustomerName.Enabled = val;
+            txt_Amount.Enabled = val;
+            dtp_CastTempDate.Enabled = val;
+        }
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             btn_Save.Enabled = false;
             btn_cancel.Enabled = false;
             btn_New.Enabled = true;
+            enable_disable(false);
 
         }
     }

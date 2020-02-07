@@ -70,11 +70,22 @@ namespace POS_GoldStore.Transactions
             }
             else
             {
-                SQL.NonScalarQuery(@"Insert Into tempmaster (TMDate                      ,TMInvID                          ,TMType,TMCSID                ,TMQty)
+                float Remaing = 0, NewAmount = 0;
+                float.TryParse(txt_BalanceQuantity.Text, out Remaing);
+                float.TryParse(txt_NewQuantity.Text, out NewAmount);
+
+                if (NewAmount > Remaing)
+                {
+                    MessageBox.Show("Amount Should Be Less Than Remaing Quantity", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    SQL.NonScalarQuery(@"Insert Into tempmaster (TMDate                      ,TMInvID                          ,TMType,TMCSID                ,TMQty)
                                                       values('" + dtp_date.Value.Date.ToString("yyyyMMdd") + "'," + int.Parse(txt_SMID.Text) + " ,1    ," + Main.CompanyID + "," + Quantity + ")");
-                SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + float.Parse(txt_NewQuantity.Text) + " where pID = " + int.Parse(txt_ProductId.Text) + "");
-                frm_PurchaseTemp_Activated( sender,  e);
-                MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SQL.NonScalarQuery("Update ProductMaster set Pbalance = Pbalance - " + float.Parse(txt_NewQuantity.Text) + " where pID = " + int.Parse(txt_ProductId.Text) + "");
+                    frm_PurchaseTemp_Activated(sender, e);
+                    MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         public void enable_disable(bool value)

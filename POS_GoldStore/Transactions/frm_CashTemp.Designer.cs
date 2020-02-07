@@ -29,26 +29,24 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_exitForm = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
             this.txt_CustomerId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_CastTempDate = new System.Windows.Forms.DateTimePicker();
             this.cmb_CustomerName = new SergeUtils.EasyCompletionComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_Remarks = new System.Windows.Forms.TextBox();
             this.rb_Recive = new System.Windows.Forms.RadioButton();
             this.rb_Pay = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_Amount = new System.Windows.Forms.TextBox();
+            this.btn_exitForm = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_New = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -63,25 +61,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(678, 63);
             this.panel2.TabIndex = 227;
-            // 
-            // btn_exitForm
-            // 
-            this.btn_exitForm.BackColor = System.Drawing.Color.White;
-            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_exitForm.FlatAppearance.BorderSize = 0;
-            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
-            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(560, 0);
-            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_exitForm.Name = "btn_exitForm";
-            this.btn_exitForm.Size = new System.Drawing.Size(118, 63);
-            this.btn_exitForm.TabIndex = 1017;
-            this.btn_exitForm.Text = "     &Close";
-            this.btn_exitForm.UseVisualStyleBackColor = false;
-            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
             // 
             // label4
             // 
@@ -113,6 +92,149 @@
             this.groupBox2.Size = new System.Drawing.Size(190, 191);
             this.groupBox2.TabIndex = 225;
             this.groupBox2.TabStop = false;
+            // 
+            // txt_CustomerId
+            // 
+            this.txt_CustomerId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_CustomerId.Enabled = false;
+            this.txt_CustomerId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CustomerId.Location = new System.Drawing.Point(179, 163);
+            this.txt_CustomerId.Name = "txt_CustomerId";
+            this.txt_CustomerId.Size = new System.Drawing.Size(275, 27);
+            this.txt_CustomerId.TabIndex = 229;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(26, 206);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 21);
+            this.label2.TabIndex = 228;
+            this.label2.Text = "Customer Name :";
+            // 
+            // dtp_CastTempDate
+            // 
+            this.dtp_CastTempDate.Enabled = false;
+            this.dtp_CastTempDate.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.dtp_CastTempDate.Location = new System.Drawing.Point(179, 276);
+            this.dtp_CastTempDate.Name = "dtp_CastTempDate";
+            this.dtp_CastTempDate.Size = new System.Drawing.Size(275, 27);
+            this.dtp_CastTempDate.TabIndex = 230;
+            // 
+            // cmb_CustomerName
+            // 
+            this.cmb_CustomerName.Enabled = false;
+            this.cmb_CustomerName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cmb_CustomerName.FormattingEnabled = true;
+            this.cmb_CustomerName.Location = new System.Drawing.Point(179, 200);
+            this.cmb_CustomerName.Name = "cmb_CustomerName";
+            this.cmb_CustomerName.Size = new System.Drawing.Size(275, 29);
+            this.cmb_CustomerName.TabIndex = 1003;
+            this.cmb_CustomerName.SelectedIndexChanged += new System.EventHandler(this.cmb_CustomerName_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(58, 169);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 21);
+            this.label1.TabIndex = 228;
+            this.label1.Text = "Customer Id :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(114, 280);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 21);
+            this.label3.TabIndex = 228;
+            this.label3.Text = "Date :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(108, 135);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 21);
+            this.label6.TabIndex = 228;
+            this.label6.Text = "Mode :";
+            // 
+            // rb_Recive
+            // 
+            this.rb_Recive.AutoSize = true;
+            this.rb_Recive.Checked = true;
+            this.rb_Recive.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.rb_Recive.Location = new System.Drawing.Point(179, 131);
+            this.rb_Recive.Name = "rb_Recive";
+            this.rb_Recive.Size = new System.Drawing.Size(91, 25);
+            this.rb_Recive.TabIndex = 1004;
+            this.rb_Recive.TabStop = true;
+            this.rb_Recive.Text = "Receive";
+            this.rb_Recive.UseVisualStyleBackColor = true;
+            // 
+            // rb_Pay
+            // 
+            this.rb_Pay.AutoSize = true;
+            this.rb_Pay.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.rb_Pay.Location = new System.Drawing.Point(276, 131);
+            this.rb_Pay.Name = "rb_Pay";
+            this.rb_Pay.Size = new System.Drawing.Size(56, 25);
+            this.rb_Pay.TabIndex = 1004;
+            this.rb_Pay.Text = "Pay";
+            this.rb_Pay.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(89, 243);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.TabIndex = 228;
+            this.label7.Text = "Amount :";
+            // 
+            // txt_Amount
+            // 
+            this.txt_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Amount.Enabled = false;
+            this.txt_Amount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Amount.Location = new System.Drawing.Point(179, 239);
+            this.txt_Amount.Name = "txt_Amount";
+            this.txt_Amount.Size = new System.Drawing.Size(275, 27);
+            this.txt_Amount.TabIndex = 229;
+            // 
+            // btn_exitForm
+            // 
+            this.btn_exitForm.BackColor = System.Drawing.Color.White;
+            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exitForm.FlatAppearance.BorderSize = 0;
+            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
+            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exitForm.Location = new System.Drawing.Point(560, 0);
+            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_exitForm.Name = "btn_exitForm";
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 63);
+            this.btn_exitForm.TabIndex = 1017;
+            this.btn_exitForm.Text = "     &Close";
+            this.btn_exitForm.UseVisualStyleBackColor = false;
+            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
             // 
             // btn_Save
             // 
@@ -170,148 +292,6 @@
             this.btn_New.UseVisualStyleBackColor = false;
             this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
-            // txt_CustomerId
-            // 
-            this.txt_CustomerId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_CustomerId.Enabled = false;
-            this.txt_CustomerId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CustomerId.Location = new System.Drawing.Point(179, 163);
-            this.txt_CustomerId.Name = "txt_CustomerId";
-            this.txt_CustomerId.Size = new System.Drawing.Size(275, 27);
-            this.txt_CustomerId.TabIndex = 229;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(26, 206);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 21);
-            this.label2.TabIndex = 228;
-            this.label2.Text = "Customer Name :";
-            // 
-            // dtp_CastTempDate
-            // 
-            this.dtp_CastTempDate.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.dtp_CastTempDate.Location = new System.Drawing.Point(179, 276);
-            this.dtp_CastTempDate.Name = "dtp_CastTempDate";
-            this.dtp_CastTempDate.Size = new System.Drawing.Size(275, 27);
-            this.dtp_CastTempDate.TabIndex = 230;
-            // 
-            // cmb_CustomerName
-            // 
-            this.cmb_CustomerName.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cmb_CustomerName.FormattingEnabled = true;
-            this.cmb_CustomerName.Location = new System.Drawing.Point(179, 200);
-            this.cmb_CustomerName.Name = "cmb_CustomerName";
-            this.cmb_CustomerName.Size = new System.Drawing.Size(275, 29);
-            this.cmb_CustomerName.TabIndex = 1003;
-            this.cmb_CustomerName.SelectedIndexChanged += new System.EventHandler(this.cmb_CustomerName_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(58, 169);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 21);
-            this.label1.TabIndex = 228;
-            this.label1.Text = "Customer Id :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(114, 280);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 21);
-            this.label3.TabIndex = 228;
-            this.label3.Text = "Date :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(89, 317);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 21);
-            this.label5.TabIndex = 228;
-            this.label5.Text = "Remarks :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(108, 135);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 21);
-            this.label6.TabIndex = 228;
-            this.label6.Text = "Mode :";
-            // 
-            // txt_Remarks
-            // 
-            this.txt_Remarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Remarks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Remarks.Location = new System.Drawing.Point(179, 313);
-            this.txt_Remarks.Name = "txt_Remarks";
-            this.txt_Remarks.Size = new System.Drawing.Size(275, 27);
-            this.txt_Remarks.TabIndex = 229;
-            // 
-            // rb_Recive
-            // 
-            this.rb_Recive.AutoSize = true;
-            this.rb_Recive.Checked = true;
-            this.rb_Recive.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.rb_Recive.Location = new System.Drawing.Point(179, 131);
-            this.rb_Recive.Name = "rb_Recive";
-            this.rb_Recive.Size = new System.Drawing.Size(91, 25);
-            this.rb_Recive.TabIndex = 1004;
-            this.rb_Recive.TabStop = true;
-            this.rb_Recive.Text = "Receive";
-            this.rb_Recive.UseVisualStyleBackColor = true;
-            // 
-            // rb_Pay
-            // 
-            this.rb_Pay.AutoSize = true;
-            this.rb_Pay.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.rb_Pay.Location = new System.Drawing.Point(276, 131);
-            this.rb_Pay.Name = "rb_Pay";
-            this.rb_Pay.Size = new System.Drawing.Size(56, 25);
-            this.rb_Pay.TabIndex = 1004;
-            this.rb_Pay.Text = "Pay";
-            this.rb_Pay.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(89, 243);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 21);
-            this.label7.TabIndex = 228;
-            this.label7.Text = "Amount :";
-            // 
-            // txt_Amount
-            // 
-            this.txt_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Amount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Amount.Location = new System.Drawing.Point(179, 239);
-            this.txt_Amount.Name = "txt_Amount";
-            this.txt_Amount.Size = new System.Drawing.Size(275, 27);
-            this.txt_Amount.TabIndex = 229;
-            // 
             // frm_CashTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,12 +302,10 @@
             this.Controls.Add(this.cmb_CustomerName);
             this.Controls.Add(this.dtp_CastTempDate);
             this.Controls.Add(this.txt_Amount);
-            this.Controls.Add(this.txt_Remarks);
             this.Controls.Add(this.txt_CustomerId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -363,9 +341,7 @@
         private SergeUtils.EasyCompletionComboBox cmb_CustomerName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_Remarks;
         private System.Windows.Forms.RadioButton rb_Recive;
         private System.Windows.Forms.RadioButton rb_Pay;
         private System.Windows.Forms.Label label7;

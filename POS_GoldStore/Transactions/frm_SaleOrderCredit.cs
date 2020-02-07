@@ -53,7 +53,7 @@ namespace POS_GoldStore.Transactions
 
         private void frm_SaleOrderCredit_Activated(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_PruchaseCredit, "select SMId,SMNo,SMDate,SMCustomerID,CustomerName,SMProductId,PName,ProductWeight,BalAmt,SMRate,SMAmount from TvuFrmCreditSaleOrder where BalAmt>0");
+            Main.fillDgv(dgv_PruchaseCredit, "select SMId,SMNo,SMDate,SMCustomerID,CustomerName,SMProductId,PName,ProductWeight,Cast(BalAmt As decimal(10,3)) as BalAmt,SMRate,SMAmount from TvuFrmCreditSaleOrder where BalAmt>0");
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -69,10 +69,21 @@ namespace POS_GoldStore.Transactions
             }
             else
             {
-                SQL.NonScalarQuery(@"Insert Into CashTemp (CT_Date                                           ,CT_InvID                         ,CT_Type,CT_CompanyId          ,CT_Amount)
+                float Remaing = 0, NewAmount = 0;
+                float.TryParse(txt_BalanceAmount.Text, out Remaing);
+                float.TryParse(txt_NewAmount.Text, out NewAmount);
+
+                if (NewAmount > Remaing)
+                {
+                    MessageBox.Show("Amount Should Be Less Than Remaing Amount", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    SQL.NonScalarQuery(@"Insert Into CashTemp (CT_Date                                           ,CT_InvID                         ,CT_Type,CT_CompanyId          ,CT_Amount)
                                                     values('" + dtp_date.Value.Date.ToString("yyyyMMdd") + "'," + int.Parse(txt_SMID.Text) + " ,2      ," + Main.CompanyID + "," + Quantity + ")");
-                frm_SaleOrderCredit_Activated(sender, e);
-                MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frm_SaleOrderCredit_Activated(sender, e);
+                    MessageBox.Show("Record Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         public void enable_disable(bool value)

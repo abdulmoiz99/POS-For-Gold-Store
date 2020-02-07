@@ -1,4 +1,5 @@
-﻿using POS_GoldStore.Setup;
+﻿using POS_GoldStore.ReprtForm;
+using POS_GoldStore.Setup;
 using POS_GoldStore.Transactions;
 using POS_GoldStore.UserManagemen;
 using System;
@@ -19,7 +20,7 @@ namespace POS_GoldStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Login());
+            Application.Run(new Frm_SalePurchaseReport());
         }
     }
 }

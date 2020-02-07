@@ -31,16 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Dashboard));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lab_date = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.lab_PurchaeAmount = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.lab_TempRec = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.lab_TempPaid = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.lab_SaleAmount = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -66,9 +61,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lab_PurchaseRetAmt = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dgv_ProductWeight = new System.Windows.Forms.DataGridView();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Receiveable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lab_ClosingBalance = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -76,6 +76,8 @@
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ProductWeight)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lab_date
@@ -120,70 +122,6 @@
             this.label23.Size = new System.Drawing.Size(151, 27);
             this.label23.TabIndex = 7;
             this.label23.Text = "Purchase Amount : ";
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
-            this.panel16.Controls.Add(this.lab_TempRec);
-            this.panel16.Controls.Add(this.label21);
-            this.panel16.Location = new System.Drawing.Point(3, 461);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(295, 35);
-            this.panel16.TabIndex = 63;
-            // 
-            // lab_TempRec
-            // 
-            this.lab_TempRec.AutoSize = true;
-            this.lab_TempRec.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_TempRec.ForeColor = System.Drawing.Color.White;
-            this.lab_TempRec.Location = new System.Drawing.Point(156, 5);
-            this.lab_TempRec.Name = "lab_TempRec";
-            this.lab_TempRec.Size = new System.Drawing.Size(18, 27);
-            this.lab_TempRec.TabIndex = 7;
-            this.lab_TempRec.Text = "1";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(28, 5);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 27);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Temp Receive :";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
-            this.panel15.Controls.Add(this.lab_TempPaid);
-            this.panel15.Controls.Add(this.label19);
-            this.panel15.Location = new System.Drawing.Point(4, 420);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(295, 35);
-            this.panel15.TabIndex = 62;
-            // 
-            // lab_TempPaid
-            // 
-            this.lab_TempPaid.AutoSize = true;
-            this.lab_TempPaid.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_TempPaid.ForeColor = System.Drawing.Color.White;
-            this.lab_TempPaid.Location = new System.Drawing.Point(155, 11);
-            this.lab_TempPaid.Name = "lab_TempPaid";
-            this.lab_TempPaid.Size = new System.Drawing.Size(18, 27);
-            this.lab_TempPaid.TabIndex = 7;
-            this.lab_TempPaid.Text = "1";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(56, 8);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 27);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "Temp Paid  :";
             // 
             // panel14
             // 
@@ -337,11 +275,12 @@
             this.groupBox2.Controls.Add(this.btn_OpenCounter);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Location = new System.Drawing.Point(322, 259);
+            this.groupBox2.Location = new System.Drawing.Point(325, 452);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(537, 146);
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btn_Update
             // 
@@ -401,6 +340,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 67;
+            this.dateTimePicker1.Visible = false;
             // 
             // panel1
             // 
@@ -466,19 +406,100 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Purchase Ret :";
             // 
+            // dgv_ProductWeight
+            // 
+            this.dgv_ProductWeight.AllowUserToAddRows = false;
+            this.dgv_ProductWeight.AllowUserToDeleteRows = false;
+            this.dgv_ProductWeight.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_ProductWeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ProductWeight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_ProductWeight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ProductWeight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PName,
+            this.Column2,
+            this.Receiveable});
+            this.dgv_ProductWeight.Location = new System.Drawing.Point(307, 258);
+            this.dgv_ProductWeight.Name = "dgv_ProductWeight";
+            this.dgv_ProductWeight.ReadOnly = true;
+            this.dgv_ProductWeight.Size = new System.Drawing.Size(570, 187);
+            this.dgv_ProductWeight.TabIndex = 70;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "Pname";
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            this.PName.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Payable";
+            this.Column2.HeaderText = "Payable";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Receiveable
+            // 
+            this.Receiveable.DataPropertyName = "Receiveable";
+            this.Receiveable.HeaderText = "Receiveable";
+            this.Receiveable.Name = "Receiveable";
+            this.Receiveable.ReadOnly = true;
+            this.Receiveable.Width = 200;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
+            this.panel3.Controls.Add(this.lab_ClosingBalance);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(5, 423);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(295, 35);
+            this.panel3.TabIndex = 71;
+            // 
+            // lab_ClosingBalance
+            // 
+            this.lab_ClosingBalance.AutoSize = true;
+            this.lab_ClosingBalance.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_ClosingBalance.ForeColor = System.Drawing.Color.White;
+            this.lab_ClosingBalance.Location = new System.Drawing.Point(156, 5);
+            this.lab_ClosingBalance.Name = "lab_ClosingBalance";
+            this.lab_ClosingBalance.Size = new System.Drawing.Size(18, 27);
+            this.lab_ClosingBalance.TabIndex = 7;
+            this.lab_ClosingBalance.Text = "1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(141, 27);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "CLosing Balance : ";
+            // 
             // frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 651);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.dgv_ProductWeight);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lab_date);
             this.Controls.Add(this.panel17);
-            this.Controls.Add(this.panel16);
-            this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.lab_CompanyName);
             this.Controls.Add(this.groupBox1);
@@ -491,10 +512,6 @@
             this.Load += new System.EventHandler(this.frm_Dashboard_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -508,6 +525,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ProductWeight)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,12 +539,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label lab_PurchaeAmount;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Label lab_TempRec;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label lab_TempPaid;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label lab_SaleAmount;
         private System.Windows.Forms.Label label17;
@@ -550,5 +564,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lab_PurchaseRetAmt;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgv_ProductWeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Receiveable;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lab_ClosingBalance;
+        private System.Windows.Forms.Label label5;
     }
 }

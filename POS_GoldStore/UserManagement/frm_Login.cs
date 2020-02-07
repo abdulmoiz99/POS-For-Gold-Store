@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace POS_GoldStore.UserManagemen
 {
-    public partial class frm_Login : Form
+    public partial class Frm_SalePurchaseReport : Form
     {
-        public frm_Login()
+        public Frm_SalePurchaseReport()
         {
             InitializeComponent();
         }

@@ -1,4 +1,5 @@
 ﻿using POS_GoldStore.Expense;
+using POS_GoldStore.ReprtForm;
 using POS_GoldStore.Setup;
 using POS_GoldStore.Transactions;
 using POS_GoldStore.UserManagement;
@@ -210,7 +211,7 @@ namespace POS_GoldStore
         {
             try
             {
-                var frm = new frm_CashTemp();
+                var frm = new CashBalance();
                 frm.MdiParent = this; // assign MdiParent of FormB to FormC
                 frm.Dock = DockStyle.Fill;
                 frm.Show();
@@ -385,6 +386,38 @@ namespace POS_GoldStore
         private void btn_SaleCredit_Click(object sender, EventArgs e)
         {
             var frm = new frm_SaleOrderCredit();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void transactionReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new SalePurchaseReports();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void btn_CashT_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashTemp();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void btn_CashTransactinos_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashTempTransactions();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void btn_CashReports_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashReports();
             frm.MdiParent = this; // assign MdiParent of FormB to FormC
             frm.Dock = DockStyle.Fill;
             frm.Show();
