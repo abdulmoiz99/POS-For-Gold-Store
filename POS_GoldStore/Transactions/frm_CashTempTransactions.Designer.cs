@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CashTempTransactions));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
@@ -55,12 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.dgv_PruchaseCredit = new System.Windows.Forms.DataGridView();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_exitForm = new System.Windows.Forms.Button();
-            this.txt_ProductId = new System.Windows.Forms.TextBox();
-            this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.Cm_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CM_CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +63,12 @@
             this.CM_Bal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CompanyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cm_Mode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_exitForm = new System.Windows.Forms.Button();
+            this.txt_ProductId = new System.Windows.Forms.TextBox();
+            this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.rb_Payable = new System.Windows.Forms.RadioButton();
             this.rb_Receiveable = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -292,12 +292,11 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txt_Find);
-            this.groupBox1.Location = new System.Drawing.Point(158, 235);
+            this.groupBox1.Location = new System.Drawing.Point(167, 275);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(372, 52);
             this.groupBox1.TabIndex = 1129;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Visible = false;
             // 
             // pictureBox1
             // 
@@ -317,20 +316,21 @@
             this.txt_Find.Name = "txt_Find";
             this.txt_Find.Size = new System.Drawing.Size(315, 22);
             this.txt_Find.TabIndex = 10;
+            this.txt_Find.TextChanged += new System.EventHandler(this.txt_Find_TextChanged);
             // 
             // dgv_PruchaseCredit
             // 
             this.dgv_PruchaseCredit.AllowUserToAddRows = false;
             this.dgv_PruchaseCredit.AllowUserToDeleteRows = false;
             this.dgv_PruchaseCredit.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_PruchaseCredit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_PruchaseCredit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_PruchaseCredit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PruchaseCredit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cm_ID,
@@ -341,28 +341,89 @@
             this.CM_Bal,
             this.CompanyID,
             this.Cm_Mode});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_PruchaseCredit.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_PruchaseCredit.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_PruchaseCredit.Location = new System.Drawing.Point(57, 333);
             this.dgv_PruchaseCredit.Name = "dgv_PruchaseCredit";
             this.dgv_PruchaseCredit.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_PruchaseCredit.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_PruchaseCredit.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_PruchaseCredit.Size = new System.Drawing.Size(656, 224);
             this.dgv_PruchaseCredit.TabIndex = 1108;
             this.dgv_PruchaseCredit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PruchaseCredit_CellContentClick);
+            // 
+            // Cm_ID
+            // 
+            this.Cm_ID.DataPropertyName = "Cm_ID";
+            this.Cm_ID.HeaderText = "Cm_ID";
+            this.Cm_ID.Name = "Cm_ID";
+            this.Cm_ID.ReadOnly = true;
+            this.Cm_ID.Visible = false;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "CM_Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // CM_CustomerID
+            // 
+            this.CM_CustomerID.DataPropertyName = "CM_CustomerID";
+            this.CM_CustomerID.HeaderText = "Customer ID";
+            this.CM_CustomerID.Name = "CM_CustomerID";
+            this.CM_CustomerID.ReadOnly = true;
+            this.CM_CustomerID.Width = 150;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            this.CustomerName.Width = 150;
+            // 
+            // CM_Amount
+            // 
+            this.CM_Amount.DataPropertyName = "CM_Amount";
+            this.CM_Amount.HeaderText = "Amount";
+            this.CM_Amount.Name = "CM_Amount";
+            this.CM_Amount.ReadOnly = true;
+            // 
+            // CM_Bal
+            // 
+            this.CM_Bal.DataPropertyName = "CM_Bal";
+            this.CM_Bal.HeaderText = "Balance";
+            this.CM_Bal.Name = "CM_Bal";
+            this.CM_Bal.ReadOnly = true;
+            // 
+            // CompanyID
+            // 
+            this.CompanyID.DataPropertyName = "CompanyID";
+            this.CompanyID.HeaderText = "CompanyId";
+            this.CompanyID.Name = "CompanyID";
+            this.CompanyID.ReadOnly = true;
+            this.CompanyID.Visible = false;
+            // 
+            // Cm_Mode
+            // 
+            this.Cm_Mode.DataPropertyName = "Cm_Mode";
+            this.Cm_Mode.HeaderText = "Cm_Mode";
+            this.Cm_Mode.Name = "Cm_Mode";
+            this.Cm_Mode.ReadOnly = true;
+            this.Cm_Mode.Visible = false;
             // 
             // label33
             // 
@@ -435,78 +496,17 @@
             this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
             this.txt_CustomerName.TabIndex = 1122;
             // 
-            // Cm_ID
-            // 
-            this.Cm_ID.DataPropertyName = "Cm_ID";
-            this.Cm_ID.HeaderText = "Cm_ID";
-            this.Cm_ID.Name = "Cm_ID";
-            this.Cm_ID.ReadOnly = true;
-            this.Cm_ID.Visible = false;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "CM_Date";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // CM_CustomerID
-            // 
-            this.CM_CustomerID.DataPropertyName = "CM_CustomerID";
-            this.CM_CustomerID.HeaderText = "Customer ID";
-            this.CM_CustomerID.Name = "CM_CustomerID";
-            this.CM_CustomerID.ReadOnly = true;
-            this.CM_CustomerID.Width = 150;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            this.CustomerName.Width = 150;
-            // 
-            // CM_Amount
-            // 
-            this.CM_Amount.DataPropertyName = "CM_Amount";
-            this.CM_Amount.HeaderText = "Amount";
-            this.CM_Amount.Name = "CM_Amount";
-            this.CM_Amount.ReadOnly = true;
-            // 
-            // CM_Bal
-            // 
-            this.CM_Bal.DataPropertyName = "CM_Bal";
-            this.CM_Bal.HeaderText = "Balance";
-            this.CM_Bal.Name = "CM_Bal";
-            this.CM_Bal.ReadOnly = true;
-            // 
-            // CompanyID
-            // 
-            this.CompanyID.DataPropertyName = "CompanyID";
-            this.CompanyID.HeaderText = "CompanyId";
-            this.CompanyID.Name = "CompanyID";
-            this.CompanyID.ReadOnly = true;
-            this.CompanyID.Visible = false;
-            // 
-            // Cm_Mode
-            // 
-            this.Cm_Mode.DataPropertyName = "Cm_Mode";
-            this.Cm_Mode.HeaderText = "Cm_Mode";
-            this.Cm_Mode.Name = "Cm_Mode";
-            this.Cm_Mode.ReadOnly = true;
-            this.Cm_Mode.Visible = false;
-            // 
             // rb_Payable
             // 
             this.rb_Payable.AutoSize = true;
             this.rb_Payable.Checked = true;
             this.rb_Payable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Payable.Location = new System.Drawing.Point(331, 293);
+            this.rb_Payable.Location = new System.Drawing.Point(294, 244);
             this.rb_Payable.Name = "rb_Payable";
-            this.rb_Payable.Size = new System.Drawing.Size(87, 24);
+            this.rb_Payable.Size = new System.Drawing.Size(122, 24);
             this.rb_Payable.TabIndex = 1133;
             this.rb_Payable.TabStop = true;
-            this.rb_Payable.Text = "Payable";
+            this.rb_Payable.Text = "Receiveable";
             this.rb_Payable.UseVisualStyleBackColor = true;
             this.rb_Payable.CheckedChanged += new System.EventHandler(this.rb_Payable_CheckedChanged);
             // 
@@ -514,18 +514,18 @@
             // 
             this.rb_Receiveable.AutoSize = true;
             this.rb_Receiveable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Receiveable.Location = new System.Drawing.Point(430, 293);
+            this.rb_Receiveable.Location = new System.Drawing.Point(433, 246);
             this.rb_Receiveable.Name = "rb_Receiveable";
-            this.rb_Receiveable.Size = new System.Drawing.Size(122, 24);
+            this.rb_Receiveable.Size = new System.Drawing.Size(87, 24);
             this.rb_Receiveable.TabIndex = 1133;
-            this.rb_Receiveable.Text = "Receiveable";
+            this.rb_Receiveable.Text = "Payable";
             this.rb_Receiveable.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 293);
+            this.label1.Location = new System.Drawing.Point(215, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 1134;

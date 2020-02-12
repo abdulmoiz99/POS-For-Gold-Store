@@ -22,8 +22,14 @@ namespace POS_GoldStore
             lab_SaleAmount.Text = SQL.ScalarQuery("select SaleAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_PurchaseRetAmt.Text = SQL.ScalarQuery("select PurchaseRetAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_SaleRetAmt.Text = SQL.ScalarQuery("select SaleRetAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
-          //  lab_TempPaid.Text = SQL.ScalarQuery("select TempPaid from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
-         //   lab_TempRec.Text = SQL.ScalarQuery("select SaleTempRec from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_RecCash.Text = SQL.ScalarQuery("select ReceiveAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_PaidCash.Text = SQL.ScalarQuery("select PaidAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_Expense.Text = SQL.ScalarQuery("select Expense from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_ClosingBalance.Text = SQL.ScalarQuery("select ClosingBal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_PervClosing.Text = SQL.ScalarQuery("select ClosingBal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "' -1");
+            lab_OpeningBalance.Text = SQL.ScalarQuery("select Opbal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+
+
         }
         private void TodayExpense()
         {
@@ -63,7 +69,7 @@ namespace POS_GoldStore
                 // Company Name 
                 lab_CompanyName.Text = "TECH WORK";// SQL.ScalarQuery("Select CompanyName From CompanySetup where CompanyID=" + Main.CompanyID + "");
                 lab_Username.Text = Main.UserName;
-
+                Main.fillDgv(dgv_ProductWeight, @"select * from TvuFrmProductSummary");
             }
             catch (Exception ex)
             {
@@ -122,7 +128,9 @@ namespace POS_GoldStore
         {
             lab_date.Text = DateTime.Now.ToString();
             //TodayDetails();
-            Main.fillDgv(dgv_ProductWeight, "Select * from TvufrmProductSummary");
+            // Main.fillDgv(dgv_ProductWeight, "Select * from TvufrmProductSummary");
+          
+      
 
 
         }
@@ -141,6 +149,11 @@ namespace POS_GoldStore
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_exitForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

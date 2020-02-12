@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashBalance));
             this.rb_SaleBalance = new System.Windows.Forms.RadioButton();
             this.rb_PurchaseBalance = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -38,8 +39,13 @@
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.dgv_Balance = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_Find = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Balance)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rb_SaleBalance
@@ -146,7 +152,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Balance.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Balance.Location = new System.Drawing.Point(45, 155);
+            this.dgv_Balance.Location = new System.Drawing.Point(45, 212);
             this.dgv_Balance.Name = "dgv_Balance";
             this.dgv_Balance.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -157,14 +163,45 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Balance.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Balance.Size = new System.Drawing.Size(553, 335);
+            this.dgv_Balance.Size = new System.Drawing.Size(553, 342);
             this.dgv_Balance.TabIndex = 1039;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.txt_Find);
+            this.groupBox1.Location = new System.Drawing.Point(107, 140);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(338, 52);
+            this.groupBox1.TabIndex = 1046;
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(301, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 170;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txt_Find
+            // 
+            this.txt_Find.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Find.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Find.Location = new System.Drawing.Point(6, 16);
+            this.txt_Find.Name = "txt_Find";
+            this.txt_Find.Size = new System.Drawing.Size(289, 22);
+            this.txt_Find.TabIndex = 1;
+            this.txt_Find.TextChanged += new System.EventHandler(this.txt_Find_TextChanged);
             // 
             // CashBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 502);
+            this.ClientSize = new System.Drawing.Size(772, 566);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rb_SaleBalance);
             this.Controls.Add(this.rb_PurchaseBalance);
             this.Controls.Add(this.label6);
@@ -177,6 +214,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Balance)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +231,8 @@
         private System.Windows.Forms.Button btn_exitForm;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DataGridView dgv_Balance;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txt_Find;
     }
 }

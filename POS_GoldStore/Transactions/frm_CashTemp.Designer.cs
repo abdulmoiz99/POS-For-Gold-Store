@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_exitForm = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_New = new System.Windows.Forms.Button();
             this.txt_CustomerId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_CastTempDate = new System.Windows.Forms.DateTimePicker();
@@ -43,10 +47,6 @@
             this.rb_Pay = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_Amount = new System.Windows.Forms.TextBox();
-            this.btn_exitForm = new System.Windows.Forms.Button();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,8 +59,27 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 32);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(678, 63);
+            this.panel2.Size = new System.Drawing.Size(754, 63);
             this.panel2.TabIndex = 227;
+            // 
+            // btn_exitForm
+            // 
+            this.btn_exitForm.BackColor = System.Drawing.Color.White;
+            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exitForm.FlatAppearance.BorderSize = 0;
+            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
+            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exitForm.Location = new System.Drawing.Point(636, 0);
+            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_exitForm.Name = "btn_exitForm";
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 63);
+            this.btn_exitForm.TabIndex = 1017;
+            this.btn_exitForm.Text = "     &Close";
+            this.btn_exitForm.UseVisualStyleBackColor = false;
+            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
             // 
             // label4
             // 
@@ -79,7 +98,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(83)))), ((int)(((byte)(121)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(678, 32);
+            this.panel1.Size = new System.Drawing.Size(754, 32);
             this.panel1.TabIndex = 226;
             // 
             // groupBox2
@@ -87,11 +106,67 @@
             this.groupBox2.Controls.Add(this.btn_Save);
             this.groupBox2.Controls.Add(this.btn_cancel);
             this.groupBox2.Controls.Add(this.btn_New);
-            this.groupBox2.Location = new System.Drawing.Point(476, 114);
+            this.groupBox2.Location = new System.Drawing.Point(552, 112);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(190, 191);
             this.groupBox2.TabIndex = 225;
             this.groupBox2.TabStop = false;
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_Save.Enabled = false;
+            this.btn_Save.FlatAppearance.BorderSize = 0;
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Image = global::POS_GoldStore.Properties.Resources.icons8_save_36;
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Save.Location = new System.Drawing.Point(8, 76);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(172, 43);
+            this.btn_Save.TabIndex = 131;
+            this.btn_Save.Text = "  &Save";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_cancel.Enabled = false;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Image = global::POS_GoldStore.Properties.Resources.icons8_undo_36;
+            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancel.Location = new System.Drawing.Point(8, 133);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(172, 43);
+            this.btn_cancel.TabIndex = 130;
+            this.btn_cancel.Text = "  &Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_New
+            // 
+            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_New.FlatAppearance.BorderSize = 0;
+            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_New.ForeColor = System.Drawing.Color.White;
+            this.btn_New.Image = global::POS_GoldStore.Properties.Resources.AddNewFolder_36;
+            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_New.Location = new System.Drawing.Point(8, 22);
+            this.btn_New.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_New.Name = "btn_New";
+            this.btn_New.Size = new System.Drawing.Size(172, 43);
+            this.btn_New.TabIndex = 127;
+            this.btn_New.Text = "&New";
+            this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
             // txt_CustomerId
             // 
@@ -178,21 +253,21 @@
             this.rb_Recive.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.rb_Recive.Location = new System.Drawing.Point(179, 131);
             this.rb_Recive.Name = "rb_Recive";
-            this.rb_Recive.Size = new System.Drawing.Size(91, 25);
+            this.rb_Recive.Size = new System.Drawing.Size(183, 25);
             this.rb_Recive.TabIndex = 1004;
             this.rb_Recive.TabStop = true;
-            this.rb_Recive.Text = "Receive";
+            this.rb_Recive.Text = "Temp Receive Cash";
             this.rb_Recive.UseVisualStyleBackColor = true;
             // 
             // rb_Pay
             // 
             this.rb_Pay.AutoSize = true;
             this.rb_Pay.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.rb_Pay.Location = new System.Drawing.Point(276, 131);
+            this.rb_Pay.Location = new System.Drawing.Point(368, 131);
             this.rb_Pay.Name = "rb_Pay";
-            this.rb_Pay.Size = new System.Drawing.Size(56, 25);
+            this.rb_Pay.Size = new System.Drawing.Size(167, 25);
             this.rb_Pay.TabIndex = 1004;
-            this.rb_Pay.Text = "Pay";
+            this.rb_Pay.Text = "Temp Given Cash";
             this.rb_Pay.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -217,86 +292,11 @@
             this.txt_Amount.Size = new System.Drawing.Size(275, 27);
             this.txt_Amount.TabIndex = 229;
             // 
-            // btn_exitForm
-            // 
-            this.btn_exitForm.BackColor = System.Drawing.Color.White;
-            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_exitForm.FlatAppearance.BorderSize = 0;
-            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
-            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(560, 0);
-            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_exitForm.Name = "btn_exitForm";
-            this.btn_exitForm.Size = new System.Drawing.Size(118, 63);
-            this.btn_exitForm.TabIndex = 1017;
-            this.btn_exitForm.Text = "     &Close";
-            this.btn_exitForm.UseVisualStyleBackColor = false;
-            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_Save.Enabled = false;
-            this.btn_Save.FlatAppearance.BorderSize = 0;
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Image = global::POS_GoldStore.Properties.Resources.icons8_save_36;
-            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Save.Location = new System.Drawing.Point(8, 76);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(172, 43);
-            this.btn_Save.TabIndex = 131;
-            this.btn_Save.Text = "  &Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_cancel.Enabled = false;
-            this.btn_cancel.FlatAppearance.BorderSize = 0;
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Image = global::POS_GoldStore.Properties.Resources.icons8_undo_36;
-            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancel.Location = new System.Drawing.Point(8, 133);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(172, 43);
-            this.btn_cancel.TabIndex = 130;
-            this.btn_cancel.Text = "  &Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_New
-            // 
-            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_New.FlatAppearance.BorderSize = 0;
-            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_New.ForeColor = System.Drawing.Color.White;
-            this.btn_New.Image = global::POS_GoldStore.Properties.Resources.AddNewFolder_36;
-            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_New.Location = new System.Drawing.Point(8, 22);
-            this.btn_New.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(172, 43);
-            this.btn_New.TabIndex = 127;
-            this.btn_New.Text = "&New";
-            this.btn_New.UseVisualStyleBackColor = false;
-            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
-            // 
             // frm_CashTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 538);
+            this.ClientSize = new System.Drawing.Size(754, 538);
             this.Controls.Add(this.rb_Pay);
             this.Controls.Add(this.rb_Recive);
             this.Controls.Add(this.cmb_CustomerName);

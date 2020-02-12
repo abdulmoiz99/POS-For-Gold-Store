@@ -26,13 +26,26 @@ namespace POS_GoldStore.Transactions
         {
             if(rb_Payable.Checked==true)
             {
-                Main.fillDgv(dgv_Temp, "select * from TvuFrmCashMainSummary where MODE= 'PAY'");
+                Main.fillDgv(dgv_List, "select * from TvuFrmCashMainSummary where MODE= 'PAY'");
             }
             else
             {
-                Main.fillDgv(dgv_Temp, "select * from TvuFrmCashMainSummary where MODE ='RECEIVE'");
+                Main.fillDgv(dgv_List, "select * from TvuFrmCashMainSummary where MODE ='RECEIVE'");
 
             }
+        }
+        private void Search(string MODE,string search)
+        {
+            Main.fillDgv(dgv_List, "select * from TvuFrmCashMainSummary  Where Mode = '"+MODE+"' AND Cast(Customer_Name as varchar) like '%"+search+"%'");
+        }
+        private void txt_Find_TextChanged(object sender, EventArgs e)
+        {
+            if(rb_Payable.Checked==true)
+            {
+                Search("PAY", txt_Find.Text);
+            }
+            else Search("RECEIVE", txt_Find.Text);
+             
         }
     }
 }

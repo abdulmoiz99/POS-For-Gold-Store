@@ -21,6 +21,11 @@ namespace POS_GoldStore.Transactions
             Main.fillDgv(dgv_PruchaseCredit, "select * from TvufrmCashMain where CM_Mode ='" + Mode + "' AND CompanyID =" + Main.CompanyID + "");
 
         }
+        public void CashTempTransSearch(String Mode)
+        {
+            Main.fillDgv(dgv_PruchaseCredit, "select * from TvufrmCashMain where cast(CustomerName as varchar) like '%" + txt_Find.Text + "%' AND  CM_Mode ='" + Mode + "' AND CompanyID =" + Main.CompanyID + "");
+
+        }
         private void frm_CashTempTransactions_Load(object sender, EventArgs e)
         {
             enable_disable(false);
@@ -98,6 +103,12 @@ namespace POS_GoldStore.Transactions
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            var Mode = "PAY";
+            if (rb_Payable.Checked == true)
+            {
+                Mode = "RECEIVE";
+            }
+
             float AMOUNT = 0;
             if (txt_NewAmount.Text == "")
             {
@@ -111,6 +122,8 @@ namespace POS_GoldStore.Transactions
             {
 
                 float Remaing = 0, NewAmount = 0;
+                int CustomerId;
+                int.TryParse(txt_CustomerID.Text, out CustomerId);
                 float.TryParse(txt_BalanceAmount.Text, out Remaing);
                 float.TryParse(txt_NewAmount.Text, out NewAmount);
 
@@ -121,10 +134,22 @@ namespace POS_GoldStore.Transactions
                 else
                 {
                     SQL.NonScalarQuery("Update CASHMAIn set CM_Bal = CM_Bal -'" + AMOUNT + "'  where CM_ID = " + txt_CashMasterID.Text + "");
+                    SQL.NonScalarQuery(@"Insert Into CashMainLog(CML_CustomerId      ,CML_Amount         ,CML_Mode      ,CML_Date                     ,CompanyId)
+                                                          values('" + CustomerId + "','" + NewAmount + "','" + Mode + "','" + System.DateTime.Now + "',"+Main.CompanyID+")");
                     MessageBox.Show("Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     rb_Payable_CheckedChanged(sender, e);
                 }
             }
+        }
+
+        private void txt_Find_TextChanged(object sender, EventArgs e)
+        {
+            if (rb_Receiveable.Checked == true)
+            {
+                CashTempTransSearch("RECEIVE");
+            }
+            else CashTempTransSearch("PAY");
+
         }
     }
 }

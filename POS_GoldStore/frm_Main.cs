@@ -422,5 +422,46 @@ namespace POS_GoldStore
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void balanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new CashBalance();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void tempToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashTemp();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void trasnsactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashTempTransactions();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void reportsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashReports();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult YorN = MessageBox.Show("Are You Sure To Exit", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (YorN == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

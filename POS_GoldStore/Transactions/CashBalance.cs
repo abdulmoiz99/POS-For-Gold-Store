@@ -22,11 +22,23 @@ namespace POS_GoldStore.Transactions
                                         FROM            dbo.TvuFrmCreditSaleOrder
                                         GROUP BY SMCustomerID, CustomerName");
         }
+        private void SaleOrderSearch()
+        {
+            Main.fillDgv(dgv_Balance, @"SELECT        SMCustomerID AS [Customer ID], CustomerName AS [Customer Name], SUM(CAST(SMAmount AS decimal(10, 3))) AS [Total Amount], SUM(CAST(TMAmount AS decimal(10, 3))) AS [Paid Amount], SUM(CAST(BalAmt AS decimal(10, 3))) AS [Balance Amount]
+                                        FROM            dbo.TvuFrmCreditSaleOrder where cast(CustomerName as varchar) like '%" + txt_Find.Text + "%'  GROUP BY SMCustomerID, CustomerName");
+
+        }
         private void PurchaseOrderBalance()
         {
             Main.fillDgv(dgv_Balance, @"SELECT        PMCustomerID AS [Customer Id], CustomerName AS [Customer Name], SUM(CAST(PMAmount AS decimal(10, 3))) AS [Total Amount], SUM(CAST(TMAmount AS decimal(10, 3))) AS [Paid Amount], SUM(CAST(BalAmt AS decimal(10,3))) AS [Balance Amount]
                                         FROM            dbo.TvuFrmCreditPurchaseOrder
                                         GROUP BY PMCustomerID, CustomerName");
+        }
+        private void PurchaseOrderSearch()
+        {
+            Main.fillDgv(dgv_Balance, @"SELECT        PMCustomerID AS [Customer Id], CustomerName AS [Customer Name], SUM(CAST(PMAmount AS decimal(10, 3))) AS [Total Amount], SUM(CAST(TMAmount AS decimal(10, 3))) AS [Paid Amount], SUM(CAST(BalAmt AS decimal(10,3))) AS [Balance Amount]
+                                        FROM            dbo.TvuFrmCreditPurchaseOrder  where cast(CustomerName as varchar) like '%"+txt_Find.Text+ "%' GROUP BY PMCustomerID, CustomerName");
+
         }
         private void label6_Click(object sender, EventArgs e)
         {
@@ -50,6 +62,15 @@ namespace POS_GoldStore.Transactions
         private void btn_exitForm_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txt_Find_TextChanged(object sender, EventArgs e)
+        {
+            if (rb_PurchaseBalance.Checked == true)
+            {
+                PurchaseOrderSearch();
+            }
+            else SaleOrderSearch();
         }
     }
 }
