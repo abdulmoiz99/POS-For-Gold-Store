@@ -34,17 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PurchaseCredit));
             this.label33 = new System.Windows.Forms.Label();
             this.dgv_PruchaseCredit = new System.Windows.Forms.DataGridView();
-            this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.txt_ProductId = new System.Windows.Forms.TextBox();
@@ -76,6 +65,18 @@
             this.txt_InvId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PruchaseCredit)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,6 +115,7 @@
             this.PMID,
             this.PMNo,
             this.PMDate,
+            this.Remarks,
             this.PMCustomerID,
             this.CustomerName,
             this.PMProductID,
@@ -130,7 +132,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_PruchaseCredit.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_PruchaseCredit.Location = new System.Drawing.Point(26, 398);
+            this.dgv_PruchaseCredit.Location = new System.Drawing.Point(3, 398);
             this.dgv_PruchaseCredit.Name = "dgv_PruchaseCredit";
             this.dgv_PruchaseCredit.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -141,90 +143,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_PruchaseCredit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_PruchaseCredit.Size = new System.Drawing.Size(835, 251);
+            this.dgv_PruchaseCredit.RowHeadersWidth = 10;
+            this.dgv_PruchaseCredit.Size = new System.Drawing.Size(902, 251);
             this.dgv_PruchaseCredit.TabIndex = 1058;
             this.dgv_PruchaseCredit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SaleTemp_CellContentClick);
-            // 
-            // PMID
-            // 
-            this.PMID.DataPropertyName = "PMID";
-            this.PMID.HeaderText = "PMID";
-            this.PMID.Name = "PMID";
-            this.PMID.ReadOnly = true;
-            this.PMID.Visible = false;
-            // 
-            // PMNo
-            // 
-            this.PMNo.DataPropertyName = "PMNo";
-            this.PMNo.HeaderText = "Inv No";
-            this.PMNo.Name = "PMNo";
-            this.PMNo.ReadOnly = true;
-            this.PMNo.Width = 80;
-            // 
-            // PMDate
-            // 
-            this.PMDate.DataPropertyName = "PMDate";
-            this.PMDate.HeaderText = "Date";
-            this.PMDate.Name = "PMDate";
-            this.PMDate.ReadOnly = true;
-            // 
-            // PMCustomerID
-            // 
-            this.PMCustomerID.DataPropertyName = "PMCustomerID";
-            this.PMCustomerID.HeaderText = "PMCustomerID";
-            this.PMCustomerID.Name = "PMCustomerID";
-            this.PMCustomerID.ReadOnly = true;
-            this.PMCustomerID.Visible = false;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
-            // PMProductID
-            // 
-            this.PMProductID.DataPropertyName = "PMProductID";
-            this.PMProductID.HeaderText = "PMProductID";
-            this.PMProductID.Name = "PMProductID";
-            this.PMProductID.ReadOnly = true;
-            this.PMProductID.Visible = false;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Product Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // ProductWeight
-            // 
-            this.ProductWeight.DataPropertyName = "ProductWeight";
-            this.ProductWeight.HeaderText = "Product Weight";
-            this.ProductWeight.Name = "ProductWeight";
-            this.ProductWeight.ReadOnly = true;
-            // 
-            // PMRate
-            // 
-            this.PMRate.DataPropertyName = "PMRate";
-            this.PMRate.HeaderText = "Rate";
-            this.PMRate.Name = "PMRate";
-            this.PMRate.ReadOnly = true;
-            // 
-            // PMAmount
-            // 
-            this.PMAmount.DataPropertyName = "PMAmount";
-            this.PMAmount.HeaderText = "Total Amount";
-            this.PMAmount.Name = "PMAmount";
-            this.PMAmount.ReadOnly = true;
-            // 
-            // BalAmt
-            // 
-            this.BalAmt.DataPropertyName = "BalAmt";
-            this.BalAmt.HeaderText = "Balance Amount";
-            this.BalAmt.Name = "BalAmt";
-            this.BalAmt.ReadOnly = true;
             // 
             // panel2
             // 
@@ -235,7 +157,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 34);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(885, 66);
+            this.panel2.Size = new System.Drawing.Size(917, 66);
             this.panel2.TabIndex = 1060;
             // 
             // btn_exitForm
@@ -248,7 +170,7 @@
             this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
             this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(767, 0);
+            this.btn_exitForm.Location = new System.Drawing.Point(799, 0);
             this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_exitForm.Name = "btn_exitForm";
             this.btn_exitForm.Size = new System.Drawing.Size(118, 66);
@@ -556,14 +478,102 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 34);
+            this.panel1.Size = new System.Drawing.Size(917, 34);
             this.panel1.TabIndex = 1059;
+            // 
+            // PMID
+            // 
+            this.PMID.DataPropertyName = "PMID";
+            this.PMID.HeaderText = "PMID";
+            this.PMID.Name = "PMID";
+            this.PMID.ReadOnly = true;
+            this.PMID.Visible = false;
+            // 
+            // PMNo
+            // 
+            this.PMNo.DataPropertyName = "PMNo";
+            this.PMNo.HeaderText = "Inv No";
+            this.PMNo.Name = "PMNo";
+            this.PMNo.ReadOnly = true;
+            this.PMNo.Width = 80;
+            // 
+            // PMDate
+            // 
+            this.PMDate.DataPropertyName = "PMDate";
+            this.PMDate.HeaderText = "Date";
+            this.PMDate.Name = "PMDate";
+            this.PMDate.ReadOnly = true;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "PMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
+            // 
+            // PMCustomerID
+            // 
+            this.PMCustomerID.DataPropertyName = "PMCustomerID";
+            this.PMCustomerID.HeaderText = "PMCustomerID";
+            this.PMCustomerID.Name = "PMCustomerID";
+            this.PMCustomerID.ReadOnly = true;
+            this.PMCustomerID.Visible = false;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            // 
+            // PMProductID
+            // 
+            this.PMProductID.DataPropertyName = "PMProductID";
+            this.PMProductID.HeaderText = "PMProductID";
+            this.PMProductID.Name = "PMProductID";
+            this.PMProductID.ReadOnly = true;
+            this.PMProductID.Visible = false;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Product Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // ProductWeight
+            // 
+            this.ProductWeight.DataPropertyName = "ProductWeight";
+            this.ProductWeight.HeaderText = "Product Weight";
+            this.ProductWeight.Name = "ProductWeight";
+            this.ProductWeight.ReadOnly = true;
+            // 
+            // PMRate
+            // 
+            this.PMRate.DataPropertyName = "PMRate";
+            this.PMRate.HeaderText = "Rate";
+            this.PMRate.Name = "PMRate";
+            this.PMRate.ReadOnly = true;
+            // 
+            // PMAmount
+            // 
+            this.PMAmount.DataPropertyName = "PMAmount";
+            this.PMAmount.HeaderText = "Total Amount";
+            this.PMAmount.Name = "PMAmount";
+            this.PMAmount.ReadOnly = true;
+            // 
+            // BalAmt
+            // 
+            this.BalAmt.DataPropertyName = "BalAmt";
+            this.BalAmt.HeaderText = "Balance Amount";
+            this.BalAmt.Name = "BalAmt";
+            this.BalAmt.ReadOnly = true;
             // 
             // frm_PurchaseCredit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 767);
+            this.ClientSize = new System.Drawing.Size(917, 767);
             this.Controls.Add(this.dgv_PruchaseCredit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txt_ProductId);
@@ -646,6 +656,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PMID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMCustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMProductID;

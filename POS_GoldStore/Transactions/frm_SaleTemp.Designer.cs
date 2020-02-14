@@ -33,17 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SaleTemp));
             this.dgv_SaleTemp = new System.Windows.Forms.DataGridView();
-            this.SMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SMCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -76,6 +65,18 @@
             this.txt_ProductId = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_CustomerName = new System.Windows.Forms.TextBox();
+            this.SMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SMCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SaleTemp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -109,7 +110,8 @@
             this.ProductWeight,
             this.BalQty,
             this.SMRate,
-            this.Amount});
+            this.Amount,
+            this.Remarks});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,92 +131,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_SaleTemp.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_SaleTemp.Size = new System.Drawing.Size(830, 274);
+            this.dgv_SaleTemp.Size = new System.Drawing.Size(926, 274);
             this.dgv_SaleTemp.TabIndex = 0;
             this.dgv_SaleTemp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // SMID
-            // 
-            this.SMID.DataPropertyName = "SMID";
-            this.SMID.HeaderText = "SMID";
-            this.SMID.Name = "SMID";
-            this.SMID.ReadOnly = true;
-            this.SMID.Visible = false;
-            // 
-            // SMNo
-            // 
-            this.SMNo.DataPropertyName = "SMNo";
-            this.SMNo.HeaderText = "Invoice No";
-            this.SMNo.Name = "SMNo";
-            this.SMNo.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "SMdate";
-            this.Column3.HeaderText = "Date";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // SMCustomerId
-            // 
-            this.SMCustomerId.DataPropertyName = "SMCustomerId";
-            this.SMCustomerId.HeaderText = "Customer ID";
-            this.SMCustomerId.Name = "SMCustomerId";
-            this.SMCustomerId.ReadOnly = true;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            this.CustomerName.Width = 120;
-            // 
-            // SMProductID
-            // 
-            this.SMProductID.DataPropertyName = "SMProductID";
-            this.SMProductID.HeaderText = "SMProductID";
-            this.SMProductID.Name = "SMProductID";
-            this.SMProductID.ReadOnly = true;
-            this.SMProductID.Visible = false;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Product Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // ProductWeight
-            // 
-            this.ProductWeight.DataPropertyName = "ProductWeight";
-            this.ProductWeight.HeaderText = "Quantity";
-            this.ProductWeight.Name = "ProductWeight";
-            this.ProductWeight.ReadOnly = true;
-            // 
-            // BalQty
-            // 
-            this.BalQty.DataPropertyName = "BalQty";
-            this.BalQty.HeaderText = "Balance Quantity";
-            this.BalQty.Name = "BalQty";
-            this.BalQty.ReadOnly = true;
-            this.BalQty.Width = 150;
-            // 
-            // SMRate
-            // 
-            this.SMRate.DataPropertyName = "SMRate";
-            this.SMRate.HeaderText = "Rate";
-            this.SMRate.Name = "SMRate";
-            this.SMRate.ReadOnly = true;
-            this.SMRate.Visible = false;
-            // 
-            // Amount
-            // 
-            this.Amount.DataPropertyName = "SMAmount";
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            this.Amount.Visible = false;
             // 
             // panel2
             // 
@@ -225,7 +144,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 34);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(863, 66);
+            this.panel2.Size = new System.Drawing.Size(950, 66);
             this.panel2.TabIndex = 1030;
             // 
             // btn_exitForm
@@ -238,7 +157,7 @@
             this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
             this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(745, 0);
+            this.btn_exitForm.Location = new System.Drawing.Point(832, 0);
             this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_exitForm.Name = "btn_exitForm";
             this.btn_exitForm.Size = new System.Drawing.Size(118, 66);
@@ -267,7 +186,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(863, 34);
+            this.panel1.Size = new System.Drawing.Size(950, 34);
             this.panel1.TabIndex = 1029;
             // 
             // dtp_date
@@ -581,11 +500,101 @@
             this.txt_CustomerName.TabIndex = 1032;
             this.txt_CustomerName.TextChanged += new System.EventHandler(this.txt_ProductName_TextChanged);
             // 
+            // SMID
+            // 
+            this.SMID.DataPropertyName = "SMID";
+            this.SMID.HeaderText = "SMID";
+            this.SMID.Name = "SMID";
+            this.SMID.ReadOnly = true;
+            this.SMID.Visible = false;
+            // 
+            // SMNo
+            // 
+            this.SMNo.DataPropertyName = "SMNo";
+            this.SMNo.HeaderText = "Invoice No";
+            this.SMNo.Name = "SMNo";
+            this.SMNo.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "SMdate";
+            this.Column3.HeaderText = "Date";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // SMCustomerId
+            // 
+            this.SMCustomerId.DataPropertyName = "SMCustomerId";
+            this.SMCustomerId.HeaderText = "Customer ID";
+            this.SMCustomerId.Name = "SMCustomerId";
+            this.SMCustomerId.ReadOnly = true;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            this.CustomerName.Width = 120;
+            // 
+            // SMProductID
+            // 
+            this.SMProductID.DataPropertyName = "SMProductID";
+            this.SMProductID.HeaderText = "SMProductID";
+            this.SMProductID.Name = "SMProductID";
+            this.SMProductID.ReadOnly = true;
+            this.SMProductID.Visible = false;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Product Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // ProductWeight
+            // 
+            this.ProductWeight.DataPropertyName = "ProductWeight";
+            this.ProductWeight.HeaderText = "Quantity";
+            this.ProductWeight.Name = "ProductWeight";
+            this.ProductWeight.ReadOnly = true;
+            // 
+            // BalQty
+            // 
+            this.BalQty.DataPropertyName = "BalQty";
+            this.BalQty.HeaderText = "Balance Quantity";
+            this.BalQty.Name = "BalQty";
+            this.BalQty.ReadOnly = true;
+            this.BalQty.Width = 150;
+            // 
+            // SMRate
+            // 
+            this.SMRate.DataPropertyName = "SMRate";
+            this.SMRate.HeaderText = "Rate";
+            this.SMRate.Name = "SMRate";
+            this.SMRate.ReadOnly = true;
+            this.SMRate.Visible = false;
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "SMAmount";
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            this.Amount.Visible = false;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "SMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
+            // 
             // frm_SaleTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 708);
+            this.ClientSize = new System.Drawing.Size(950, 708);
             this.Controls.Add(this.txt_ProductId);
             this.Controls.Add(this.txt_SMID);
             this.Controls.Add(this.groupBox2);
@@ -662,6 +671,8 @@
         private System.Windows.Forms.TextBox txt_SMID;
         private System.Windows.Forms.DateTimePicker dtp_date;
         private System.Windows.Forms.TextBox txt_ProductId;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SMID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SMNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -673,7 +684,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BalQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn SMRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
     }
 }

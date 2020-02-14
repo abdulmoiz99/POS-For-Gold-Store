@@ -48,7 +48,7 @@ namespace POS_GoldStore.Transactions
 
         private void frm_SaleTemp_Activated(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_SaleTemp, "select SMId,SMNo,SMDate,SMCustomerID,CustomerName,SMProductId,PName,ProductWeight,BalQty,SMRate,SMAmount from TvuFrmTempRec where BalQty>0");
+            Main.fillDgv(dgv_SaleTemp, "select SMId,SMNo,SMDate,SMCustomerID,CustomerName,SMProductId,PName,ProductWeight,BalQty,SMRate,SMAmount,SMRemarks from TvuFrmTempRec where BalQty>0");
         }
 
         private void btn_Save_Click(object sender, EventArgs e)

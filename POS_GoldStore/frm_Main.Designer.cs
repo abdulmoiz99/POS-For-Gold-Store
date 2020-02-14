@@ -59,9 +59,15 @@
             this.tempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trasnsactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_exitForm = new System.Windows.Forms.Button();
+            this.btn_Minimize = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CashTemp
@@ -121,9 +127,9 @@
             this.panel2.Controls.Add(this.btn_SaleOrder);
             this.panel2.Controls.Add(this.btn_PurchaseOrder);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(474, 24);
+            this.panel2.Location = new System.Drawing.Point(474, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 712);
+            this.panel2.Size = new System.Drawing.Size(226, 676);
             this.panel2.TabIndex = 4;
             // 
             // btn_CashReports
@@ -266,8 +272,9 @@
             this.setupToolStripMenuItem,
             this.userManagementToolStripMenuItem,
             this.reportsToolStripMenuItem,
-            this.cashToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.cashToolStripMenuItem,
+            this.toolsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 36);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(700, 24);
             this.menuStrip1.TabIndex = 6;
@@ -387,10 +394,73 @@
             this.reportsToolStripMenuItem1.Text = "Reports";
             this.reportsToolStripMenuItem1.Click += new System.EventHandler(this.reportsToolStripMenuItem1_Click);
             // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculatorToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // calculatorToolStripMenuItem
+            // 
+            this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
+            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.calculatorToolStripMenuItem.Text = "Calculator";
+            this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.panel1.Controls.Add(this.btn_Minimize);
+            this.panel1.Controls.Add(this.btn_exitForm);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(700, 36);
+            this.panel1.TabIndex = 228;
+            // 
+            // btn_exitForm
+            // 
+            this.btn_exitForm.BackColor = System.Drawing.Color.White;
+            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exitForm.FlatAppearance.BorderSize = 0;
+            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
+            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exitForm.Location = new System.Drawing.Point(582, 0);
+            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_exitForm.Name = "btn_exitForm";
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 36);
+            this.btn_exitForm.TabIndex = 1017;
+            this.btn_exitForm.Text = "   Exit";
+            this.btn_exitForm.UseVisualStyleBackColor = false;
+            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Minimize.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_Minimize.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Minimize.Location = new System.Drawing.Point(414, 0);
+            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(168, 36);
+            this.btn_Minimize.TabIndex = 1018;
+            this.btn_Minimize.Text = "Minimize";
+            this.btn_Minimize.UseVisualStyleBackColor = false;
+            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
             // frm_Main
             // 
@@ -399,6 +469,8 @@
             this.ClientSize = new System.Drawing.Size(700, 736);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Main";
@@ -410,6 +482,7 @@
             this.panel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,5 +520,10 @@
         private System.Windows.Forms.ToolStripMenuItem tempToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trasnsactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_exitForm;
+        private System.Windows.Forms.Button btn_Minimize;
     }
 }

@@ -47,6 +47,8 @@
             this.rb_Pay = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_Amount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_Remarks = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -194,7 +196,7 @@
             // 
             this.dtp_CastTempDate.Enabled = false;
             this.dtp_CastTempDate.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.dtp_CastTempDate.Location = new System.Drawing.Point(179, 276);
+            this.dtp_CastTempDate.Location = new System.Drawing.Point(179, 311);
             this.dtp_CastTempDate.Name = "dtp_CastTempDate";
             this.dtp_CastTempDate.Size = new System.Drawing.Size(275, 27);
             this.dtp_CastTempDate.TabIndex = 230;
@@ -227,7 +229,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(114, 280);
+            this.label3.Location = new System.Drawing.Point(114, 315);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 21);
@@ -275,7 +277,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(89, 243);
+            this.label7.Location = new System.Drawing.Point(89, 245);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 21);
@@ -287,10 +289,32 @@
             this.txt_Amount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Amount.Enabled = false;
             this.txt_Amount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Amount.Location = new System.Drawing.Point(179, 239);
+            this.txt_Amount.Location = new System.Drawing.Point(179, 241);
             this.txt_Amount.Name = "txt_Amount";
             this.txt_Amount.Size = new System.Drawing.Size(275, 27);
             this.txt_Amount.TabIndex = 229;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(89, 282);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 21);
+            this.label5.TabIndex = 228;
+            this.label5.Text = "Remarks :";
+            // 
+            // txt_Remarks
+            // 
+            this.txt_Remarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Remarks.Enabled = false;
+            this.txt_Remarks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Remarks.Location = new System.Drawing.Point(179, 278);
+            this.txt_Remarks.Name = "txt_Remarks";
+            this.txt_Remarks.Size = new System.Drawing.Size(275, 27);
+            this.txt_Remarks.TabIndex = 229;
             // 
             // frm_CashTemp
             // 
@@ -301,9 +325,11 @@
             this.Controls.Add(this.rb_Recive);
             this.Controls.Add(this.cmb_CustomerName);
             this.Controls.Add(this.dtp_CastTempDate);
+            this.Controls.Add(this.txt_Remarks);
             this.Controls.Add(this.txt_Amount);
             this.Controls.Add(this.txt_CustomerId);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -346,5 +372,7 @@
         private System.Windows.Forms.RadioButton rb_Pay;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_Amount;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_Remarks;
     }
 }

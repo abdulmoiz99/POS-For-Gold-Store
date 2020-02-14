@@ -20,7 +20,7 @@ namespace POS_GoldStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_SalePurchaseReport());
+            Application.Run(new frm_SaleOrder());
         }
     }
 }

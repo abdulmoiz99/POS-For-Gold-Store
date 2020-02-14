@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -457,11 +458,50 @@ namespace POS_GoldStore
 
         private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //DialogResult YorN = MessageBox.Show("Are You Sure To Exit", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (YorN == DialogResult.Yes)
+            //{
+            //    Application.Exit();
+            //}
+        }
+
+        private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = null;
+                if (p == null)
+                {
+                    p = new Process();
+                    p.StartInfo.FileName = "Calc.exe";
+                    p.Start();
+                }
+                else
+                {
+                    p.Close();
+                    p.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Excepton" + ex.Message);
+            }
+        }
+
+        private void btn_exitForm_Click(object sender, EventArgs e)
+        {
             DialogResult YorN = MessageBox.Show("Are You Sure To Exit", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (YorN == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+        //    if (e.KeyChar == 'm')
+                this.WindowState = FormWindowState.Minimized;
+        }
     }
-}
+    }
+

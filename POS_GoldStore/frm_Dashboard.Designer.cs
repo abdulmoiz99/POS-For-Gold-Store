@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Dashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lab_date = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.lab_PurchaeAmount = new System.Windows.Forms.Label();
@@ -85,6 +85,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lab_CashReceiveable = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.lab_CashPayable = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             this.panel14.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -101,6 +107,8 @@
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // lab_date
@@ -108,7 +116,7 @@
             this.lab_date.AutoSize = true;
             this.lab_date.Font = new System.Drawing.Font("BigNoodleTitling", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_date.ForeColor = System.Drawing.Color.DarkGray;
-            this.lab_date.Location = new System.Drawing.Point(553, 91);
+            this.lab_date.Location = new System.Drawing.Point(486, 41);
             this.lab_date.Name = "lab_date";
             this.lab_date.Size = new System.Drawing.Size(168, 52);
             this.lab_date.TabIndex = 65;
@@ -119,7 +127,7 @@
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel17.Controls.Add(this.lab_PurchaeAmount);
             this.panel17.Controls.Add(this.label23);
-            this.panel17.Location = new System.Drawing.Point(4, 370);
+            this.panel17.Location = new System.Drawing.Point(3, 283);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(295, 35);
             this.panel17.TabIndex = 64;
@@ -151,7 +159,7 @@
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel14.Controls.Add(this.lab_SaleAmount);
             this.panel14.Controls.Add(this.label17);
-            this.panel14.Location = new System.Drawing.Point(5, 418);
+            this.panel14.Location = new System.Drawing.Point(4, 331);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(295, 35);
             this.panel14.TabIndex = 61;
@@ -184,7 +192,7 @@
             this.lab_CompanyName.AutoSize = true;
             this.lab_CompanyName.Font = new System.Drawing.Font("BigNoodleTitling", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_CompanyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lab_CompanyName.Location = new System.Drawing.Point(11, 97);
+            this.lab_CompanyName.Location = new System.Drawing.Point(10, 41);
             this.lab_CompanyName.Name = "lab_CompanyName";
             this.lab_CompanyName.Size = new System.Drawing.Size(251, 87);
             this.lab_CompanyName.TabIndex = 56;
@@ -196,9 +204,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox1.Location = new System.Drawing.Point(3, 181);
+            this.groupBox1.Location = new System.Drawing.Point(2, 125);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(437, 143);
+            this.groupBox1.Size = new System.Drawing.Size(437, 111);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Info";
@@ -228,7 +236,7 @@
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(448, 156);
+            this.panel7.Location = new System.Drawing.Point(447, 100);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(392, 45);
             this.panel7.TabIndex = 52;
@@ -257,19 +265,19 @@
             this.dgv_Expense.AllowUserToDeleteRows = false;
             this.dgv_Expense.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_Expense.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Expense.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Expense.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Expense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Expense.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Type,
             this.Amount});
-            this.dgv_Expense.Location = new System.Drawing.Point(448, 198);
+            this.dgv_Expense.Location = new System.Drawing.Point(447, 142);
             this.dgv_Expense.Name = "dgv_Expense";
             this.dgv_Expense.ReadOnly = true;
             this.dgv_Expense.Size = new System.Drawing.Size(390, 94);
@@ -298,7 +306,7 @@
             this.groupBox2.Controls.Add(this.btn_OpenCounter);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Location = new System.Drawing.Point(324, 529);
+            this.groupBox2.Location = new System.Drawing.Point(305, 441);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(537, 146);
             this.groupBox2.TabIndex = 66;
@@ -359,7 +367,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(288, 89);
+            this.dateTimePicker1.Location = new System.Drawing.Point(233, 107);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 67;
@@ -370,7 +378,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel1.Controls.Add(this.lab_SaleRetAmt);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(5, 499);
+            this.panel1.Location = new System.Drawing.Point(4, 412);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 35);
             this.panel1.TabIndex = 69;
@@ -402,7 +410,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel2.Controls.Add(this.lab_PurchaseRetAmt);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(6, 458);
+            this.panel2.Location = new System.Drawing.Point(5, 371);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(295, 35);
             this.panel2.TabIndex = 68;
@@ -435,20 +443,20 @@
             this.dgv_ProductWeight.AllowUserToDeleteRows = false;
             this.dgv_ProductWeight.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_ProductWeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ProductWeight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ProductWeight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_ProductWeight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ProductWeight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Payable});
-            this.dgv_ProductWeight.Location = new System.Drawing.Point(306, 335);
+            this.dgv_ProductWeight.Location = new System.Drawing.Point(305, 248);
             this.dgv_ProductWeight.Name = "dgv_ProductWeight";
             this.dgv_ProductWeight.ReadOnly = true;
             this.dgv_ProductWeight.Size = new System.Drawing.Size(570, 187);
@@ -484,7 +492,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel3.Controls.Add(this.lab_ClosingBalance);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(3, 663);
+            this.panel3.Location = new System.Drawing.Point(2, 578);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(295, 35);
             this.panel3.TabIndex = 71;
@@ -516,7 +524,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel4.Controls.Add(this.lab_RecCash);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(3, 540);
+            this.panel4.Location = new System.Drawing.Point(2, 453);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(295, 35);
             this.panel4.TabIndex = 72;
@@ -548,7 +556,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel5.Controls.Add(this.lab_PaidCash);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(4, 581);
+            this.panel5.Location = new System.Drawing.Point(3, 494);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(295, 35);
             this.panel5.TabIndex = 73;
@@ -580,7 +588,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel6.Controls.Add(this.lab_PervClosing);
             this.panel6.Controls.Add(this.label11);
-            this.panel6.Location = new System.Drawing.Point(3, 704);
+            this.panel6.Location = new System.Drawing.Point(2, 619);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(295, 35);
             this.panel6.TabIndex = 74;
@@ -612,7 +620,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel8.Controls.Add(this.lab_OpeningBalance);
             this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(3, 329);
+            this.panel8.Location = new System.Drawing.Point(2, 242);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(295, 35);
             this.panel8.TabIndex = 75;
@@ -644,7 +652,7 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
             this.panel10.Controls.Add(this.lab_Expense);
             this.panel10.Controls.Add(this.label10);
-            this.panel10.Location = new System.Drawing.Point(3, 622);
+            this.panel10.Location = new System.Drawing.Point(2, 535);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(295, 35);
             this.panel10.TabIndex = 76;
@@ -679,7 +687,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(954, 66);
+            this.panel11.Size = new System.Drawing.Size(954, 37);
             this.panel11.TabIndex = 1042;
             // 
             // btn_exitForm
@@ -695,17 +703,83 @@
             this.btn_exitForm.Location = new System.Drawing.Point(836, 0);
             this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_exitForm.Name = "btn_exitForm";
-            this.btn_exitForm.Size = new System.Drawing.Size(118, 66);
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 37);
             this.btn_exitForm.TabIndex = 1016;
             this.btn_exitForm.Text = "     &Close";
             this.btn_exitForm.UseVisualStyleBackColor = false;
             this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Teal;
+            this.panel12.Controls.Add(this.lab_CashReceiveable);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Location = new System.Drawing.Point(305, 619);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(295, 35);
+            this.panel12.TabIndex = 1043;
+            // 
+            // lab_CashReceiveable
+            // 
+            this.lab_CashReceiveable.AutoSize = true;
+            this.lab_CashReceiveable.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CashReceiveable.ForeColor = System.Drawing.Color.White;
+            this.lab_CashReceiveable.Location = new System.Drawing.Point(156, 5);
+            this.lab_CashReceiveable.Name = "lab_CashReceiveable";
+            this.lab_CashReceiveable.Size = new System.Drawing.Size(18, 27);
+            this.lab_CashReceiveable.TabIndex = 7;
+            this.lab_CashReceiveable.Text = "1";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(17, 5);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(142, 27);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Cash Receiveable :";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Controls.Add(this.lab_CashPayable);
+            this.panel13.Controls.Add(this.label14);
+            this.panel13.Location = new System.Drawing.Point(606, 619);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(295, 35);
+            this.panel13.TabIndex = 1044;
+            // 
+            // lab_CashPayable
+            // 
+            this.lab_CashPayable.AutoSize = true;
+            this.lab_CashPayable.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CashPayable.ForeColor = System.Drawing.Color.White;
+            this.lab_CashPayable.Location = new System.Drawing.Point(130, 5);
+            this.lab_CashPayable.Name = "lab_CashPayable";
+            this.lab_CashPayable.Size = new System.Drawing.Size(18, 27);
+            this.lab_CashPayable.TabIndex = 7;
+            this.lab_CashPayable.Text = "1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(17, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(116, 27);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Cash Payable :";
             // 
             // frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 769);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel8);
@@ -759,6 +833,10 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -819,5 +897,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button btn_exitForm;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label lab_CashReceiveable;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label lab_CashPayable;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -135,7 +135,7 @@ namespace POS_GoldStore.Transactions
                 {
                     SQL.NonScalarQuery("Update CASHMAIn set CM_Bal = CM_Bal -'" + AMOUNT + "'  where CM_ID = " + txt_CashMasterID.Text + "");
                     SQL.NonScalarQuery(@"Insert Into CashMainLog(CML_CustomerId      ,CML_Amount         ,CML_Mode      ,CML_Date                     ,CompanyId)
-                                                          values('" + CustomerId + "','" + NewAmount + "','" + Mode + "','" + System.DateTime.Now + "',"+Main.CompanyID+")");
+                                                          values('" + CustomerId + "','" + NewAmount + "','" + Mode + "','" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "',"+Main.CompanyID+")");
                     MessageBox.Show("Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     rb_Payable_CheckedChanged(sender, e);
                 }

@@ -194,6 +194,7 @@ namespace POS_GoldStore.Transactions
 
         private void frm_SaleOrder_Load(object sender, EventArgs e)
         {
+            btn_Balance_Click( sender,  e);
             enable_disable(false);
             Main.fillDgv(dgv_ProductDetails, "Select PName , PBalance from ProductMaster Where PActive = 1 and CompanyID =" + Main.CompanyID + "");
         }
@@ -390,6 +391,29 @@ namespace POS_GoldStore.Transactions
         private void btn_Print_Click(object sender, EventArgs e)
         {
             Report();
+        }
+
+        private void rdo_Credit_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rdo_Credit.Checked == true)
+            {
+                lab_Amt.Visible = false;
+                lab_Recived.Visible = false;
+                lab_Ret.Visible = false;
+                txt_Amount.Visible = false;
+                txt_Received.Visible = false;
+                txt_Return.Visible = false;
+            }
+            else
+            {
+                lab_Amt.Visible = true;
+                lab_Recived.Visible = true;
+                lab_Ret.Visible = true;
+                txt_Amount.Visible = true;
+                txt_Received.Visible = true;
+                txt_Return.Visible = true;
+            }
         }
     }
 

@@ -59,9 +59,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dgv_PruchaseCredit = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_exitForm = new System.Windows.Forms.Button();
+            this.txt_ProductId = new System.Windows.Forms.TextBox();
+            this.txt_CustomerName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,12 +77,6 @@
             this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_exitForm = new System.Windows.Forms.Button();
-            this.txt_ProductId = new System.Windows.Forms.TextBox();
-            this.txt_CustomerName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -317,7 +318,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 66);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(887, 34);
+            this.panel1.Size = new System.Drawing.Size(932, 34);
             this.panel1.TabIndex = 1084;
             // 
             // dtp_date
@@ -378,6 +379,7 @@
             this.PMID,
             this.PMNo,
             this.PMDate,
+            this.Remarks,
             this.PMCustomerID,
             this.CustomerName,
             this.PMProductID,
@@ -405,9 +407,79 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_PruchaseCredit.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_PruchaseCredit.Size = new System.Drawing.Size(835, 251);
+            this.dgv_PruchaseCredit.RowHeadersWidth = 10;
+            this.dgv_PruchaseCredit.Size = new System.Drawing.Size(903, 251);
             this.dgv_PruchaseCredit.TabIndex = 1083;
             this.dgv_PruchaseCredit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PruchaseCredit_CellContentClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.panel2.Controls.Add(this.btn_exitForm);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(932, 66);
+            this.panel2.TabIndex = 1085;
+            // 
+            // btn_exitForm
+            // 
+            this.btn_exitForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_exitForm.FlatAppearance.BorderSize = 0;
+            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
+            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exitForm.Location = new System.Drawing.Point(814, 0);
+            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_exitForm.Name = "btn_exitForm";
+            this.btn_exitForm.Size = new System.Drawing.Size(118, 66);
+            this.btn_exitForm.TabIndex = 1016;
+            this.btn_exitForm.Text = "     &Close";
+            this.btn_exitForm.UseVisualStyleBackColor = false;
+            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
+            // 
+            // txt_ProductId
+            // 
+            this.txt_ProductId.Enabled = false;
+            this.txt_ProductId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ProductId.Location = new System.Drawing.Point(613, 674);
+            this.txt_ProductId.Name = "txt_ProductId";
+            this.txt_ProductId.Size = new System.Drawing.Size(43, 26);
+            this.txt_ProductId.TabIndex = 1107;
+            this.txt_ProductId.Visible = false;
+            // 
+            // txt_CustomerName
+            // 
+            this.txt_CustomerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CustomerName.Location = new System.Drawing.Point(143, 187);
+            this.txt_CustomerName.Name = "txt_CustomerName";
+            this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
+            this.txt_CustomerName.TabIndex = 1097;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1, 190);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 20);
+            this.label9.TabIndex = 1088;
+            this.label9.Text = "Customer Name :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 20);
+            this.label1.TabIndex = 1086;
+            this.label1.Text = "Invoice ID :";
             // 
             // PMID
             // 
@@ -431,6 +503,13 @@
             this.PMDate.HeaderText = "Date";
             this.PMDate.Name = "PMDate";
             this.PMDate.ReadOnly = true;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "SMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
             // 
             // PMCustomerID
             // 
@@ -490,80 +569,11 @@
             this.BalAmt.Name = "BalAmt";
             this.BalAmt.ReadOnly = true;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.panel2.Controls.Add(this.btn_exitForm);
-            this.panel2.Controls.Add(this.label33);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(887, 66);
-            this.panel2.TabIndex = 1085;
-            // 
-            // btn_exitForm
-            // 
-            this.btn_exitForm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_exitForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_exitForm.FlatAppearance.BorderSize = 0;
-            this.btn_exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exitForm.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
-            this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(769, 0);
-            this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_exitForm.Name = "btn_exitForm";
-            this.btn_exitForm.Size = new System.Drawing.Size(118, 66);
-            this.btn_exitForm.TabIndex = 1016;
-            this.btn_exitForm.Text = "     &Close";
-            this.btn_exitForm.UseVisualStyleBackColor = false;
-            this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
-            // 
-            // txt_ProductId
-            // 
-            this.txt_ProductId.Enabled = false;
-            this.txt_ProductId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ProductId.Location = new System.Drawing.Point(613, 674);
-            this.txt_ProductId.Name = "txt_ProductId";
-            this.txt_ProductId.Size = new System.Drawing.Size(43, 26);
-            this.txt_ProductId.TabIndex = 1107;
-            this.txt_ProductId.Visible = false;
-            // 
-            // txt_CustomerName
-            // 
-            this.txt_CustomerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CustomerName.Location = new System.Drawing.Point(143, 187);
-            this.txt_CustomerName.Name = "txt_CustomerName";
-            this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
-            this.txt_CustomerName.TabIndex = 1097;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1, 190);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 20);
-            this.label9.TabIndex = 1088;
-            this.label9.Text = "Customer Name :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 20);
-            this.label1.TabIndex = 1086;
-            this.label1.Text = "Invoice ID :";
-            // 
             // frm_SaleOrderCredit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 612);
+            this.ClientSize = new System.Drawing.Size(932, 612);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txt_NewAmount);
             this.Controls.Add(this.txt_BalanceAmount);
@@ -645,6 +655,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PMID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMCustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMProductID;

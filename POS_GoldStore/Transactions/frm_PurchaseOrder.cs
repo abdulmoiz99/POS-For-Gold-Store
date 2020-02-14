@@ -186,6 +186,7 @@ namespace POS_GoldStore.Transactions
 
         private void frm_PurchaseOrder_Load(object sender, EventArgs e)
         {
+            btn_Balance_Click(sender, e);
             enable_disable(false);
             Main.fillDgv(dgv_ProductDetails, "Select PName , PBalance from ProductMaster Where PActive = 1 and CompanyID =" + Main.CompanyID + "");
 
@@ -278,7 +279,7 @@ namespace POS_GoldStore.Transactions
             }
             if (!double.TryParse(txt_Amount.Text, out Amount))
             {
-               // MessageBox.Show("Amount Is Invalid");
+                // MessageBox.Show("Amount Is Invalid");
             }
             else
             {
@@ -340,6 +341,33 @@ namespace POS_GoldStore.Transactions
         private void btn_Print_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rdo_Cash_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdo_Credit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo_Credit.Checked == true)
+            {
+                lab_Amt.Visible = false;
+                lab_Given.Visible = false;
+                lab_Ret.Visible = false;
+                txt_Amount.Visible = false;
+                txt_Given.Visible = false;
+                txt_Return.Visible = false;
+            }
+            else
+            {
+                lab_Amt.Visible = true;
+                lab_Given.Visible = true;
+                lab_Ret.Visible = true;
+                txt_Amount.Visible = true;
+                txt_Given.Visible = true;
+                txt_Return.Visible = true;
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace POS_GoldStore.Transactions
                     this.Close();
                 }
                 else
-                {   
+                {
                     Main.fillCombo(cmb_CustomerName, "CustomerMaster", "CustomerName", "CustomerID", "CustomerActive=1");
 
                 }
@@ -80,8 +80,8 @@ namespace POS_GoldStore.Transactions
             else
             {
 
-                SQL.NonScalarQuery(@"Insert into CashMain(CM_Date                                                   ,    CM_CustomerID                      ,CM_Amount     ,CM_Bal        ,CM_Mode          ,CompanyID)
-                                                   values('" + dtp_CastTempDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ," + amount + "," + amount + ",'" + mode + "'   ," + Main.CompanyID + ")");
+                SQL.NonScalarQuery(@"Insert into CashMain(CM_Date                                                   ,    CM_CustomerID                      ,CM_Amount     ,CM_Bal        ,CM_Mode          ,CM_Remarks                ,CompanyID)
+                                                   values('" + dtp_CastTempDate.Value.Date.ToString("yyyyMMdd") + "'," + cmb_CustomerName.SelectedValue + " ," + amount + "," + amount + ",'" + mode + "'   ,'" + txt_Remarks.Text + "'," + Main.CompanyID + ")");
                 MessageBox.Show("Record Added Successfull", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -97,6 +97,7 @@ namespace POS_GoldStore.Transactions
         {
             cmb_CustomerName.Enabled = val;
             txt_Amount.Enabled = val;
+            txt_Remarks.Enabled = val;
             dtp_CastTempDate.Enabled = val;
         }
         private void btn_cancel_Click(object sender, EventArgs e)

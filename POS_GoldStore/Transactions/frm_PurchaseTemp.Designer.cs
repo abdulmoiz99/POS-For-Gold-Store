@@ -62,20 +62,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.dgv_SaleTemp = new System.Windows.Forms.DataGridView();
+            this.txt_ProductId = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_ProductId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -347,7 +348,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(878, 34);
+            this.panel1.Size = new System.Drawing.Size(968, 34);
             this.panel1.TabIndex = 1037;
             // 
             // dtp_date
@@ -379,7 +380,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 34);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(878, 66);
+            this.panel2.Size = new System.Drawing.Size(968, 66);
             this.panel2.TabIndex = 1038;
             // 
             // btn_exitForm
@@ -392,7 +393,7 @@
             this.btn_exitForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btn_exitForm.Image = global::POS_GoldStore.Properties.Resources.icons8_close_window_36;
             this.btn_exitForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exitForm.Location = new System.Drawing.Point(760, 0);
+            this.btn_exitForm.Location = new System.Drawing.Point(850, 0);
             this.btn_exitForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_exitForm.Name = "btn_exitForm";
             this.btn_exitForm.Size = new System.Drawing.Size(118, 66);
@@ -421,6 +422,7 @@
             this.PMCustomerId,
             this.CustomerName,
             this.PMdate,
+            this.Remarks,
             this.PMProductID,
             this.PName,
             this.ProductWeight,
@@ -435,7 +437,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_SaleTemp.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_SaleTemp.Location = new System.Drawing.Point(25, 388);
+            this.dgv_SaleTemp.Location = new System.Drawing.Point(13, 388);
             this.dgv_SaleTemp.Name = "dgv_SaleTemp";
             this.dgv_SaleTemp.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -446,9 +448,38 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_SaleTemp.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_SaleTemp.Size = new System.Drawing.Size(823, 251);
+            this.dgv_SaleTemp.RowHeadersWidth = 10;
+            this.dgv_SaleTemp.Size = new System.Drawing.Size(894, 251);
             this.dgv_SaleTemp.TabIndex = 1036;
             this.dgv_SaleTemp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SaleTemp_CellContentClick);
+            // 
+            // txt_ProductId
+            // 
+            this.txt_ProductId.Enabled = false;
+            this.txt_ProductId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ProductId.Location = new System.Drawing.Point(631, 692);
+            this.txt_ProductId.Name = "txt_ProductId";
+            this.txt_ProductId.Size = new System.Drawing.Size(43, 26);
+            this.txt_ProductId.TabIndex = 1057;
+            this.txt_ProductId.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(-3, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 20);
+            this.label9.TabIndex = 1041;
+            this.label9.Text = "Customer Name :";
+            // 
+            // txt_CustomerName
+            // 
+            this.txt_CustomerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CustomerName.Location = new System.Drawing.Point(139, 205);
+            this.txt_CustomerName.Name = "txt_CustomerName";
+            this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
+            this.txt_CustomerName.TabIndex = 1048;
             // 
             // PMID
             // 
@@ -486,6 +517,13 @@
             this.PMdate.HeaderText = "Date";
             this.PMdate.Name = "PMdate";
             this.PMdate.ReadOnly = true;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "PMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
             // 
             // PMProductID
             // 
@@ -533,39 +571,11 @@
             this.Amount.ReadOnly = true;
             this.Amount.Visible = false;
             // 
-            // txt_ProductId
-            // 
-            this.txt_ProductId.Enabled = false;
-            this.txt_ProductId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ProductId.Location = new System.Drawing.Point(631, 692);
-            this.txt_ProductId.Name = "txt_ProductId";
-            this.txt_ProductId.Size = new System.Drawing.Size(43, 26);
-            this.txt_ProductId.TabIndex = 1057;
-            this.txt_ProductId.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-3, 208);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 20);
-            this.label9.TabIndex = 1041;
-            this.label9.Text = "Customer Name :";
-            // 
-            // txt_CustomerName
-            // 
-            this.txt_CustomerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CustomerName.Location = new System.Drawing.Point(139, 205);
-            this.txt_CustomerName.Name = "txt_CustomerName";
-            this.txt_CustomerName.Size = new System.Drawing.Size(178, 26);
-            this.txt_CustomerName.TabIndex = 1048;
-            // 
             // frm_PurchaseTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 759);
+            this.ClientSize = new System.Drawing.Size(968, 759);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txt_NewQuantity);
             this.Controls.Add(this.txt_BalanceQuantity);
@@ -643,18 +653,19 @@
         private System.Windows.Forms.DataGridView dgv_SaleTemp;
         private System.Windows.Forms.TextBox txt_ProductId;
         private System.Windows.Forms.DateTimePicker dtp_date;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMCustomerId;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductWeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn BalQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_CustomerName;
     }
 }
