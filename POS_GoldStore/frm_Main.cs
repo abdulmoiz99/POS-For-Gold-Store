@@ -502,6 +502,29 @@ namespace POS_GoldStore
         //    if (e.KeyChar == 'm')
                 this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btn_Calculator_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = null;
+                if (p == null)
+                {
+                    p = new Process();
+                    p.StartInfo.FileName = "Calc.exe";
+                    p.Start();
+                }
+                else
+                {
+                    p.Close();
+                    p.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Excepton" + ex.Message);
+            }
+        }
     }
     }
 

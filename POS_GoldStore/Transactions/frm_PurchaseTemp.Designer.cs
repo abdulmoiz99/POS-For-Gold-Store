@@ -70,11 +70,11 @@
             this.PMCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
@@ -367,9 +367,9 @@
             this.label33.Location = new System.Drawing.Point(19, 13);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(204, 33);
+            this.label33.Size = new System.Drawing.Size(205, 33);
             this.label33.TabIndex = 1;
-            this.label33.Text = "Purchae Temp";
+            this.label33.Text = "Receive Temp";
             // 
             // panel2
             // 
@@ -422,11 +422,11 @@
             this.PMCustomerId,
             this.CustomerName,
             this.PMdate,
-            this.Remarks,
             this.PMProductID,
             this.PName,
             this.ProductWeight,
             this.BalQty,
+            this.Remarks,
             this.PMRate,
             this.Amount});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -518,13 +518,6 @@
             this.PMdate.Name = "PMdate";
             this.PMdate.ReadOnly = true;
             // 
-            // Remarks
-            // 
-            this.Remarks.DataPropertyName = "PMRemarks";
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            this.Remarks.ReadOnly = true;
-            // 
             // PMProductID
             // 
             this.PMProductID.DataPropertyName = "PMProductID";
@@ -554,6 +547,13 @@
             this.BalQty.Name = "BalQty";
             this.BalQty.ReadOnly = true;
             this.BalQty.Width = 150;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "PMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
             // 
             // PMRate
             // 
@@ -660,11 +660,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PMCustomerId;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductWeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn BalQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
     }

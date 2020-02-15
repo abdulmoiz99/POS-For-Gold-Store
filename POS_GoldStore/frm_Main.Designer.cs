@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_CashTemp = new System.Windows.Forms.Button();
             this.btn_SaleOrder = new System.Windows.Forms.Button();
             this.btn_PurchaseOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_CashReports = new System.Windows.Forms.Button();
-            this.btn_CashTransactinos = new System.Windows.Forms.Button();
+            this.btn_Calculator = new System.Windows.Forms.Button();
             this.btn_CashT = new System.Windows.Forms.Button();
             this.btn_SaleCredit = new System.Windows.Forms.Button();
             this.btn_PurchaseCredit = new System.Windows.Forms.Button();
@@ -56,33 +54,16 @@
             this.transactionReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trasnsactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_exitForm = new System.Windows.Forms.Button();
             this.btn_Minimize = new System.Windows.Forms.Button();
+            this.btn_exitForm = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_CashTemp
-            // 
-            this.btn_CashTemp.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_CashTemp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CashTemp.ForeColor = System.Drawing.Color.White;
-            this.btn_CashTemp.Location = new System.Drawing.Point(6, 493);
-            this.btn_CashTemp.Name = "btn_CashTemp";
-            this.btn_CashTemp.Size = new System.Drawing.Size(220, 46);
-            this.btn_CashTemp.TabIndex = 0;
-            this.btn_CashTemp.Text = "Cash Balance";
-            this.btn_CashTemp.UseVisualStyleBackColor = false;
-            this.btn_CashTemp.Visible = false;
-            this.btn_CashTemp.Click += new System.EventHandler(this.btn_CashFlow_Click);
             // 
             // btn_SaleOrder
             // 
@@ -113,15 +94,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.btn_CashReports);
-            this.panel2.Controls.Add(this.btn_CashTransactinos);
+            this.panel2.Controls.Add(this.btn_Calculator);
             this.panel2.Controls.Add(this.btn_CashT);
             this.panel2.Controls.Add(this.btn_SaleCredit);
             this.panel2.Controls.Add(this.btn_PurchaseCredit);
             this.panel2.Controls.Add(this.btn_TempBal);
             this.panel2.Controls.Add(this.btn_Expense);
             this.panel2.Controls.Add(this.btn_SaleTemp);
-            this.panel2.Controls.Add(this.btn_CashTemp);
             this.panel2.Controls.Add(this.btn_PurchaseTemp);
             this.panel2.Controls.Add(this.btn_CashTemp1);
             this.panel2.Controls.Add(this.btn_SaleOrder);
@@ -129,49 +108,33 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(474, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 676);
+            this.panel2.Size = new System.Drawing.Size(226, 808);
             this.panel2.TabIndex = 4;
             // 
-            // btn_CashReports
+            // btn_Calculator
             // 
-            this.btn_CashReports.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_CashReports.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CashReports.ForeColor = System.Drawing.Color.White;
-            this.btn_CashReports.Location = new System.Drawing.Point(6, 649);
-            this.btn_CashReports.Name = "btn_CashReports";
-            this.btn_CashReports.Size = new System.Drawing.Size(220, 46);
-            this.btn_CashReports.TabIndex = 9;
-            this.btn_CashReports.Text = "Cash Reports";
-            this.btn_CashReports.UseVisualStyleBackColor = false;
-            this.btn_CashReports.Visible = false;
-            this.btn_CashReports.Click += new System.EventHandler(this.btn_CashReports_Click);
-            // 
-            // btn_CashTransactinos
-            // 
-            this.btn_CashTransactinos.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_CashTransactinos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CashTransactinos.ForeColor = System.Drawing.Color.White;
-            this.btn_CashTransactinos.Location = new System.Drawing.Point(6, 597);
-            this.btn_CashTransactinos.Name = "btn_CashTransactinos";
-            this.btn_CashTransactinos.Size = new System.Drawing.Size(220, 46);
-            this.btn_CashTransactinos.TabIndex = 8;
-            this.btn_CashTransactinos.Text = "Cash Transactions";
-            this.btn_CashTransactinos.UseVisualStyleBackColor = false;
-            this.btn_CashTransactinos.Visible = false;
-            this.btn_CashTransactinos.Click += new System.EventHandler(this.btn_CashTransactinos_Click);
+            this.btn_Calculator.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Calculator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Calculator.ForeColor = System.Drawing.Color.White;
+            this.btn_Calculator.Location = new System.Drawing.Point(6, 545);
+            this.btn_Calculator.Name = "btn_Calculator";
+            this.btn_Calculator.Size = new System.Drawing.Size(220, 46);
+            this.btn_Calculator.TabIndex = 8;
+            this.btn_Calculator.Text = "Calcu&lator";
+            this.btn_Calculator.UseVisualStyleBackColor = false;
+            this.btn_Calculator.Click += new System.EventHandler(this.btn_Calculator_Click);
             // 
             // btn_CashT
             // 
             this.btn_CashT.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_CashT.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CashT.ForeColor = System.Drawing.Color.White;
-            this.btn_CashT.Location = new System.Drawing.Point(6, 545);
+            this.btn_CashT.Location = new System.Drawing.Point(6, 493);
             this.btn_CashT.Name = "btn_CashT";
             this.btn_CashT.Size = new System.Drawing.Size(220, 46);
             this.btn_CashT.TabIndex = 7;
-            this.btn_CashT.Text = "Cash Temp";
+            this.btn_CashT.Text = "&Cash Temp";
             this.btn_CashT.UseVisualStyleBackColor = false;
-            this.btn_CashT.Visible = false;
             this.btn_CashT.Click += new System.EventHandler(this.btn_CashT_Click);
             // 
             // btn_SaleCredit
@@ -183,7 +146,7 @@
             this.btn_SaleCredit.Name = "btn_SaleCredit";
             this.btn_SaleCredit.Size = new System.Drawing.Size(220, 46);
             this.btn_SaleCredit.TabIndex = 6;
-            this.btn_SaleCredit.Text = "Sale Credit";
+            this.btn_SaleCredit.Text = "S&ale Credit";
             this.btn_SaleCredit.UseVisualStyleBackColor = false;
             this.btn_SaleCredit.Click += new System.EventHandler(this.btn_SaleCredit_Click);
             // 
@@ -196,7 +159,7 @@
             this.btn_PurchaseCredit.Name = "btn_PurchaseCredit";
             this.btn_PurchaseCredit.Size = new System.Drawing.Size(220, 46);
             this.btn_PurchaseCredit.TabIndex = 5;
-            this.btn_PurchaseCredit.Text = "Purchase Credit";
+            this.btn_PurchaseCredit.Text = "Pu&rchase Credit";
             this.btn_PurchaseCredit.UseVisualStyleBackColor = false;
             this.btn_PurchaseCredit.Click += new System.EventHandler(this.btn_PurchaseCredit_Click);
             // 
@@ -209,7 +172,7 @@
             this.btn_TempBal.Name = "btn_TempBal";
             this.btn_TempBal.Size = new System.Drawing.Size(220, 46);
             this.btn_TempBal.TabIndex = 4;
-            this.btn_TempBal.Text = "Temp Balance";
+            this.btn_TempBal.Text = "&Temp Balance";
             this.btn_TempBal.UseVisualStyleBackColor = false;
             this.btn_TempBal.Click += new System.EventHandler(this.btn_TempBal_Click);
             // 
@@ -272,8 +235,7 @@
             this.setupToolStripMenuItem,
             this.userManagementToolStripMenuItem,
             this.reportsToolStripMenuItem,
-            this.cashToolStripMenuItem,
-            this.toolsToolStripMenuItem});
+            this.cashToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 36);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(700, 24);
@@ -359,7 +321,6 @@
             // 
             this.cashToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.balanceToolStripMenuItem,
-            this.tempToolStripMenuItem,
             this.trasnsactionsToolStripMenuItem,
             this.reportsToolStripMenuItem1});
             this.cashToolStripMenuItem.Name = "cashToolStripMenuItem";
@@ -372,13 +333,6 @@
             this.balanceToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.balanceToolStripMenuItem.Text = "Balance ";
             this.balanceToolStripMenuItem.Click += new System.EventHandler(this.balanceToolStripMenuItem_Click);
-            // 
-            // tempToolStripMenuItem
-            // 
-            this.tempToolStripMenuItem.Name = "tempToolStripMenuItem";
-            this.tempToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.tempToolStripMenuItem.Text = "Temp";
-            this.tempToolStripMenuItem.Click += new System.EventHandler(this.tempToolStripMenuItem_Click);
             // 
             // trasnsactionsToolStripMenuItem
             // 
@@ -393,21 +347,6 @@
             this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.reportsToolStripMenuItem1.Text = "Reports";
             this.reportsToolStripMenuItem1.Click += new System.EventHandler(this.reportsToolStripMenuItem1_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.calculatorToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // calculatorToolStripMenuItem
-            // 
-            this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
-            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.calculatorToolStripMenuItem.Text = "Calculator";
-            this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -424,6 +363,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 36);
             this.panel1.TabIndex = 228;
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Minimize.FlatAppearance.BorderSize = 0;
+            this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Minimize.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_Minimize.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Minimize.Location = new System.Drawing.Point(414, 0);
+            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(168, 36);
+            this.btn_Minimize.TabIndex = 1018;
+            this.btn_Minimize.Text = "Minimize";
+            this.btn_Minimize.UseVisualStyleBackColor = false;
+            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
             // 
             // btn_exitForm
             // 
@@ -444,29 +401,11 @@
             this.btn_exitForm.UseVisualStyleBackColor = false;
             this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
             // 
-            // btn_Minimize
-            // 
-            this.btn_Minimize.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Minimize.FlatAppearance.BorderSize = 0;
-            this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Minimize.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btn_Minimize.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Minimize.Location = new System.Drawing.Point(414, 0);
-            this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_Minimize.Name = "btn_Minimize";
-            this.btn_Minimize.Size = new System.Drawing.Size(168, 36);
-            this.btn_Minimize.TabIndex = 1018;
-            this.btn_Minimize.Text = "Minimize";
-            this.btn_Minimize.UseVisualStyleBackColor = false;
-            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 736);
+            this.ClientSize = new System.Drawing.Size(700, 868);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
@@ -489,7 +428,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_CashTemp;
         private System.Windows.Forms.Button btn_SaleOrder;
         private System.Windows.Forms.Button btn_PurchaseOrder;
         private System.Windows.Forms.Panel panel2;
@@ -513,17 +451,13 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionReportsToolStripMenuItem;
         private System.Windows.Forms.Button btn_CashT;
-        private System.Windows.Forms.Button btn_CashTransactinos;
-        private System.Windows.Forms.Button btn_CashReports;
         private System.Windows.Forms.ToolStripMenuItem cashToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tempToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trasnsactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_exitForm;
         private System.Windows.Forms.Button btn_Minimize;
+        private System.Windows.Forms.Button btn_Calculator;
     }
 }

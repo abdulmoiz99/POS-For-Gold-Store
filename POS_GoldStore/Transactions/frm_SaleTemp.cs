@@ -120,7 +120,7 @@ namespace POS_GoldStore.Transactions
 
         private void txt_Find_TextChanged(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_SaleTemp, "select SMId,SMNo,SMDate,SMCustomerID,CustomerName,CustomerName,SMProductID,PName,ProductWeight,BalQty,SMRate,SMAmount  from TvuFrmTempRec where CompanyID=1 AND + CAST(SMNo as varchar) + CAST(SMCustomerID as varchar) + CAST(PName as varchar)  like '%" + txt_Find.Text + "%'");
+            Main.fillDgv(dgv_SaleTemp, "select SMId,SMNo,SMDate,SMCustomerID,CustomerName,SMRemarks,SMProductID,PName,ProductWeight,BalQty,SMRate,SMAmount  from TvuFrmTempRec where CompanyID=1 AND + CAST(SMNo as varchar) + CAST(SMCustomerID as varchar) + CAST(PName as varchar)  like '%" + txt_Find.Text + "%'");
         }
 
         private void btn_exitForm_Click(object sender, EventArgs e)

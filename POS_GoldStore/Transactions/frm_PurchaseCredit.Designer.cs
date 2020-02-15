@@ -68,7 +68,6 @@
             this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +76,7 @@
             this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PruchaseCredit)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -115,7 +115,6 @@
             this.PMID,
             this.PMNo,
             this.PMDate,
-            this.Remarks,
             this.PMCustomerID,
             this.CustomerName,
             this.PMProductID,
@@ -123,7 +122,8 @@
             this.ProductWeight,
             this.PMRate,
             this.PMAmount,
-            this.BalAmt});
+            this.BalAmt,
+            this.Remarks});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -504,13 +504,6 @@
             this.PMDate.Name = "PMDate";
             this.PMDate.ReadOnly = true;
             // 
-            // Remarks
-            // 
-            this.Remarks.DataPropertyName = "PMRemarks";
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            this.Remarks.ReadOnly = true;
-            // 
             // PMCustomerID
             // 
             this.PMCustomerID.DataPropertyName = "PMCustomerID";
@@ -568,6 +561,13 @@
             this.BalAmt.HeaderText = "Balance Amount";
             this.BalAmt.Name = "BalAmt";
             this.BalAmt.ReadOnly = true;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "PMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
             // 
             // frm_PurchaseCredit
             // 
@@ -656,7 +656,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PMID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMCustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMProductID;
@@ -665,5 +664,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PMRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PMAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn BalAmt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
     }
 }
