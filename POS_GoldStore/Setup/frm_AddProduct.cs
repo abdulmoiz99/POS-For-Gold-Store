@@ -30,6 +30,7 @@ namespace POS_GoldStore.Setup
             btn_Save.Enabled = true;
             txt_Name.Enabled = true;
             txt_PBalance.Enabled = true;
+            txt_Remarks.Enabled = true;
 
             txt_Name.Focus();
             dgv_BrandSetup.Enabled = false;
@@ -45,7 +46,7 @@ namespace POS_GoldStore.Setup
             btn_cancel.Enabled = true;
             txt_Name.Enabled = true;
             txt_PBalance.Enabled = true;
-
+            txt_Remarks.Enabled = true;
             txt_Name.Focus();
             dgv_BrandSetup.Enabled = true;
 
@@ -124,6 +125,7 @@ namespace POS_GoldStore.Setup
             btn_Save.Enabled = false;
             txt_Name.Enabled = false;
             txt_PBalance.Enabled = false;
+            txt_Remarks.Enabled = false;
 
             dgv_BrandSetup.Enabled = true;
         }

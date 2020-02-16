@@ -60,6 +60,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Minimize = new System.Windows.Forms.Button();
             this.btn_exitForm = new System.Windows.Forms.Button();
+            this.customerBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -322,7 +323,8 @@
             this.cashToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.balanceToolStripMenuItem,
             this.trasnsactionsToolStripMenuItem,
-            this.reportsToolStripMenuItem1});
+            this.reportsToolStripMenuItem1,
+            this.customerBalanceToolStripMenuItem});
             this.cashToolStripMenuItem.Name = "cashToolStripMenuItem";
             this.cashToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.cashToolStripMenuItem.Text = "Cash";
@@ -330,21 +332,21 @@
             // balanceToolStripMenuItem
             // 
             this.balanceToolStripMenuItem.Name = "balanceToolStripMenuItem";
-            this.balanceToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.balanceToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.balanceToolStripMenuItem.Text = "Balance ";
             this.balanceToolStripMenuItem.Click += new System.EventHandler(this.balanceToolStripMenuItem_Click);
             // 
             // trasnsactionsToolStripMenuItem
             // 
             this.trasnsactionsToolStripMenuItem.Name = "trasnsactionsToolStripMenuItem";
-            this.trasnsactionsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.trasnsactionsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.trasnsactionsToolStripMenuItem.Text = "Trasnsactions";
             this.trasnsactionsToolStripMenuItem.Click += new System.EventHandler(this.trasnsactionsToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem1
             // 
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
-            this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.reportsToolStripMenuItem1.Text = "Reports";
             this.reportsToolStripMenuItem1.Click += new System.EventHandler(this.reportsToolStripMenuItem1_Click);
             // 
@@ -371,7 +373,7 @@
             this.btn_Minimize.FlatAppearance.BorderSize = 0;
             this.btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Minimize.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_Minimize.ForeColor = System.Drawing.Color.SteelBlue;
             this.btn_Minimize.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Minimize.Location = new System.Drawing.Point(414, 0);
             this.btn_Minimize.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -400,6 +402,12 @@
             this.btn_exitForm.Text = "   Exit";
             this.btn_exitForm.UseVisualStyleBackColor = false;
             this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
+            // 
+            // customerBalanceToolStripMenuItem
+            // 
+            this.customerBalanceToolStripMenuItem.Name = "customerBalanceToolStripMenuItem";
+            this.customerBalanceToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.customerBalanceToolStripMenuItem.Text = "Customer Balance";
             // 
             // frm_Main
             // 
@@ -459,5 +467,6 @@
         private System.Windows.Forms.Button btn_exitForm;
         private System.Windows.Forms.Button btn_Minimize;
         private System.Windows.Forms.Button btn_Calculator;
+        private System.Windows.Forms.ToolStripMenuItem customerBalanceToolStripMenuItem;
     }
 }
