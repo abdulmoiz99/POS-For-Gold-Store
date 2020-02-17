@@ -39,10 +39,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.lab_SaleAmount = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.lab_CompanyName = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lab_Username = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -91,9 +87,14 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.lab_CashPayable = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.lab_CashTempReceive = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.lab_CashTempPay = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Expense)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -109,6 +110,8 @@
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // lab_date
@@ -116,7 +119,7 @@
             this.lab_date.AutoSize = true;
             this.lab_date.Font = new System.Drawing.Font("BigNoodleTitling", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_date.ForeColor = System.Drawing.Color.DarkGray;
-            this.lab_date.Location = new System.Drawing.Point(486, 41);
+            this.lab_date.Location = new System.Drawing.Point(579, 42);
             this.lab_date.Name = "lab_date";
             this.lab_date.Size = new System.Drawing.Size(168, 52);
             this.lab_date.TabIndex = 65;
@@ -187,56 +190,12 @@
             this.label17.TabIndex = 7;
             this.label17.Text = "Sale Amount :";
             // 
-            // lab_CompanyName
-            // 
-            this.lab_CompanyName.AutoSize = true;
-            this.lab_CompanyName.Font = new System.Drawing.Font("BigNoodleTitling", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_CompanyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lab_CompanyName.Location = new System.Drawing.Point(10, 41);
-            this.lab_CompanyName.Name = "lab_CompanyName";
-            this.lab_CompanyName.Size = new System.Drawing.Size(251, 87);
-            this.lab_CompanyName.TabIndex = 56;
-            this.lab_CompanyName.Text = "COmpany";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lab_Username);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox1.Location = new System.Drawing.Point(2, 125);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(437, 111);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "User Info";
-            // 
-            // lab_Username
-            // 
-            this.lab_Username.AutoSize = true;
-            this.lab_Username.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Username.Location = new System.Drawing.Point(172, 47);
-            this.lab_Username.Name = "lab_Username";
-            this.lab_Username.Size = new System.Drawing.Size(124, 24);
-            this.lab_Username.TabIndex = 35;
-            this.lab_Username.Text = "Username :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 24);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Username :";
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(447, 100);
+            this.panel7.Location = new System.Drawing.Point(540, 101);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(392, 45);
             this.panel7.TabIndex = 52;
@@ -253,7 +212,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label3.Location = new System.Drawing.Point(3, 4);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 25);
             this.label3.TabIndex = 7;
@@ -277,7 +236,7 @@
             this.dgv_Expense.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Type,
             this.Amount});
-            this.dgv_Expense.Location = new System.Drawing.Point(447, 142);
+            this.dgv_Expense.Location = new System.Drawing.Point(540, 143);
             this.dgv_Expense.Name = "dgv_Expense";
             this.dgv_Expense.ReadOnly = true;
             this.dgv_Expense.Size = new System.Drawing.Size(390, 94);
@@ -306,9 +265,9 @@
             this.groupBox2.Controls.Add(this.btn_OpenCounter);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Location = new System.Drawing.Point(305, 441);
+            this.groupBox2.Location = new System.Drawing.Point(5, 79);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(537, 146);
+            this.groupBox2.Size = new System.Drawing.Size(509, 146);
             this.groupBox2.TabIndex = 66;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -327,7 +286,7 @@
             this.btn_Update.Location = new System.Drawing.Point(274, 83);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(253, 49);
+            this.btn_Update.Size = new System.Drawing.Size(220, 49);
             this.btn_Update.TabIndex = 328;
             this.btn_Update.Text = "  &Update";
             this.btn_Update.UseVisualStyleBackColor = false;
@@ -338,7 +297,7 @@
             this.txt_OpeningBalance.Enabled = false;
             this.txt_OpeningBalance.Location = new System.Drawing.Point(14, 37);
             this.txt_OpeningBalance.Name = "txt_OpeningBalance";
-            this.txt_OpeningBalance.Size = new System.Drawing.Size(513, 37);
+            this.txt_OpeningBalance.Size = new System.Drawing.Size(480, 37);
             this.txt_OpeningBalance.TabIndex = 130;
             this.txt_OpeningBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_OpeningBalance_KeyPress);
             // 
@@ -367,7 +326,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(233, 107);
+            this.dateTimePicker1.Location = new System.Drawing.Point(559, 59);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 67;
@@ -456,7 +415,7 @@
             this.Column1,
             this.Column2,
             this.Payable});
-            this.dgv_ProductWeight.Location = new System.Drawing.Point(305, 248);
+            this.dgv_ProductWeight.Location = new System.Drawing.Point(339, 250);
             this.dgv_ProductWeight.Name = "dgv_ProductWeight";
             this.dgv_ProductWeight.ReadOnly = true;
             this.dgv_ProductWeight.Size = new System.Drawing.Size(570, 187);
@@ -714,7 +673,7 @@
             this.panel12.BackColor = System.Drawing.Color.Teal;
             this.panel12.Controls.Add(this.lab_CashReceiveable);
             this.panel12.Controls.Add(this.label12);
-            this.panel12.Location = new System.Drawing.Point(305, 619);
+            this.panel12.Location = new System.Drawing.Point(339, 510);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(295, 35);
             this.panel12.TabIndex = 1043;
@@ -746,7 +705,7 @@
             this.panel13.BackColor = System.Drawing.Color.Teal;
             this.panel13.Controls.Add(this.lab_CashPayable);
             this.panel13.Controls.Add(this.label14);
-            this.panel13.Location = new System.Drawing.Point(606, 619);
+            this.panel13.Location = new System.Drawing.Point(640, 510);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(295, 35);
             this.panel13.TabIndex = 1044;
@@ -773,11 +732,77 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Cash Payable :";
             // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
+            this.panel15.Controls.Add(this.lab_CashTempReceive);
+            this.panel15.Controls.Add(this.label4);
+            this.panel15.Location = new System.Drawing.Point(339, 458);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(295, 35);
+            this.panel15.TabIndex = 1045;
+            // 
+            // lab_CashTempReceive
+            // 
+            this.lab_CashTempReceive.AutoSize = true;
+            this.lab_CashTempReceive.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CashTempReceive.ForeColor = System.Drawing.Color.White;
+            this.lab_CashTempReceive.Location = new System.Drawing.Point(156, 5);
+            this.lab_CashTempReceive.Name = "lab_CashTempReceive";
+            this.lab_CashTempReceive.Size = new System.Drawing.Size(18, 27);
+            this.lab_CashTempReceive.TabIndex = 7;
+            this.lab_CashTempReceive.Text = "1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(49, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 27);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Temp Receive :";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
+            this.panel16.Controls.Add(this.lab_CashTempPay);
+            this.panel16.Controls.Add(this.label15);
+            this.panel16.Location = new System.Drawing.Point(640, 458);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(295, 35);
+            this.panel16.TabIndex = 1046;
+            // 
+            // lab_CashTempPay
+            // 
+            this.lab_CashTempPay.AutoSize = true;
+            this.lab_CashTempPay.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CashTempPay.ForeColor = System.Drawing.Color.White;
+            this.lab_CashTempPay.Location = new System.Drawing.Point(130, 5);
+            this.lab_CashTempPay.Name = "lab_CashTempPay";
+            this.lab_CashTempPay.Size = new System.Drawing.Size(18, 27);
+            this.lab_CashTempPay.TabIndex = 7;
+            this.lab_CashTempPay.Text = "1";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(44, 5);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 27);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Temp Paid :";
+            // 
             // frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 769);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
@@ -795,8 +820,6 @@
             this.Controls.Add(this.lab_date);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel14);
-            this.Controls.Add(this.lab_CompanyName);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dgv_Expense);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -808,8 +831,6 @@
             this.panel17.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Expense)).EndInit();
@@ -837,6 +858,10 @@
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -851,10 +876,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label lab_SaleAmount;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lab_CompanyName;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lab_Username;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
@@ -903,5 +924,11 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label lab_CashPayable;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label lab_CashTempReceive;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label lab_CashTempPay;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -20,7 +20,7 @@ namespace POS_GoldStore.Transactions
         private void TotalReceiveable(int CustomerID)
         {
             String CreditCashReceiveable = SQL.ScalarQuery("SELECT SUM(CAST(BalAmt AS decimal(10, 3))) AS [Balance Amount] FROM dbo.TvuFrmCreditSaleOrder where SMCustomerID = " + CustomerID + "  GROUP BY SMCustomerID, CustomerName");
-            String CashReceiveable = SQL.ScalarQuery("select  SUM(Balance) as Receiveable from TvuFrmCashMainSummary where [Customer ID] = " + CustomerID + " AND MODE = 'RECEIVE'");
+            String CashReceiveable = SQL.ScalarQuery("select  SUM(Balance) as Receiveable from TvuFrmCashMainSummary where [Customer ID] = " + CustomerID + " AND MODE = 'PAY'");
             float fCreditCashReceiveable = 0, fCashReceiveable = 0, TotalReceiveable = 0;
             float.TryParse(CreditCashReceiveable, out fCreditCashReceiveable);
             float.TryParse(CashReceiveable, out fCashReceiveable);
@@ -30,12 +30,27 @@ namespace POS_GoldStore.Transactions
         private void TotalPayable(int CustomerID)
         {
             String CreditCashPayable = SQL.ScalarQuery("SELECT SUM(CAST(BalAmt AS decimal(10, 3))) AS [Balance Amount] FROM dbo.TvuFrmCreditPurchaseOrder where PMCustomerID = " + CustomerID + "  GROUP BY PMCustomerID, CustomerName");
-            String CashReceiveable = SQL.ScalarQuery("select  SUM(Balance) as Receiveable from TvuFrmCashMainSummary where [Customer ID] = " + CustomerID + " AND MODE = 'PAY'");
+            String CashReceiveable = SQL.ScalarQuery("select  SUM(Balance) as Receiveable from TvuFrmCashMainSummary where [Customer ID] = " + CustomerID + " AND MODE = 'RECEIVE'");
             float fCreditCashPayable = 0, fCashPayable = 0, TotalPayable = 0;
             float.TryParse(CreditCashPayable, out fCreditCashPayable);
             float.TryParse(CashReceiveable, out fCashPayable);
             TotalPayable = fCreditCashPayable + fCashPayable;
             txt_CashPayable.Text = TotalPayable.ToString();
+        }
+        private void Checkbalance()
+        {
+            lab_bal.Visible = true;
+            float Receive = 0, Pay = 0, Bal = 0;
+            float.TryParse(txt_CashReceiveable.Text, out Receive);
+            float.TryParse(txt_CashPayable.Text, out Pay);
+            Bal = Receive - Pay;
+            lab_bal.Text = Bal.ToString();
+            if (Bal >= 0)
+            {
+                lab_bal.ForeColor = Color.SpringGreen;
+            }
+            else lab_bal.ForeColor = Color.Red;
+
         }
         private void label5_Click(object sender, EventArgs e)
         {
@@ -46,7 +61,7 @@ namespace POS_GoldStore.Transactions
         {
             this.Close();
         }
-
+        
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             if (cmb_CustomerName.SelectedIndex < 0)
@@ -59,6 +74,7 @@ namespace POS_GoldStore.Transactions
                 int.TryParse(cmb_CustomerName.SelectedValue.ToString(), out customerID);
                 TotalReceiveable(customerID);
                 TotalPayable(customerID);
+                Checkbalance();
             }
         }
 

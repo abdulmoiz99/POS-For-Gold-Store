@@ -25,6 +25,10 @@ namespace POS_GoldStore
             lab_RecCash.Text = SQL.ScalarQuery("select ReceiveAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_PaidCash.Text = SQL.ScalarQuery("select PaidAmt from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_Expense.Text = SQL.ScalarQuery("select Expense from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_CashTempReceive.Text = SQL.ScalarQuery("select CashTempReceive from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+            lab_CashTempPay.Text = SQL.ScalarQuery("select CashTempPay from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
+
+
             lab_ClosingBalance.Text = SQL.ScalarQuery("select ClosingBal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_PervClosing.Text = SQL.ScalarQuery("select ClosingBal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "' -1");
             lab_OpeningBalance.Text = SQL.ScalarQuery("select Opbal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
@@ -69,8 +73,6 @@ namespace POS_GoldStore
             {
 
                 // Company Name 
-                lab_CompanyName.Text = "TECH WORK";// SQL.ScalarQuery("Select CompanyName From CompanySetup where CompanyID=" + Main.CompanyID + "");
-                lab_Username.Text = Main.UserName;
                 Main.fillDgv(dgv_ProductWeight, @"select * from TvuFrmProductSummary");
             }
             catch (Exception ex)

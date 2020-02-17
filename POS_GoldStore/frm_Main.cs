@@ -525,6 +525,14 @@ namespace POS_GoldStore
                 MessageBox.Show("Excepton" + ex.Message);
             }
         }
+
+        private void customerBalanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_TotalBalance();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
     }
     }
 

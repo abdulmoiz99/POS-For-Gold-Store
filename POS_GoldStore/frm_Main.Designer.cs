@@ -408,6 +408,7 @@
             this.customerBalanceToolStripMenuItem.Name = "customerBalanceToolStripMenuItem";
             this.customerBalanceToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.customerBalanceToolStripMenuItem.Text = "Customer Balance";
+            this.customerBalanceToolStripMenuItem.Click += new System.EventHandler(this.customerBalanceToolStripMenuItem_Click);
             // 
             // frm_Main
             // 

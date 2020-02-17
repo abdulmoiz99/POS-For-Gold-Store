@@ -41,6 +41,8 @@
             this.txt_CashReceiveable = new System.Windows.Forms.TextBox();
             this.txt_CashPayable = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lab_bal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,11 +204,38 @@
             this.label5.Text = "Total Cash Payable :";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // lab_bal
+            // 
+            this.lab_bal.AutoSize = true;
+            this.lab_bal.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_bal.ForeColor = System.Drawing.Color.SpringGreen;
+            this.lab_bal.Location = new System.Drawing.Point(328, 440);
+            this.lab_bal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_bal.Name = "lab_bal";
+            this.lab_bal.Size = new System.Drawing.Size(78, 56);
+            this.lab_bal.TabIndex = 212;
+            this.lab_bal.Text = "00";
+            this.lab_bal.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.label6.Location = new System.Drawing.Point(212, 454);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 24);
+            this.label6.TabIndex = 213;
+            this.label6.Text = "Balance :";
+            // 
             // frm_TotalBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 617);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lab_bal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_CashPayable);
             this.Controls.Add(this.label2);
@@ -243,5 +272,7 @@
         private System.Windows.Forms.TextBox txt_CashReceiveable;
         private System.Windows.Forms.TextBox txt_CashPayable;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lab_bal;
+        private System.Windows.Forms.Label label6;
     }
 }
