@@ -20,7 +20,7 @@ namespace POS_GoldStore.Transactions
         {
             Main.fillDgv(dgv_Balance, @"SELECT        SMCustomerID AS [Customer ID], CustomerName AS [Customer Name], SUM(CAST(SMAmount AS decimal(10, 3))) AS [Total Amount], SUM(CAST(TMAmount AS decimal(10, 3))) AS [Paid Amount], SUM(CAST(BalAmt AS decimal(10, 3))) AS [Balance Amount]
                                         FROM            dbo.TvuFrmCreditSaleOrder
-                                        GROUP BY SMCustomerID, CustomerName");
+                                         GROUP BY SMCustomerID, CustomerName");
         }
         private void SaleOrderSearch()
         {

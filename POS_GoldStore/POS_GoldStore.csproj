@@ -133,12 +133,6 @@
     <Compile Include="Transactions\CashBalance.Designer.cs">
       <DependentUpon>CashBalance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transactions\frm_CashFlow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transactions\frm_CashFlow.Designer.cs">
-      <DependentUpon>frm_CashFlow.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transactions\frm_CashReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,9 +256,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\CashBalance.resx">
       <DependentUpon>CashBalance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transactions\frm_CashFlow.resx">
-      <DependentUpon>frm_CashFlow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frm_CashReports.resx">
       <DependentUpon>frm_CashReports.cs</DependentUpon>
