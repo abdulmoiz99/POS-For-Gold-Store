@@ -129,5 +129,11 @@ namespace POS_GoldStore.Transactions
             this.Close();
 
         }
+
+        private void txt_NewQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+
+        }
     }
 }

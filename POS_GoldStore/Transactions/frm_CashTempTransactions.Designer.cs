@@ -156,6 +156,7 @@
             this.txt_NewAmount.Name = "txt_NewAmount";
             this.txt_NewAmount.Size = new System.Drawing.Size(178, 26);
             this.txt_NewAmount.TabIndex = 1128;
+            this.txt_NewAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NewAmount_KeyPress);
             // 
             // txt_BalanceAmount
             // 

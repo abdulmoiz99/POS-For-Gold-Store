@@ -415,6 +415,35 @@ namespace POS_GoldStore.Transactions
                 txt_Return.Visible = true;
             }
         }
+
+        private void txt_ProductRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+
+        }
+
+        private void txt_Amount_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txt_Amount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+
+        }
+
+        private void txt_Received_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+
+        }
+
+        private void txt_Return_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+
+        }
     }
 
 }

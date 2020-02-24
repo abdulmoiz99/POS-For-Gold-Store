@@ -34,6 +34,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PurchaseCredit));
             this.label33 = new System.Windows.Forms.Label();
             this.dgv_PruchaseCredit = new System.Windows.Forms.DataGridView();
+            this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.txt_ProductId = new System.Windows.Forms.TextBox();
@@ -65,18 +77,6 @@
             this.txt_InvId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMCustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PruchaseCredit)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -147,6 +147,94 @@
             this.dgv_PruchaseCredit.Size = new System.Drawing.Size(902, 251);
             this.dgv_PruchaseCredit.TabIndex = 1058;
             this.dgv_PruchaseCredit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SaleTemp_CellContentClick);
+            // 
+            // PMID
+            // 
+            this.PMID.DataPropertyName = "PMID";
+            this.PMID.HeaderText = "PMID";
+            this.PMID.Name = "PMID";
+            this.PMID.ReadOnly = true;
+            this.PMID.Visible = false;
+            // 
+            // PMNo
+            // 
+            this.PMNo.DataPropertyName = "PMNo";
+            this.PMNo.HeaderText = "Inv No";
+            this.PMNo.Name = "PMNo";
+            this.PMNo.ReadOnly = true;
+            this.PMNo.Width = 80;
+            // 
+            // PMDate
+            // 
+            this.PMDate.DataPropertyName = "PMDate";
+            this.PMDate.HeaderText = "Date";
+            this.PMDate.Name = "PMDate";
+            this.PMDate.ReadOnly = true;
+            // 
+            // PMCustomerID
+            // 
+            this.PMCustomerID.DataPropertyName = "PMCustomerID";
+            this.PMCustomerID.HeaderText = "PMCustomerID";
+            this.PMCustomerID.Name = "PMCustomerID";
+            this.PMCustomerID.ReadOnly = true;
+            this.PMCustomerID.Visible = false;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            // 
+            // PMProductID
+            // 
+            this.PMProductID.DataPropertyName = "PMProductID";
+            this.PMProductID.HeaderText = "PMProductID";
+            this.PMProductID.Name = "PMProductID";
+            this.PMProductID.ReadOnly = true;
+            this.PMProductID.Visible = false;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Product Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // ProductWeight
+            // 
+            this.ProductWeight.DataPropertyName = "ProductWeight";
+            this.ProductWeight.HeaderText = "Product Weight";
+            this.ProductWeight.Name = "ProductWeight";
+            this.ProductWeight.ReadOnly = true;
+            // 
+            // PMRate
+            // 
+            this.PMRate.DataPropertyName = "PMRate";
+            this.PMRate.HeaderText = "Rate";
+            this.PMRate.Name = "PMRate";
+            this.PMRate.ReadOnly = true;
+            // 
+            // PMAmount
+            // 
+            this.PMAmount.DataPropertyName = "PMAmount";
+            this.PMAmount.HeaderText = "Total Amount";
+            this.PMAmount.Name = "PMAmount";
+            this.PMAmount.ReadOnly = true;
+            // 
+            // BalAmt
+            // 
+            this.BalAmt.DataPropertyName = "BalAmt";
+            this.BalAmt.HeaderText = "Balance Amount";
+            this.BalAmt.Name = "BalAmt";
+            this.BalAmt.ReadOnly = true;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "PMRemarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
             // 
             // panel2
             // 
@@ -289,6 +377,7 @@
             this.txt_NewAmount.Name = "txt_NewAmount";
             this.txt_NewAmount.Size = new System.Drawing.Size(178, 26);
             this.txt_NewAmount.TabIndex = 1078;
+            this.txt_NewAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NewAmount_KeyPress);
             // 
             // txt_BalanceAmount
             // 
@@ -480,94 +569,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 34);
             this.panel1.TabIndex = 1059;
-            // 
-            // PMID
-            // 
-            this.PMID.DataPropertyName = "PMID";
-            this.PMID.HeaderText = "PMID";
-            this.PMID.Name = "PMID";
-            this.PMID.ReadOnly = true;
-            this.PMID.Visible = false;
-            // 
-            // PMNo
-            // 
-            this.PMNo.DataPropertyName = "PMNo";
-            this.PMNo.HeaderText = "Inv No";
-            this.PMNo.Name = "PMNo";
-            this.PMNo.ReadOnly = true;
-            this.PMNo.Width = 80;
-            // 
-            // PMDate
-            // 
-            this.PMDate.DataPropertyName = "PMDate";
-            this.PMDate.HeaderText = "Date";
-            this.PMDate.Name = "PMDate";
-            this.PMDate.ReadOnly = true;
-            // 
-            // PMCustomerID
-            // 
-            this.PMCustomerID.DataPropertyName = "PMCustomerID";
-            this.PMCustomerID.HeaderText = "PMCustomerID";
-            this.PMCustomerID.Name = "PMCustomerID";
-            this.PMCustomerID.ReadOnly = true;
-            this.PMCustomerID.Visible = false;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
-            // PMProductID
-            // 
-            this.PMProductID.DataPropertyName = "PMProductID";
-            this.PMProductID.HeaderText = "PMProductID";
-            this.PMProductID.Name = "PMProductID";
-            this.PMProductID.ReadOnly = true;
-            this.PMProductID.Visible = false;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Product Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // ProductWeight
-            // 
-            this.ProductWeight.DataPropertyName = "ProductWeight";
-            this.ProductWeight.HeaderText = "Product Weight";
-            this.ProductWeight.Name = "ProductWeight";
-            this.ProductWeight.ReadOnly = true;
-            // 
-            // PMRate
-            // 
-            this.PMRate.DataPropertyName = "PMRate";
-            this.PMRate.HeaderText = "Rate";
-            this.PMRate.Name = "PMRate";
-            this.PMRate.ReadOnly = true;
-            // 
-            // PMAmount
-            // 
-            this.PMAmount.DataPropertyName = "PMAmount";
-            this.PMAmount.HeaderText = "Total Amount";
-            this.PMAmount.Name = "PMAmount";
-            this.PMAmount.ReadOnly = true;
-            // 
-            // BalAmt
-            // 
-            this.BalAmt.DataPropertyName = "BalAmt";
-            this.BalAmt.HeaderText = "Balance Amount";
-            this.BalAmt.Name = "BalAmt";
-            this.BalAmt.ReadOnly = true;
-            // 
-            // Remarks
-            // 
-            this.Remarks.DataPropertyName = "PMRemarks";
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            this.Remarks.ReadOnly = true;
             // 
             // frm_PurchaseCredit
             // 

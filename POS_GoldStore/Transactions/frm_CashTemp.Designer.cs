@@ -293,6 +293,8 @@
             this.txt_Amount.Name = "txt_Amount";
             this.txt_Amount.Size = new System.Drawing.Size(275, 27);
             this.txt_Amount.TabIndex = 229;
+            this.txt_Amount.TextChanged += new System.EventHandler(this.txt_Amount_TextChanged);
+            this.txt_Amount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Amount_KeyPress);
             // 
             // label5
             // 

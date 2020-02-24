@@ -151,5 +151,11 @@ namespace POS_GoldStore.Transactions
             else CashTempTransSearch("PAY");
 
         }
+
+        private void txt_NewAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+
+        }
     }
 }

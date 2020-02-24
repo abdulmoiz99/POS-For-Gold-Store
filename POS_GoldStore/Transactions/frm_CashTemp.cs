@@ -108,5 +108,15 @@ namespace POS_GoldStore.Transactions
             enable_disable(false);
 
         }
+
+        private void txt_Amount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+        }
+
+        private void txt_Amount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
