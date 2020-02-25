@@ -132,13 +132,13 @@ namespace POS_GoldStore.Setup
 
         private void txt_Find_TextChanged(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_BrandSetup, "select PID,PName,PBalance,PActive from ProductMaster where CompanyID=" + Main.CompanyID + " AND CAST(PName as varchar) like '%" + txt_Find.Text + "%'");
+            Main.fillDgv(dgv_BrandSetup, "select PID,PName,CONVERT(DECIMAL(10,3),PBalance) AS PBalance,PActive from ProductMaster where CompanyID=" + Main.CompanyID + " AND CAST(PName as varchar) like '%" + txt_Find.Text + "%'");
 
         }
 
         private void frm_AddProduct_Load(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_BrandSetup, "select PID,PName,PBalance, Pactive from ProductMaster where CompanyID=" + Main.CompanyID + "");
+            Main.fillDgv(dgv_BrandSetup, "select PID,PName,CONVERT(DECIMAL(10,3),PBalance) AS PBalance, Pactive from ProductMaster where CompanyID=" + Main.CompanyID + "");
 
         }
 
@@ -160,7 +160,7 @@ namespace POS_GoldStore.Setup
                     txt_DataGridViewIndex.Text = selectedrow.Cells["PID"].Value.ToString();
                     txt_Name.Text = selectedrow.Cells["PName"].Value.ToString();
                     txt_PBalance.Text = selectedrow.Cells["PBalance"].Value.ToString();
-                    txt_Remarks.Text = selectedrow.Cells["Remarks"].Value.ToString();
+               //     txt_Remarks.Text = selectedrow.Cells["PRemarks"].Value.ToString();
                     bool active = Convert.ToBoolean(selectedrow.Cells["PActive"].Value.ToString());
                     if (active == true) rdo_Yes.Checked = true;
                     else rdo_No.Checked = true;
@@ -207,6 +207,11 @@ namespace POS_GoldStore.Setup
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_PBalance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
         }
     }
 }

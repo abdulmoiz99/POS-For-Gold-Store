@@ -82,10 +82,10 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.lab_CashReceiveable = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.lab_CashPayable = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lab_CashReceiveable = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.lab_CashTempReceive = new System.Windows.Forms.Label();
@@ -678,16 +678,16 @@
             this.panel12.Size = new System.Drawing.Size(295, 35);
             this.panel12.TabIndex = 1043;
             // 
-            // lab_CashReceiveable
+            // lab_CashPayable
             // 
-            this.lab_CashReceiveable.AutoSize = true;
-            this.lab_CashReceiveable.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_CashReceiveable.ForeColor = System.Drawing.Color.White;
-            this.lab_CashReceiveable.Location = new System.Drawing.Point(156, 5);
-            this.lab_CashReceiveable.Name = "lab_CashReceiveable";
-            this.lab_CashReceiveable.Size = new System.Drawing.Size(18, 27);
-            this.lab_CashReceiveable.TabIndex = 7;
-            this.lab_CashReceiveable.Text = "1";
+            this.lab_CashPayable.AutoSize = true;
+            this.lab_CashPayable.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CashPayable.ForeColor = System.Drawing.Color.White;
+            this.lab_CashPayable.Location = new System.Drawing.Point(130, 5);
+            this.lab_CashPayable.Name = "lab_CashPayable";
+            this.lab_CashPayable.Size = new System.Drawing.Size(18, 27);
+            this.lab_CashPayable.TabIndex = 7;
+            this.lab_CashPayable.Text = "1";
             // 
             // label12
             // 
@@ -700,6 +700,17 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Cash Receiveable :";
             // 
+            // lab_CashReceiveable
+            // 
+            this.lab_CashReceiveable.AutoSize = true;
+            this.lab_CashReceiveable.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CashReceiveable.ForeColor = System.Drawing.Color.White;
+            this.lab_CashReceiveable.Location = new System.Drawing.Point(156, 4);
+            this.lab_CashReceiveable.Name = "lab_CashReceiveable";
+            this.lab_CashReceiveable.Size = new System.Drawing.Size(18, 27);
+            this.lab_CashReceiveable.TabIndex = 7;
+            this.lab_CashReceiveable.Text = "1";
+            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Teal;
@@ -709,17 +720,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(295, 35);
             this.panel13.TabIndex = 1044;
-            // 
-            // lab_CashPayable
-            // 
-            this.lab_CashPayable.AutoSize = true;
-            this.lab_CashPayable.Font = new System.Drawing.Font("BigNoodleTitling", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_CashPayable.ForeColor = System.Drawing.Color.White;
-            this.lab_CashPayable.Location = new System.Drawing.Point(130, 5);
-            this.lab_CashPayable.Name = "lab_CashPayable";
-            this.lab_CashPayable.Size = new System.Drawing.Size(18, 27);
-            this.lab_CashPayable.TabIndex = 7;
-            this.lab_CashPayable.Text = "1";
             // 
             // label14
             // 

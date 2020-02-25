@@ -533,6 +533,19 @@ namespace POS_GoldStore
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void cashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CashTransaction_Click(object sender, EventArgs e)
+        {
+            var frm = new frm_CashTempTransactions();
+            frm.MdiParent = this; // assign MdiParent of FormB to FormC
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
     }
     }
 

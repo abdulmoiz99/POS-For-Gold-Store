@@ -95,6 +95,10 @@ namespace POS_GoldStore.Setup
             {
                 MessageBox.Show("Please Enter Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (cmb_City.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please Select City", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else if (txt_CustomerFName.Text == "")
             {
                 MessageBox.Show("Please Enter Father Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -133,7 +137,7 @@ namespace POS_GoldStore.Setup
                 DialogResult YesOrNo = MessageBox.Show("Are you sure To UPDATE the current Record", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (YesOrNo == DialogResult.Yes)
                 {
-                    SQL.NonScalarQuery("update CustomerMaster set CustomerName='" + txt_CustomerName.Text + "',CustomerFatherName='" + txt_CustomerFName.Text + "',CustomerCNIC='" + txt_CustomerCNIC.Text + "',CustomerContactNo='" + txt_CustomerContactNo.Text + "',CustomerAddress='" + txt_CustomerContactNo.Text + "',CustomerCityid=" + cmb_City.SelectedValue + ",CustomerActive="+active+" where CustomerId=" + int.Parse(txt_DataGridViewIndex.Text) + "");
+                    SQL.NonScalarQuery("update CustomerMaster set CustomerName='" + txt_CustomerName.Text + "',CustomerFatherName='" + txt_CustomerFName.Text + "',CustomerCNIC='" + txt_CustomerCNIC.Text + "',CustomerContactNo='" + txt_CustomerContactNo.Text + "',CustomerAddress='" + txt_CustomerContactNo.Text + "',CustomerCityid=" + cmb_City.SelectedValue + ",CustomerActive=" + active + " where CustomerId=" + int.Parse(txt_DataGridViewIndex.Text) + "");
                     AllClear();
                     frm_AddCustomer_Load(sender, e);
                     btn_cancel_Click(sender, e);
@@ -187,7 +191,7 @@ namespace POS_GoldStore.Setup
                     txt_CustomerCNIC.Text = selectedrow.Cells["CustomerCNIC"].Value.ToString();
                     txt_CustomerContactNo.Text = selectedrow.Cells["CustomerContactNo"].Value.ToString();
                     txt_CustomerAddress.Text = selectedrow.Cells["CustomerAddress"].Value.ToString();
-                    cmb_City.SelectedValue =int.Parse(selectedrow.Cells["CustomerCityID"].Value.ToString());
+                    cmb_City.SelectedValue = int.Parse(selectedrow.Cells["CustomerCityID"].Value.ToString());
                     bool active = Convert.ToBoolean(selectedrow.Cells["CustomerActive"].Value.ToString());
                     if (active == true) cb_Active.Checked = true;
                     else cb_Active.Checked = false;
@@ -203,6 +207,16 @@ namespace POS_GoldStore.Setup
         private void txt_Find_TextChanged(object sender, EventArgs e)
         {
             Main.fillDgv(dgv_Customer, "select Customerid,CustomerName,CustomerFatherName,CustomerCNIC,CustomerContactNo,CustomerCityId,CustomerActive from CustomerMaster where CompanyID=" + Main.CompanyID + " AND CAST(CustomerName as varchar) + CAST(CustomerID as varchar) like '%" + txt_Find.Text + "%'");
+        }
+
+        private void txt_CustomerCNIC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+        }
+
+        private void txt_CustomerContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
         }
     }
 }

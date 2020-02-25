@@ -182,5 +182,10 @@ namespace POS_GoldStore.Setup
             Main.fillDgv(dgv_DocSetup, "Select * from DocType");
 
         }
+
+        private void txt_DocStartFrom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Main.OnlyDigits(e);
+        }
     }
 }

@@ -41,6 +41,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.dgv_BrandSetup = new System.Windows.Forms.DataGridView();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btn_Save = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -56,11 +61,6 @@
             this.txt_PBalance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Remarks = new System.Windows.Forms.TextBox();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BrandSetup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -241,6 +241,46 @@
             this.dgv_BrandSetup.TabStop = false;
             this.dgv_BrandSetup.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_BrandSetup_CellContentClick);
             // 
+            // PID
+            // 
+            this.PID.DataPropertyName = "PID";
+            this.PID.HeaderText = "ID";
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            this.PID.Visible = false;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            this.PName.Width = 170;
+            // 
+            // PBalance
+            // 
+            this.PBalance.DataPropertyName = "PBalance";
+            this.PBalance.HeaderText = "Balance";
+            this.PBalance.Name = "PBalance";
+            this.PBalance.ReadOnly = true;
+            // 
+            // PRemarks
+            // 
+            this.PRemarks.DataPropertyName = "PRemarks";
+            this.PRemarks.HeaderText = "PRemarks";
+            this.PRemarks.Name = "PRemarks";
+            this.PRemarks.ReadOnly = true;
+            this.PRemarks.Visible = false;
+            // 
+            // PActive
+            // 
+            this.PActive.DataPropertyName = "PActive";
+            this.PActive.HeaderText = "Active";
+            this.PActive.Name = "PActive";
+            this.PActive.ReadOnly = true;
+            this.PActive.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PActive.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // btn_Save
             // 
             this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
@@ -404,6 +444,7 @@
             this.txt_PBalance.Size = new System.Drawing.Size(249, 33);
             this.txt_PBalance.TabIndex = 2;
             this.txt_PBalance.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
+            this.txt_PBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PBalance_KeyPress);
             // 
             // label5
             // 
@@ -428,46 +469,6 @@
             this.txt_Remarks.Size = new System.Drawing.Size(249, 33);
             this.txt_Remarks.TabIndex = 2;
             this.txt_Remarks.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
-            // 
-            // PID
-            // 
-            this.PID.DataPropertyName = "PID";
-            this.PID.HeaderText = "ID";
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            this.PID.Visible = false;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            this.PName.Width = 170;
-            // 
-            // PBalance
-            // 
-            this.PBalance.DataPropertyName = "PBalance";
-            this.PBalance.HeaderText = "Balance";
-            this.PBalance.Name = "PBalance";
-            this.PBalance.ReadOnly = true;
-            // 
-            // PRemarks
-            // 
-            this.PRemarks.DataPropertyName = "PRemarks";
-            this.PRemarks.HeaderText = "PRemarks";
-            this.PRemarks.Name = "PRemarks";
-            this.PRemarks.ReadOnly = true;
-            this.PRemarks.Visible = false;
-            // 
-            // PActive
-            // 
-            this.PActive.DataPropertyName = "PActive";
-            this.PActive.HeaderText = "Active";
-            this.PActive.Name = "PActive";
-            this.PActive.ReadOnly = true;
-            this.PActive.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PActive.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frm_AddProduct
             // 

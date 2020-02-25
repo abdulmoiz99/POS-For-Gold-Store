@@ -54,13 +54,13 @@
             this.transactionReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trasnsactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Minimize = new System.Windows.Forms.Button();
             this.btn_exitForm = new System.Windows.Forms.Button();
-            this.customerBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_CashTransaction = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,6 +95,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btn_CashTransaction);
             this.panel2.Controls.Add(this.btn_Calculator);
             this.panel2.Controls.Add(this.btn_CashT);
             this.panel2.Controls.Add(this.btn_SaleCredit);
@@ -117,7 +118,7 @@
             this.btn_Calculator.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Calculator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Calculator.ForeColor = System.Drawing.Color.White;
-            this.btn_Calculator.Location = new System.Drawing.Point(6, 545);
+            this.btn_Calculator.Location = new System.Drawing.Point(5, 597);
             this.btn_Calculator.Name = "btn_Calculator";
             this.btn_Calculator.Size = new System.Drawing.Size(220, 46);
             this.btn_Calculator.TabIndex = 8;
@@ -134,7 +135,7 @@
             this.btn_CashT.Name = "btn_CashT";
             this.btn_CashT.Size = new System.Drawing.Size(220, 46);
             this.btn_CashT.TabIndex = 7;
-            this.btn_CashT.Text = "&Cash Temp";
+            this.btn_CashT.Text = "Ca&sh Temp";
             this.btn_CashT.UseVisualStyleBackColor = false;
             this.btn_CashT.Click += new System.EventHandler(this.btn_CashT_Click);
             // 
@@ -322,12 +323,12 @@
             // 
             this.cashToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.balanceToolStripMenuItem,
-            this.trasnsactionsToolStripMenuItem,
             this.reportsToolStripMenuItem1,
             this.customerBalanceToolStripMenuItem});
             this.cashToolStripMenuItem.Name = "cashToolStripMenuItem";
             this.cashToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.cashToolStripMenuItem.Text = "Cash";
+            this.cashToolStripMenuItem.Click += new System.EventHandler(this.cashToolStripMenuItem_Click);
             // 
             // balanceToolStripMenuItem
             // 
@@ -336,19 +337,19 @@
             this.balanceToolStripMenuItem.Text = "Balance ";
             this.balanceToolStripMenuItem.Click += new System.EventHandler(this.balanceToolStripMenuItem_Click);
             // 
-            // trasnsactionsToolStripMenuItem
-            // 
-            this.trasnsactionsToolStripMenuItem.Name = "trasnsactionsToolStripMenuItem";
-            this.trasnsactionsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.trasnsactionsToolStripMenuItem.Text = "Trasnsactions";
-            this.trasnsactionsToolStripMenuItem.Click += new System.EventHandler(this.trasnsactionsToolStripMenuItem_Click);
-            // 
             // reportsToolStripMenuItem1
             // 
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
             this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.reportsToolStripMenuItem1.Text = "Reports";
             this.reportsToolStripMenuItem1.Click += new System.EventHandler(this.reportsToolStripMenuItem1_Click);
+            // 
+            // customerBalanceToolStripMenuItem
+            // 
+            this.customerBalanceToolStripMenuItem.Name = "customerBalanceToolStripMenuItem";
+            this.customerBalanceToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.customerBalanceToolStripMenuItem.Text = "Customer Balance";
+            this.customerBalanceToolStripMenuItem.Click += new System.EventHandler(this.customerBalanceToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -403,12 +404,18 @@
             this.btn_exitForm.UseVisualStyleBackColor = false;
             this.btn_exitForm.Click += new System.EventHandler(this.btn_exitForm_Click);
             // 
-            // customerBalanceToolStripMenuItem
+            // btn_CashTransaction
             // 
-            this.customerBalanceToolStripMenuItem.Name = "customerBalanceToolStripMenuItem";
-            this.customerBalanceToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.customerBalanceToolStripMenuItem.Text = "Customer Balance";
-            this.customerBalanceToolStripMenuItem.Click += new System.EventHandler(this.customerBalanceToolStripMenuItem_Click);
+            this.btn_CashTransaction.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_CashTransaction.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CashTransaction.ForeColor = System.Drawing.Color.White;
+            this.btn_CashTransaction.Location = new System.Drawing.Point(6, 545);
+            this.btn_CashTransaction.Name = "btn_CashTransaction";
+            this.btn_CashTransaction.Size = new System.Drawing.Size(220, 46);
+            this.btn_CashTransaction.TabIndex = 9;
+            this.btn_CashTransaction.Text = "Cash T&ransaction";
+            this.btn_CashTransaction.UseVisualStyleBackColor = false;
+            this.btn_CashTransaction.Click += new System.EventHandler(this.btn_CashTransaction_Click);
             // 
             // frm_Main
             // 
@@ -462,12 +469,12 @@
         private System.Windows.Forms.Button btn_CashT;
         private System.Windows.Forms.ToolStripMenuItem cashToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trasnsactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_exitForm;
         private System.Windows.Forms.Button btn_Minimize;
         private System.Windows.Forms.Button btn_Calculator;
         private System.Windows.Forms.ToolStripMenuItem customerBalanceToolStripMenuItem;
+        private System.Windows.Forms.Button btn_CashTransaction;
     }
 }

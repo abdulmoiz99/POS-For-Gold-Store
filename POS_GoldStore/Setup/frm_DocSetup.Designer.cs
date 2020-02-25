@@ -45,6 +45,7 @@
             this.txt_Abbr = new System.Windows.Forms.TextBox();
             this.txt_VoucherType = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_exitForm = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
@@ -62,9 +62,9 @@
             this.btn_New = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DocSetup)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_DataGridViewIndex
@@ -174,6 +174,7 @@
             this.txt_DocStartFrom.Name = "txt_DocStartFrom";
             this.txt_DocStartFrom.Size = new System.Drawing.Size(263, 31);
             this.txt_DocStartFrom.TabIndex = 238;
+            this.txt_DocStartFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DocStartFrom_KeyPress);
             // 
             // txt_VoucherNo
             // 
@@ -214,6 +215,16 @@
             this.groupBox1.Size = new System.Drawing.Size(372, 52);
             this.groupBox1.TabIndex = 241;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(321, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 170;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_exitForm
             // 
@@ -325,16 +336,6 @@
             this.groupBox2.Size = new System.Drawing.Size(190, 302);
             this.groupBox2.TabIndex = 248;
             this.groupBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(321, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 170;
-            this.pictureBox1.TabStop = false;
             // 
             // btn_Save
             // 
@@ -457,10 +458,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DocSetup)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
