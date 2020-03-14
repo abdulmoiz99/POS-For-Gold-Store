@@ -41,6 +41,7 @@
             this.dtp_ToDate = new System.Windows.Forms.DateTimePicker();
             this.btn_Generate = new System.Windows.Forms.Button();
             this.rb_Purchase = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,6 +194,10 @@
             this.rb_Purchase.Text = "Purchase ";
             this.rb_Purchase.UseVisualStyleBackColor = true;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // SalePurchaseReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,5 +241,6 @@
         private System.Windows.Forms.DateTimePicker dtp_ToDate;
         private System.Windows.Forms.Button btn_Generate;
         private System.Windows.Forms.RadioButton rb_Purchase;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

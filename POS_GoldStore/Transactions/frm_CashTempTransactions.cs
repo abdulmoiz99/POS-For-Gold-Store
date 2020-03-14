@@ -103,10 +103,10 @@ namespace POS_GoldStore.Transactions
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            var Mode = "PAY";
+            var Mode = "RECEIVE";
             if (rb_Payable.Checked == true)
             {
-                Mode = "RECEIVE";
+                Mode = "PAY";
             }
 
             float AMOUNT = 0;

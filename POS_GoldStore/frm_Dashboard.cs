@@ -32,8 +32,8 @@ namespace POS_GoldStore
             lab_ClosingBalance.Text = SQL.ScalarQuery("select ClosingBal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
             lab_PervClosing.Text = SQL.ScalarQuery("select ClosingBal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "' -1");
             lab_OpeningBalance.Text = SQL.ScalarQuery("select Opbal from tvufrmDashboardSummary where convert(varchar,recdate,112) ='" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'");
-            lab_CashReceiveable.Text = SQL.ScalarQuery("Select ((select SUM(CM_Bal) from TvuFrmCashMain where CM_Mode ='RECEIVE')+(select SUM(BalAmt) as Receiveable from TvuFrmCreditPurchaseOrder)) as Payabel");
-            lab_CashPayable.Text = SQL.ScalarQuery("Select ((select SUM(CM_Bal) from TvuFrmCashMain where CM_Mode ='PAY')+(select SUM(BalAmt) as Receiveable from TvuFrmCreditSaleOrder)) as Payable");
+            lab_CashReceiveable.Text = SQL.ScalarQuery("Select ((select SUM(CM_Bal) from TvuFrmCashMain where CM_Mode ='PAY')+(select SUM(BalAmt) as Receiveable from TvuFrmCreditSaleOrder)) as Payabel");
+            lab_CashPayable.Text = SQL.ScalarQuery("Select ((select SUM(CM_Bal) from TvuFrmCashMain where CM_Mode ='RECEIVE')+(select SUM(BalAmt) as Receiveable from TvuFrmCreditPurchaseOrder)) as Payable");
 
 
         }

@@ -16,5 +16,10 @@ namespace POS_GoldStore.ReprtForm
         {
             InitializeComponent();
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

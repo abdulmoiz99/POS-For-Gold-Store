@@ -26,9 +26,9 @@ namespace POS_GoldStore.Transactions
             double.TryParse(txt_ProductWeight.Text, out Weight);
             double.TryParse(txt_ProductRate.Text, out Rate);
             double Amount = (Weight / 11.664) * Rate;
-            double output = ((double)((int)(Amount * 1000.0))) / 1000.0;
-            txt_Amount.Text = output.ToString();
-            lab_Amount.Text = output.ToString();
+           // double output = ((double)((int)(Amount * 1000.0))) / 1000.0;
+            txt_Amount.Text = Amount.ToString("#.000");
+            lab_Amount.Text = Amount.ToString("#.000");
             ReturnBalance();
         }
         public void enable_disable(bool TorF)

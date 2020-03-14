@@ -117,5 +117,9 @@ namespace POS_GoldStore.ReprtForm
             }
         }
 
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }
